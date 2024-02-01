@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+select, button {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.optionbtns {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 10px;
+}
+
+.villaindiv {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+#villain {
+    width: 150px;
+}
+
+.herodropdowns {
+    display: flex;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#challengefieldset.collapse, .collapse {
+    display: none;
+}
+
+#challengefieldset {
+    display: flex;
+    flex-direction: row;
+}
+
+#challengefieldset>div {
+    display: flex;
+    flex-direction: column;
+    
+}
