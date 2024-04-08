@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Achievement Tracker</title>
+</head>
+<body>
+    <div id="app">
+        <h1 align='center'>Achievement Tracker</h1>
+        <div class="herodropdowns">
+            <div class="hero">
+                <label for="heroes1">Select Hero 1:</label>
+                <select id="heroes1"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes2">Select Hero 2:</label>
+                <select id="heroes2"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes3">Select Hero 3:</label>
+                <select id="heroes3"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes4">Select Hero 4:</label>
+                <select id="heroes4"></select>
+            </div>
+        </div>
+        
+        <label for="villain">Select Villain:</label>
+        <div class='villaindiv'>
+            <select id="villain"></select>
+            <label><input type="checkbox" id='infinity' name='campaign' value='infinity'>Infinity Campaign</label>    
+        </div>
+        
+        <div class='optionbtns'>
+            <button id='challengebtn' onclick='expand()'>Show/Hide Challenges</button>
+            <button id='modebtn' onclick='expand()'>Show/Hide Gamemodes</button>
+            <button id='additionalbtn' onclick='expand()'>Show/Hide Additional Factors</button>
+        </div>
+        
+        <fieldset class="collapse" id='challengefieldset'>
+            <legend>Select Challenges:</legend>
+            <div>
+                <label>
+                    <input type="checkbox" id="acceleratedvillain" name="challenges" value="acceleratedvillain"> Accelerated Villain
+                </label>
+                <label>
+                    <input type="checkbox" id="carnage" name="challenges" value="carnage"> Carnage
+                </label>
+                <label>
+                    <input type="checkbox" id="complications" name="challenges" value="complications"> Complications
+                </label>
+                <label>
+                    <input type="checkbox" id="dangerroom" name="challenges" value="dangerroom"> Danger Room
+                </label>
+                <label>
+                    <input type="checkbox" id="deadpool" name="challenges" value="deadpool"> Deadpool
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" id="endangered" name="challenges" value="endangered"> Endangered Locations
+                </label>
+                <label>
+                    <input type="checkbox" id="finfangfoom" name="challenges" value="finfangfoom"> Fin Fang Foom
+                </label>
+                <label>
+                    <input type="checkbox" id="hazardouslocations" name="challenges" value="hazardouslocations"> Hazard Locations
+                </label>
+
+                <label>
+                    <input type="checkbox" id="planb" name="challenges" value="planb"> Plan B
+                </label>
+                <label>
+                    <input type="checkbox" id="secretidentity" name="challenges" value="secretidentity"> Secret Identity
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" id="sentineli" name="challenges" value="sentineli"> Sentinel I
+                </label>
+                <label>
+                    <input type="checkbox" id="sentinelii" name="challenges" value="sentinelii"> Sentinel II
+                </label>
+
+                <label>
+                    <input type="checkbox" id="sentineliii" name="challenges" value="sentineliii"> Sentinel III
+                </label>
+                <label>
+                    <input type="checkbox" id="takeover" name="challenges" value="takeover"> Takeover
+                </label>
+                <label>
+                    <input type="checkbox" id="brutaltakeover" name="challenges" value="brutaltakeover"> Takeover (Brutal)
+                </label>
+                <label>
+                    <input type="checkbox" id="traitor" name="challenges" value="traitor"> Traitor
+                </label>
+            </div>
+        </fieldset>
+        
+        <fieldset class="collapse" id="modefieldset">
+            <legend>Optional Modes:</legend>
+            <div>
+                <label>
+                    <input type="radio" id='shieldmode' name='gamemodes' value='shieldmode'> S.H.I.E.L.D. Solo Mode
+                </label>
+                <label>
+                    <input type="radio" id="solomodex" name="gamemodes" value="solomodex"> Xavier Solo Mode
+                </label>
+                <label>
+                    <input type="radio" id="commander" name="gamemodes" value="commander"> Commander Solo Mode
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" id="supervillain" name="gamemodes" value="supervillain"> Super Villain
+                </label>
+                <label>
+                    <input type="radio" id="teamvteam" name="gamemodes" value="teamvteam"> Team vs Team (COMING SOON)
+                </label></div>
+            <div>
+                <label>
+                    <input type="radio" id="registrationclash" name="gamemodes" value="registrationclash"> Registration Clash (COMING SOON)
+                </label>
+                <label>
+                    <input type="radio" id="clashofheroes" name="gamemodes" value="clashofheroes"> Clash of Heroes (COMING SOON)
+                </label>
+            </div>
+        </fieldset>
+        <fieldset class="collapse" id='additionalfieldset'>
+            <legend>Select Additional Factors:</legend>
+            <label>
+                <input type="checkbox" id="starlightcitadel" name="additional" value="starlightcitadel"> Using Starlight Citadel Location
+            </label>
+        </fieldset>
+        
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty">
+            <option value="normal">Normal</option>
+            <option value="moderate">Moderate</option>
+            <option value="hard">Hard</option>
+            <option value="heroic">Heroic</option>
+        </select>
+        
+
+        <button onclick="getRelevantAchievements()">Get Achievements</button>
+
+        <h2>Available Achievements:</h2>
+        <ul id="available-achievements"></ul>
+        
+        <h2>Available Achievements (X-Men):</h2>
+        <ul id="available-achievements-x"></ul>
+        
+        <h2>Available Achievements (New):</h2>
+        <ul id="available-achievements-new"></ul>
+        
+        <h2>Available Achievements (Spider-geddon):</h2>
+        <ul id="available-achievements-spider"></ul>
+        
+        <div>
+            <button id='completedbtn' onclick='saveCompletedAchievements()'>Save Completed Achievements</button>
+        </div>
+        
+        <div>
+            <button id='clearbtn' onclick='clearCompletedAchievements()'>Clear Completed Achievements</button>
+        </div>
+        
+        <h2>Available Teams:</h2>
+        <ul id="available-teams"></ul>
+        
+        <div>
+            <button id='allbtn' onclick='showAllAchievements()'>Show All Achievements</button>
+            <button id='remainingbtn' onclick="showRemainingAchievements()">Show All Remaining Achievements</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
