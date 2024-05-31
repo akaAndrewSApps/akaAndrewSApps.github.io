@@ -2,7 +2,7 @@
 //Array of all Season 1 Heroes
 const season1Heroes = ["Adam Warlock", "America Chavez", "Ant-Man", "Beta Ray Bill", "Black Cat", "Black Panther", "Black Widow", "Blade", "Captain America", "Captain Marvel", "Daredevil", "Doctor Strange", "Drax", "Elektra", "Falcon", "Gamora", "Ghost Rider", "Ghost-Spider", "Groot", "Hawkeye", "Howard the Duck", "Hulk", "Iron Fist", "Iron Man", "Jessica Jones", "Korg", "Luke Cage", "Mantis", "Miles Morales", "Mockingbird", "Moon Knight", "Ms. Marvel", "Nebula", "Nick Fury", "Nova", "Okoye", "Punisher", "Quicksilver", "Rocket Racoon", "Scarlet Witch", "Shang Chi", "She-Hulk", "Shuri", "Spider-Ham", "Spider-Man", "Spider-Man 2099", "Spider-Woman", "Squirrel Girl", "Star-Lord", "Thor", "Valkyrie", "Venom", "Vision", "War Machine", "Wasp", "Winter Soldier", "Yondu"];
 //Array of all Season 2 Heroes
-const season2Heroes = ["Angel", "Apocalypse", "Archangel", "Banshee", "Beast", "Beast (First Class)", "Bishop", "Blink", "Bob", "Boom Boom", "Cable", "Cannonball", "Captain Britain", "Cloak", "Colossus", "Cyclops", "Cyclops (First Class)", "Dagger", "Dazzler", "Deadpool", "Doctor Doom", "Domino", "Doop", "Emma Frost", "Fantomex", "Feral", "Firestar", "Forge", "Gambit", "Guardian", "Gwenpool", "Havok", "Hope Summers", "Human Torch", "Iceman", "Iceman (First Class)", "Invisible Woman", "Jean Grey", "Jean Grey (First Class)", "Jubilee", "Kitty Pryde", "Lady Deadpool", "Legion", "Logan", "Longshot", "Magik", "Magneto", "Marrow", "Mirage", "Mister Fantastic", "Multiple Man", "Mystique", "Namor", "Nightcrawler", "Northstar", "Old Man Logan", "Phoenix", "Pixie", "Polaris", "Professor X", "Psylocke", "Puck", "Rogue", "Sasquatch", "Shatterstar", "Silver Surfer", "Snowbird", "Spiral", "Storm", "Storm (Mohawk)", "Strong Guy", "Sunfire", "Sunspot", "The Thing", "Warlock", "Warpath", "Weapon X", "Wolfsbane", "Wolverine"];
+const season2Heroes = ["Angel", "Apocalypse", "Archangel", "Banshee", "Beast", "Beast (First Class)", "Bishop", "Blink", "Bob", "Boom Boom", "Cable", "Cannonball", "Captain Britain", "Cloak", "Colossus", "Cyclops", "Cyclops (First Class)", "Dagger", "Dazzler", "Deadpool", "Doctor Doom", "Domino", "Doop", "Emma Frost", "Fantomex", "Feral", "Firestar", "Forge", "Gambit", "Guardian", "Gwenpool", "Havok", "Hope Summers", "Human Torch", "Iceman", "Iceman (First Class)", "Invisible Woman", "Jean Grey", "Jubilee", "Kitty Pryde", "Lady Deadpool", "Legion", "Logan", "Longshot", "Magik", "Magneto", "Marrow", "Marvel Girl", "Mirage", "Mister Fantastic", "Multiple Man", "Mystique", "Namor", "Nightcrawler", "Northstar", "Old Man Logan", "Phoenix", "Pixie", "Polaris", "Professor X", "Psylocke", "Puck", "Rogue", "Sasquatch", "Shatterstar", "Silver Surfer", "Snowbird", "Spiral", "Storm", "Storm (Mohawk)", "Strong Guy", "Sunfire", "Sunspot", "The Thing", "Warlock", "Warpath", "Weapon X", "Wolfsbane", "Wolverine"];
 //Array of all Season 3 Heroes
 const season3Heroes = ["Agent Venom", "Ares", "Aurora", "Black Bolt", "Black Knight", "Captain America (Classic)", "Captain America (Sam)", "Captain Britain (Betsy)", "Captain Carter", "Ch'od", "Chamber", "Corsair", "Cosmic Ghost Rider", "Crystal", "Cyborg Spider-Man", "Cypher", "Daken", "Darkchild", "Darkstar", "Deathlok", "Doc Samson", "Elsa Bloodstone", "Gladiator", "Gladiator Hulk", "Ghost Rider (Blaze)", "Goliath", "Gorgon", "Havok (X-Factor)", "Hephzibah", "Hercules", "Hulkbuster Iron Man", "Hulkling", "Husk", "Ironheart", "Iron Lad", "Iron Man (Civil War)", "Iron Spider", "Karnak", "Kate Bishop", "Kid Loki", "Lilandra", "Lockjaw", "Loki", "M", "Magneto (AoA)", "Man-Thing", "Maria Hill", "Medusa",  "Meggan", "Mighty Thor", "Moondragon", "Moon Girl / Devil Dinosaur", "Moonstone", "Morbius", "Morph", "Nick Fury, Sr.", "Nova (Frankie Raye)", "Nova Prime", "Patriot", "Phyla-Vell", "Quake", "Quasar", "Raza", "Red Guardian", "Red Hulk", "Ronin", "Sabretooth / Wildchild", "Sentry", "Shuri Black Panther", "Siryn", "Songbird", "Spectrum", "Speed", "Spider-Man 2099 (Original)", "Stature", "Tigra", "Triton", "Ursa Major", "U.S. Agent", "Werewolf by Night", "White Widow", "Wiccan", "Wonder-Man", "Wong", "X-Man", "Yellowjacket"];
 //Array of all Spider-geddon Heroes
@@ -986,10 +986,10 @@ function getNewAchievements(heroes, villain, challenges, difficulty) {
     if ((heroes.includes('Hulk') || heroes.includes('Grey Hulk') || heroes.includes('Gladiator Hulk')) && heroes.includes('She-Hulk')) {
         availableAchievements.push('Gamma-irradiated cousins: Win with Hulk and She-Hulk');
     }
-    if (heroes.includes('Fantomex') && (heroes.includes('Jean Grey') || heroes.includes('Jean Grey (First Class)')) && heroes.includes('Professor X')) {
+    if (heroes.includes('Fantomex') && (heroes.includes('Jean Grey') || heroes.includes('Marvel Girl')) && heroes.includes('Professor X')) {
         availableAchievements.push(' Introducing Weapons Plus: Win with Fantomex, Jean Grey, and Professor X');
     }
-    if ((heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && (heroes.includes('Jean Grey') || heroes.includes('Jean Grey (First Class)')) && (heroes.includes('Havok') || heroes.includes('Havok (X-Factor)')) && heroes.includes('Polaris')) {
+    if ((heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && (heroes.includes('Jean Grey') || heroes.includes('Marvel Girl')) && (heroes.includes('Havok') || heroes.includes('Havok (X-Factor)')) && heroes.includes('Polaris')) {
         availableAchievements.push('Summer’s Love: Win with Cyclops, Jean Grey, Havok, and Polaris');
     }
     if ((heroes.includes('Captain America') || heroes.includes('Captain America (Classic)')) && (heroes.includes('Iron Man') || heroes.includes('Iron Man (Civil War)') || heroes.includes('Hulkbuster Iron Man')) && (heroes.includes('Hawkeye') || heroes.includes('Ronin'))) {
@@ -2444,7 +2444,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     if (villain == 'Magneto' && heroes.includes('Professor X')) {
         let ogXMen = true;
         for (let i = 0; i < heroes.length; i++) {
-            if (heroes[i] != 'Professor X' && heroes[i] != 'Archangel' && heroes[i] != 'Angel' && heroes[i] != 'Beast' && heroes[i] != 'Beast (First Class)' && heroes[i] != 'Cyclops' && heroes[i] != 'Cyclops (First Class)' && heroes[i] != 'Iceman' && heroes[i] != 'Iceman (First Class)' && heroes[i] != 'Jean Grey' && heroes[i] != 'Jean Grey (First Class)') {
+            if (heroes[i] != 'Professor X' && heroes[i] != 'Archangel' && heroes[i] != 'Angel' && heroes[i] != 'Beast' && heroes[i] != 'Beast (First Class)' && heroes[i] != 'Cyclops' && heroes[i] != 'Cyclops (First Class)' && heroes[i] != 'Iceman' && heroes[i] != 'Iceman (First Class)' && heroes[i] != 'Jean Grey' && heroes[i] != 'Marvel Girl') {
                 ogXMen = false;
             }
         }
@@ -2455,7 +2455,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     if (villain == 'Juggernaut' && heroes.includes('Professor X')) {
         heroFeatsAchievements.push('Stepbrothers: Defeat Juggernaut with Professor X in your team');
     }
-    if(heroes.includes('Professor X') && heroes.includes('Emma Frost') && (heroes.include('Jean Grey') || heroes.includes('Jean Grey (First Class)'))) {
+    if(heroes.includes('Professor X') && heroes.includes('Emma Frost') && (heroes.include('Jean Grey') || heroes.includes('Marvel Girl'))) {
         heroFeatsAchievements.push('Mind Readers: Defeat a Villain with Professor X, Jean Grey, and Emma Frost');
     }
     //BLUE TEAM / GOLD TEAM achievements
@@ -2538,7 +2538,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     if (heroes.length > 0) {
         let ogXMen = true;
         for (let i = 0; i < heroes.length; i++) {
-            if (heroes[i] != 'Professor X' && heroes[i] != 'Archangel' && heroes[i] != 'Angel' && heroes[i] != 'Beast' && heroes[i] != 'Beast (First Class)' && heroes[i] != 'Cyclops' && heroes[i] != 'Cyclops (First Class)' && heroes[i] != 'Iceman' && heroes[i] != 'Iceman (First Class)' && heroes[i] != 'Jean Grey' && heroes[i] != 'Jean Grey (First Class)') {
+            if (heroes[i] != 'Professor X' && heroes[i] != 'Archangel' && heroes[i] != 'Angel' && heroes[i] != 'Beast' && heroes[i] != 'Beast (First Class)' && heroes[i] != 'Cyclops' && heroes[i] != 'Cyclops (First Class)' && heroes[i] != 'Iceman' && heroes[i] != 'Iceman (First Class)' && heroes[i] != 'Jean Grey' && heroes[i] != 'Marvel Girl') {
                 ogXMen = false;
             }
         }
@@ -2562,7 +2562,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
         let hulk = (heroes[0] == 'Hulk' || heroes[0] == 'Grey Hulk' || heroes[0] == 'Gladiator Hulk') && (heroes[1] == 'Hulk' || heroes[1] == 'Grey Hulk' || heroes[1] == 'Gladiator Hulk');
         let iceman = heroes.includes('Iceman') && heroes.includes('Iceman (First Class)');
         let ironMan = (heroes[0] == 'Iron Man' || heroes[0] == 'Iron Man (Civil War)' || heroes[0] == 'Hulkbuster Iron Man') && (heroes[1] == 'Iron Man' || heroes[1] == 'Iron Man (Civil War)' || heroes[1] == 'Hulkbuster Iron Man');
-        let jeanGrey = heroes.includes('Jean Grey') && heroes.includes('Jean Grey (First Class)');
+        let jeanGrey = heroes.includes('Jean Grey') && heroes.includes('Marvel Girl');
         let loki = heroes.includes('Loki') && heroes.includes('Kid Loki');
         let magik = heroes.includes('Magik') && heroes.includes('Darkchild');
         let magneto = heroes.includes('Magneto') && heroes.includes('Magneto (AoA)');
@@ -2599,7 +2599,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     if (heroes.includes('Colossus') && (heroes.includes('Wolverine') || heroes.includes('Old Man Logan') || heroes.includes('Weapon X') || heroes.includes('Logan'))) {
         heroFeatsAchievements.push('Fastball Special: Win with Colossus and Wolverine in your team, delivering the final blow with a Fastball Special using Wolverine');
     }
-    if ((heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && (heroes.includes('Havok') || heroes.includes('Havok (X-Factor)')) && (heroes.includes('Jean Grey') || heroes.includes('Jean Grey (First Class)')) && heroes.includes('Hope Summers')) {
+    if ((heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && (heroes.includes('Havok') || heroes.includes('Havok (X-Factor)')) && (heroes.includes('Jean Grey') || heroes.includes('Marvel Girl')) && heroes.includes('Hope Summers')) {
         heroFeatsAchievements.push('Summers Family: Win with Cyclops, Havok, Jean Grey, and Hope Summers as your team');
         }
     if (heroes.includes('Mystique') && heroes.includes('Nightcrawler')) {
@@ -2607,7 +2607,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     }
     if ((heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) 
         && (heroes.includes('Wolverine') || heroes.includes('Old Man Logan') || heroes.includes('Weapon X') || heroes.includes('Logan')) 
-        && (heroes.includes('Jean Grey') || heroes.includes('Jean Grey (First Class)'))) {
+        && (heroes.includes('Jean Grey') || heroes.includes('Marvel Girl'))) {
         heroFeatsAchievements.push('Les Liaisons Dangereuses: Win with Jean Grey, Cyclops, and Wolverine in your team');
     }
     if ((heroes.includes('Magneto') || heroes.includes('Magneto (AoA)')) && heroes.includes('Rogue') && heroes.includes('Gambit')) {
@@ -2747,7 +2747,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     if (villain == 'Stryfe' && heroes.includes('Cable')) {
         heroFeatsAchievements.includes('Clones War: Defeat Stryfe with Cable in your team');
     }
-    if (villain == 'Mister Sinister' && (heroes.includes('Jean Grey') || heroes.includes('Jean Grey (First Class)')) && (heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && heroes.includes('Cable')) {
+    if (villain == 'Mister Sinister' && (heroes.includes('Jean Grey') || heroes.includes('Marvel Girl')) && (heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && heroes.includes('Cable')) {
         heroFeatsAchievements.push('All in the Family: Defeat Mister Sinister with Jean Grey, Cyclops, and Cable in your team');
     }
     if (villain == 'Mojo') {
