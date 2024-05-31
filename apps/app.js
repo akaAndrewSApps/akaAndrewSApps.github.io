@@ -1110,8 +1110,17 @@ function getNewAchievements(heroes, villain, challenges, difficulty) {
     if (villain == 'Sandman' && (heroes.includes('Cyborg Spider-Man') || heroes.includes('Iron Spider') || heroes.includes('Spider-Man') || heroes.includes('Symbiote Spider-Man')) && heroes.includes('Human Torch')) {
         availableAchievements.push('Like sand through an hourglass: Defeat Sandman with Spider-Man and the Human Torch in your team');
     }
-    if (villain == 'M.O.D.O.K.' && heroes.includes('Mister Fantastic') && heroes.includes('Invisible Woman') && heroes.includes('Human Torch') && heroes.includes('The Thing')) {
-        availableAchievements.push('Flip Four: Defeat M.O.D.O.K. with only members of the Fantastic Four in your team');
+    //FIXME consider other Fan Four members
+    if(villain == 'M.O.D.O.K.') {
+        let onlyFanFour = true;
+        for (let i = 0; i < heroes.length; i++) {
+            if (heroes[i] != 'Mister Fantastic' && heroes[i] != 'Invisible Woman' && heroes[i] != 'The Thing' && heroes[i] != 'Human Torch') {
+                onlyFanFour = false;
+            }
+        }
+        if (onlyFanFour) {
+            availableAchievements.push('Flip Four: Defeat M.O.D.O.K. with only members of the Fantastic Four in your team');
+        }
     }
     if (villain == 'Kingpin' && heroes.includes('Daredevil') && (difficulty == 'hard' || difficulty == 'heroic') && challenges.includes('secretidentity')) {
         availableAchievements.push('Born Again: Defeat Kingpin with Daredevil in your team, but on Hard or Heroic difficulty Challenge and with the Secret Identity Challenge');
@@ -1197,8 +1206,17 @@ function getNewAchievements(heroes, villain, challenges, difficulty) {
     if (villain == 'Doctor Doom' && heroes.includes('Namor') && heroes.includes('Black Panther')) {
         availableAchievements.push('Battleworld: Defeat Doctor Doom with Namor and Black Panther');
     }
-    if (villain == 'Doctor Doom' && heroes.includes('Mister Fantastic') && heroes.includes('Invisible Woman') && heroes.includes('Human Torch') && heroes.includes('The Thing') && (difficulty == 'hard' || difficulty == 'heroic')) {
-        availableAchievements.push('Impending Doom: Defeat Doctor Doom with only members of the Fantastic Four in your team, at Hard or Heroic difficulty');
+    //FIXME consider other Fan Four members
+    if(villain == 'Doctor Doom' && (difficulty == 'hard' || difficulty == 'heroic')) {
+        let onlyFanFour = true;
+        for (let i = 0; i < heroes.length; i++) {
+            if (heroes[i] != 'Mister Fantastic' && heroes[i] != 'Invisible Woman' && heroes[i] != 'The Thing' && heroes[i] != 'Human Torch') {
+                onlyFanFour = false;
+            }
+        }
+        if (onlyFanFour) {
+            availableAchievements.push('Impending Doom: Defeat Doctor Doom with only members of the Fantastic Four in your team, at Hard or Heroic difficulty');
+        }
     }
     if (villain == 'Super-Skrull' && heroes.includes('Namor') && heroes.includes('Iron Fist')) {
         availableAchievements.push('Fire and Stone!: Defeat Super-Skrull with Namor and Iron Fist');
