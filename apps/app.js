@@ -1809,7 +1809,8 @@ function getXVillainFights(villain, difficulty) {
         }
         villainFightsAchievements.push(`Defeat ${villainName} without completing the Clear Threats Mission`);
     }
-    if (villain == 'Scarlet Witch & Quicksilver') {
+const season2Villains = ["Apocalypse", "Arcade", "Avalanche", "Bob", "Brood Queen", "Callisto", "Colossus (Phoenix Force)", "Cyclops (Phoenix Force)", "Dark Phoenix", "Deadpool", "Deathbird", "Doctor Doom", "Emma Frost", "Emma Frost (Phoenix Force)", "Four Horsemen", "Juggernaut", "Lady Deathstrike", "Legion", "Magik (Phoenix Force)", "Magneto", "Marrow", "Mastermind", "Mister Sinister", "Mojo", "Mystique", "Namor", "Namor (Phoenix Force)", "Nimrod", "Omega Red", "Onslaught", "Phoenix Force", "Quicksilver & Scarlet Witch", "Sabretooth", "Sauron", "Shadow King", "Silver Samurai", "Spiral", "Scarlet Witch & Quicksilver", "Sebastian Shaw", "Stryfe", "Super Skrull", "Toad + Blob + Pyro"];
+    if (villain == 'Scarlet Witch & Quicksilver' || villain == 'Quicksilver & Scarlet Witch') {
         const villainName = "Scarlet Witch & Quicksilver";
         if (difficulty == 'hard' || difficulty == 'heroic') {
             villainFightsAchievements.push(`Defeat ${villainName} with Hard Challenge`);
