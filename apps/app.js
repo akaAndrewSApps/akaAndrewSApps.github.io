@@ -2901,7 +2901,7 @@ function checkAntiHero(heroes) {
 // returns 'startingHandHeroesPresent', a String that identifies how many Starting Hand heroes
 function checkStartingHandHeroes(heroes) {
     //Array with all heroes with Starting Hand cards
-    const startingHandHeroes = ['Anti-Venom', 'Apocalypse', 'Bishop', 'Cloak', 'Colossus', 'Dagger', 'Deadpool', 'Doctor Doom', 'Doop', 'Fantomex', 'Grey Hulk', 'Gwenpool', 'Human Torch', 'Invisble Woman', 'Juggernaut', 'Kitty Pryde', 'Lady Deadpool', 'Logan', 'Magik', 'Marrow', 'Mister Fantastic', 'Multiple Man', 'Mystique', 'Northstar', 'Old Man Logan', 'Peni Parker', 'Phoenix', 'Puck', 'Scarelt Spider', 'Silk', 'Silver Surfer', 'Snowbird', 'Spider-Man Noir', 'Spiral', 'Storm (Mohawk)', 'Superior Spider-Man', 'Symbiote Spider-Man', 'The Thing', 'Warlock', 'Weapon X', 'Wolverine', 'X-23'];
+    const startingHandHeroes = ['Anti-Venom', 'Apocalypse', 'Bishop', 'Cloak', 'Colossus', 'Dagger', 'Deadpool', 'Doctor Doom', 'Doop', 'Fantomex', 'Grey Hulk', 'Gwenpool', 'Human Torch', 'Invisible Woman', 'Juggernaut', 'Kitty Pryde', 'Lady Deadpool', 'Logan', 'Magik', 'Marrow', 'Mister Fantastic', 'Multiple Man', 'Mystique', 'Northstar', 'Old Man Logan', 'Peni Parker', 'Phoenix', 'Puck', 'Scarelt Spider', 'Silk', 'Silver Surfer', 'Snowbird', 'Spider-Man Noir', 'Spiral', 'Storm (Mohawk)', 'Superior Spider-Man', 'Symbiote Spider-Man', 'The Thing', 'Warlock', 'Weapon X', 'Wolverine', 'X-23'];
     //variable with default value
     let startingHandHeroesPresent = 'no';
     //variable with default count of Starting Hand heroes
@@ -3036,10 +3036,13 @@ function saveCompletedAchievements() {
     //store the saved Array in localStorage
     localStorage.setItem('achievements', JSON.stringify(completedAchievements));
 }
-// clearCompletedAchievements() function that clears all saved achievements  //FIXME (COMING SOON)
+// clearCompletedAchievements() function that clears all saved achievements
 function clearCompletedAchievements() {
-    //FIXME add a warning and confirmation step
-    //localStorage.clear();
+    // IF user confirms the alert
+    if (confirm("Are you sure you wish to reset your saved achievements?\nTHIS WILL DELETE YOUR DATA AND CANNOT BE UNDONE!!")) {
+        //clear local storage
+        localStorage.clear();
+    }
 }
 
 // showAllAchievements() function that shows all achievments
