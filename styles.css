@@ -44,7 +44,7 @@ ul li {
     width: 150px;
 }
 
-.herodropdowns {
+.herodropdowns, .team1herodropdowns, .team2herodropdowns {
     display: flex;
 }
 
