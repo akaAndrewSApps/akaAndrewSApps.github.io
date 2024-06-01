@@ -21,17 +21,39 @@ const spiderVillains = ['Anti-Venom', 'Morlun', 'Spot', 'Superior Spider-Man'];
 const companions = ['Alligator Loki', 'Cosmo', 'Goose', 'Jeff', 'Lockheed', 'Redwing', 'Throg'];
 
 //variables for dropdowns
+//default hero selection
 const heroDropdown1 = document.getElementById('heroes1');
 const heroDropdown2 = document.getElementById('heroes2');
 const heroDropdown3 = document.getElementById('heroes3');
 const heroDropdown4 = document.getElementById('heroes4');
+//team vs team hero selection
+const heroDropdown1team1 = document.getElementById('heroes1team1');
+const heroDropdown2team1 = document.getElementById('heroes2team1');
+const heroDropdown3team1 = document.getElementById('heroes3team1');
+const heroDropdown4team1 = document.getElementById('heroes4team1');
+const heroDropdown1team2 = document.getElementById('heroes1team2');
+const heroDropdown2team2 = document.getElementById('heroes2team2');
+const heroDropdown3team2 = document.getElementById('heroes3team2');
+const heroDropdown4team2 = document.getElementById('heroes4team2');
+//villain selection
 const villainDropdown = document.getElementById('villain');
 
-//Populates the 4 hero and 1 villain dropdown
+//Populates the various dropdowns
+//default hero dropdowns
 populateDropdown1(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 populateDropdown2(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 populateDropdown3(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 populateDropdown4(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+//team vs team hero dropdowns
+populateTeam1Dropdown1(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+populateTeam1Dropdown2(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+populateTeam1Dropdown3(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+populateTeam1Dropdown4(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+populateTeam2Dropdown1(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+populateTeam2Dropdown2(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+populateTeam2Dropdown3(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+populateTeam2Dropdown4(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
+//villain dropdown
 populateDropdownVillains(season1Villains, season2Villains, season3Villains, spiderVillains);
 
 // populateDropdown1() function that populates the first hero dropdown
@@ -294,6 +316,526 @@ function populateDropdown4(s1, s2, s3, p1, sp1) {
         promoLabel.appendChild(option);
     }
 }
+// populateTeam1Dropdown1() function that populates the blue team's first hero dropdown
+// param s1 Array of Season 1 heroes
+// param s2 Array of Season 2 heroes
+// param s3 Array of Season 3 heroes
+// param p1 Array of Promotional heroes
+// param sp1 Array of Spider-geddon heroes
+function populateTeam1Dropdown1(s1, s2, s3, p1, sp1) {
+    //Variable for default option
+    const noHero = "No Hero";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noHero;
+    defaultOption.text = noHero;
+    heroDropdown1team1.add(defaultOption);
+    //Populates the dropdown with Season 1 heroes
+    const season1Label = document.createElement('optgroup');
+    season1Label.label = "Season 1";
+    heroDropdown1team1.add(season1Label);
+    for (let i = 0; i < s1.length; i++) {
+        const option = document.createElement('option');
+        option.value = s1[i];
+        option.text = s1[i];
+        season1Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 2 heroes
+    const season2Label = document.createElement('optgroup');
+    season2Label.label = "Season 2";
+    heroDropdown1team1.add(season2Label);
+    for (let i = 0; i < s2.length; i++) {
+        const option = document.createElement('option');
+        option.value = s2[i];
+        option.text = s2[i];
+        season2Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 3 heroes
+    const season3Label = document.createElement('optgroup');
+    season3Label.label = "Season 3";
+    heroDropdown1team1.add(season3Label);
+    for (let i = 0; i < s3.length; i++) {
+        const option = document.createElement('option');
+        option.value = s3[i];
+        option.text = s3[i];
+        season3Label.appendChild(option);
+    }
+    //Populates the dropdown with Spider-geddon heroes
+    const spiderLabel = document.createElement('optgroup');
+    spiderLabel.label = "Spider-geddon";
+    heroDropdown1team1.add(spiderLabel);
+    for (let i = 0; i < sp1.length; i++) {
+        const option = document.createElement('option');
+        option.value = sp1[i];
+        option.text = sp1[i];
+        spiderLabel.appendChild(option);
+    }
+    //Populates the dropdown with promotional heroes
+    const promoLabel = document.createElement('optgroup');
+    promoLabel.label = "Promos";
+    heroDropdown1team1.add(promoLabel);
+    for (let i = 0; i < p1.length; i++) {
+        const option = document.createElement('option');
+        option.value = p1[i];
+        option.text = p1[i];
+        promoLabel.appendChild(option);
+    }
+}
+// populateTeam1Dropdown2() function that populates the blue team's second hero dropdown
+// param s1 Array of Season 1 heroes
+// param s2 Array of Season 2 heroes
+// param s3 Array of Season 3 heroes
+// param p1 Array of Promotional heroes
+// param sp1 Array of Spider-geddon heroes
+function populateTeam1Dropdown2(s1, s2, s3, p1, sp1) {
+    //Variable for default option
+    const noHero = "No Hero";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noHero;
+    defaultOption.text = noHero;
+    heroDropdown2team1.add(defaultOption);
+    //Populates the dropdown with Season 1 heroes
+    const season1Label = document.createElement('optgroup');
+    season1Label.label = "Season 1";
+    heroDropdown2team1.add(season1Label);
+    for (let i = 0; i < s1.length; i++) {
+        const option = document.createElement('option');
+        option.value = s1[i];
+        option.text = s1[i];
+        season1Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 2 heroes
+    const season2Label = document.createElement('optgroup');
+    season2Label.label = "Season 2";
+    heroDropdown2team1.add(season2Label);
+    for (let i = 0; i < s2.length; i++) {
+        const option = document.createElement('option');
+        option.value = s2[i];
+        option.text = s2[i];
+        season2Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 3 heroes
+    const season3Label = document.createElement('optgroup');
+    season3Label.label = "Season 3";
+    heroDropdown2team1.add(season3Label);
+    for (let i = 0; i < s3.length; i++) {
+        const option = document.createElement('option');
+        option.value = s3[i];
+        option.text = s3[i];
+        season3Label.appendChild(option);
+    }
+    //Populates the dropdown with Spider-geddon heroes
+    const spiderLabel = document.createElement('optgroup');
+    spiderLabel.label = "Spider-geddon";
+    heroDropdown2team1.add(spiderLabel);
+    for (let i = 0; i < sp1.length; i++) {
+        const option = document.createElement('option');
+        option.value = sp1[i];
+        option.text = sp1[i];
+        spiderLabel.appendChild(option);
+    }
+    //Populates the dropdown with promotional heroes
+    const promoLabel = document.createElement('optgroup');
+    promoLabel.label = "Promos";
+    heroDropdown2team1.add(promoLabel);
+    for (let i = 0; i < p1.length; i++) {
+        const option = document.createElement('option');
+        option.value = p1[i];
+        option.text = p1[i];
+        promoLabel.appendChild(option);
+    }
+}
+// populateTeam1Dropdown3() function that populates the blue team's third hero dropdown
+// param s1 Array of Season 1 heroes
+// param s2 Array of Season 2 heroes
+// param s3 Array of Season 3 heroes
+// param p1 Array of Promotional heroes
+// param sp1 Array of Spider-geddon heroes
+function populateTeam1Dropdown3(s1, s2, s3, p1, sp1) {
+    //Variable for default option
+    const noHero = "No Hero";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noHero;
+    defaultOption.text = noHero;
+    heroDropdown3team1.add(defaultOption);
+    //Populates the dropdown with Season 1 heroes
+    const season1Label = document.createElement('optgroup');
+    season1Label.label = "Season 1";
+    heroDropdown3team1.add(season1Label);
+    for (let i = 0; i < s1.length; i++) {
+        const option = document.createElement('option');
+        option.value = s1[i];
+        option.text = s1[i];
+        season1Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 2 heroes
+    const season2Label = document.createElement('optgroup');
+    season2Label.label = "Season 2";
+    heroDropdown3team1.add(season2Label);
+    for (let i = 0; i < s2.length; i++) {
+        const option = document.createElement('option');
+        option.value = s2[i];
+        option.text = s2[i];
+        season2Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 3 heroes
+    const season3Label = document.createElement('optgroup');
+    season3Label.label = "Season 3";
+    heroDropdown3team1.add(season3Label);
+    for (let i = 0; i < s3.length; i++) {
+        const option = document.createElement('option');
+        option.value = s3[i];
+        option.text = s3[i];
+        season3Label.appendChild(option);
+    }
+    //Populates the dropdown with Spider-geddon heroes
+    const spiderLabel = document.createElement('optgroup');
+    spiderLabel.label = "Spider-geddon";
+    heroDropdown3team1.add(spiderLabel);
+    for (let i = 0; i < sp1.length; i++) {
+        const option = document.createElement('option');
+        option.value = sp1[i];
+        option.text = sp1[i];
+        spiderLabel.appendChild(option);
+    }
+    //Populates the dropdown with promotional heroes
+    const promoLabel = document.createElement('optgroup');
+    promoLabel.label = "Promos";
+    heroDropdown3team1.add(promoLabel);
+    for (let i = 0; i < p1.length; i++) {
+        const option = document.createElement('option');
+        option.value = p1[i];
+        option.text = p1[i];
+        promoLabel.appendChild(option);
+    }
+}
+// populateTeam1Dropdown4() function that populates the blue team's fourth hero dropdown
+// param s1 Array of Season 1 heroes
+// param s2 Array of Season 2 heroes
+// param s3 Array of Season 3 heroes
+// param p1 Array of Promotional heroes
+// param sp1 Array of Spider-geddon heroes
+function populateTeam1Dropdown4(s1, s2, s3, p1, sp1) {
+    //Variable for default option
+    const noHero = "No Hero";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noHero;
+    defaultOption.text = noHero;
+    heroDropdown4team1.add(defaultOption);
+    //Populates the dropdown with Season 1 heroes
+    const season1Label = document.createElement('optgroup');
+    season1Label.label = "Season 1";
+    heroDropdown4team1.add(season1Label);
+    for (let i = 0; i < s1.length; i++) {
+        const option = document.createElement('option');
+        option.value = s1[i];
+        option.text = s1[i];
+        season1Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 2 heroes
+    const season2Label = document.createElement('optgroup');
+    season2Label.label = "Season 2";
+    heroDropdown4team1.add(season2Label);
+    for (let i = 0; i < s2.length; i++) {
+        const option = document.createElement('option');
+        option.value = s2[i];
+        option.text = s2[i];
+        season2Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 3 heroes
+    const season3Label = document.createElement('optgroup');
+    season3Label.label = "Season 3";
+    heroDropdown4team1.add(season3Label);
+    for (let i = 0; i < s3.length; i++) {
+        const option = document.createElement('option');
+        option.value = s3[i];
+        option.text = s3[i];
+        season3Label.appendChild(option);
+    }
+    //Populates the dropdown with Spider-geddon heroes
+    const spiderLabel = document.createElement('optgroup');
+    spiderLabel.label = "Spider-geddon";
+    heroDropdown4team1.add(spiderLabel);
+    for (let i = 0; i < sp1.length; i++) {
+        const option = document.createElement('option');
+        option.value = sp1[i];
+        option.text = sp1[i];
+        spiderLabel.appendChild(option);
+    }
+    //Populates the dropdown with promotional heroes
+    const promoLabel = document.createElement('optgroup');
+    promoLabel.label = "Promos";
+    heroDropdown4team1.add(promoLabel);
+    for (let i = 0; i < p1.length; i++) {
+        const option = document.createElement('option');
+        option.value = p1[i];
+        option.text = p1[i];
+        promoLabel.appendChild(option);
+    }
+}
+// populateTeam2Dropdown1() function that populates the gold team's first hero dropdown
+// param s1 Array of Season 1 heroes
+// param s2 Array of Season 2 heroes
+// param s3 Array of Season 3 heroes
+// param p1 Array of Promotional heroes
+// param sp1 Array of Spider-geddon heroes
+function populateTeam2Dropdown1(s1, s2, s3, p1, sp1) {
+    //Variable for default option
+    const noHero = "No Hero";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noHero;
+    defaultOption.text = noHero;
+    heroDropdown1team2.add(defaultOption);
+    //Populates the dropdown with Season 1 heroes
+    const season1Label = document.createElement('optgroup');
+    season1Label.label = "Season 1";
+    heroDropdown1team2.add(season1Label);
+    for (let i = 0; i < s1.length; i++) {
+        const option = document.createElement('option');
+        option.value = s1[i];
+        option.text = s1[i];
+        season1Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 2 heroes
+    const season2Label = document.createElement('optgroup');
+    season2Label.label = "Season 2";
+    heroDropdown1team2.add(season2Label);
+    for (let i = 0; i < s2.length; i++) {
+        const option = document.createElement('option');
+        option.value = s2[i];
+        option.text = s2[i];
+        season2Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 3 heroes
+    const season3Label = document.createElement('optgroup');
+    season3Label.label = "Season 3";
+    heroDropdown1team2.add(season3Label);
+    for (let i = 0; i < s3.length; i++) {
+        const option = document.createElement('option');
+        option.value = s3[i];
+        option.text = s3[i];
+        season3Label.appendChild(option);
+    }
+    //Populates the dropdown with Spider-geddon heroes
+    const spiderLabel = document.createElement('optgroup');
+    spiderLabel.label = "Spider-geddon";
+    heroDropdown1team2.add(spiderLabel);
+    for (let i = 0; i < sp1.length; i++) {
+        const option = document.createElement('option');
+        option.value = sp1[i];
+        option.text = sp1[i];
+        spiderLabel.appendChild(option);
+    }
+    //Populates the dropdown with promotional heroes
+    const promoLabel = document.createElement('optgroup');
+    promoLabel.label = "Promos";
+    heroDropdown1team2.add(promoLabel);
+    for (let i = 0; i < p1.length; i++) {
+        const option = document.createElement('option');
+        option.value = p1[i];
+        option.text = p1[i];
+        promoLabel.appendChild(option);
+    }
+}
+// populateTeam2Dropdown2() function that populates the gold team's second hero dropdown
+// param s1 Array of Season 1 heroes
+// param s2 Array of Season 2 heroes
+// param s3 Array of Season 3 heroes
+// param p1 Array of Promotional heroes
+// param sp1 Array of Spider-geddon heroes
+function populateTeam2Dropdown2(s1, s2, s3, p1, sp1) {
+    //Variable for default option
+    const noHero = "No Hero";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noHero;
+    defaultOption.text = noHero;
+    heroDropdown2team2.add(defaultOption);
+    //Populates the dropdown with Season 1 heroes
+    const season1Label = document.createElement('optgroup');
+    season1Label.label = "Season 1";
+    heroDropdown2team2.add(season1Label);
+    for (let i = 0; i < s1.length; i++) {
+        const option = document.createElement('option');
+        option.value = s1[i];
+        option.text = s1[i];
+        season1Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 2 heroes
+    const season2Label = document.createElement('optgroup');
+    season2Label.label = "Season 2";
+    heroDropdown2team2.add(season2Label);
+    for (let i = 0; i < s2.length; i++) {
+        const option = document.createElement('option');
+        option.value = s2[i];
+        option.text = s2[i];
+        season2Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 3 heroes
+    const season3Label = document.createElement('optgroup');
+    season3Label.label = "Season 3";
+    heroDropdown2team2.add(season3Label);
+    for (let i = 0; i < s3.length; i++) {
+        const option = document.createElement('option');
+        option.value = s3[i];
+        option.text = s3[i];
+        season3Label.appendChild(option);
+    }
+    //Populates the dropdown with Spider-geddon heroes
+    const spiderLabel = document.createElement('optgroup');
+    spiderLabel.label = "Spider-geddon";
+    heroDropdown2team2.add(spiderLabel);
+    for (let i = 0; i < sp1.length; i++) {
+        const option = document.createElement('option');
+        option.value = sp1[i];
+        option.text = sp1[i];
+        spiderLabel.appendChild(option);
+    }
+    //Populates the dropdown with promotional heroes
+    const promoLabel = document.createElement('optgroup');
+    promoLabel.label = "Promos";
+    heroDropdown2team2.add(promoLabel);
+    for (let i = 0; i < p1.length; i++) {
+        const option = document.createElement('option');
+        option.value = p1[i];
+        option.text = p1[i];
+        promoLabel.appendChild(option);
+    }
+}
+// populateTeam2Dropdown3() function that populates the gold team's third hero dropdown
+// param s1 Array of Season 1 heroes
+// param s2 Array of Season 2 heroes
+// param s3 Array of Season 3 heroes
+// param p1 Array of Promotional heroes
+// param sp1 Array of Spider-geddon heroes
+function populateTeam2Dropdown3(s1, s2, s3, p1, sp1) {
+    //Variable for default option
+    const noHero = "No Hero";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noHero;
+    defaultOption.text = noHero;
+    heroDropdown3team2.add(defaultOption);
+    //Populates the dropdown with Season 1 heroes
+    const season1Label = document.createElement('optgroup');
+    season1Label.label = "Season 1";
+    heroDropdown3team2.add(season1Label);
+    for (let i = 0; i < s1.length; i++) {
+        const option = document.createElement('option');
+        option.value = s1[i];
+        option.text = s1[i];
+        season1Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 2 heroes
+    const season2Label = document.createElement('optgroup');
+    season2Label.label = "Season 2";
+    heroDropdown3team2.add(season2Label);
+    for (let i = 0; i < s2.length; i++) {
+        const option = document.createElement('option');
+        option.value = s2[i];
+        option.text = s2[i];
+        season2Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 3 heroes
+    const season3Label = document.createElement('optgroup');
+    season3Label.label = "Season 3";
+    heroDropdown3team2.add(season3Label);
+    for (let i = 0; i < s3.length; i++) {
+        const option = document.createElement('option');
+        option.value = s3[i];
+        option.text = s3[i];
+        season3Label.appendChild(option);
+    }
+    //Populates the dropdown with Spider-geddon heroes
+    const spiderLabel = document.createElement('optgroup');
+    spiderLabel.label = "Spider-geddon";
+    heroDropdown3team2.add(spiderLabel);
+    for (let i = 0; i < sp1.length; i++) {
+        const option = document.createElement('option');
+        option.value = sp1[i];
+        option.text = sp1[i];
+        spiderLabel.appendChild(option);
+    }
+    //Populates the dropdown with promotional heroes
+    const promoLabel = document.createElement('optgroup');
+    promoLabel.label = "Promos";
+    heroDropdown3team2.add(promoLabel);
+    for (let i = 0; i < p1.length; i++) {
+        const option = document.createElement('option');
+        option.value = p1[i];
+        option.text = p1[i];
+        promoLabel.appendChild(option);
+    }
+}
+// populateTeam2Dropdown4() function that populates the gold team's fourth hero dropdown
+// param s1 Array of Season 1 heroes
+// param s2 Array of Season 2 heroes
+// param s3 Array of Season 3 heroes
+// param p1 Array of Promotional heroes
+// param sp1 Array of Spider-geddon heroes
+function populateTeam2Dropdown4(s1, s2, s3, p1, sp1) {
+    //Variable for default option
+    const noHero = "No Hero";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noHero;
+    defaultOption.text = noHero;
+    heroDropdown4team2.add(defaultOption);
+    //Populates the dropdown with Season 1 heroes
+    const season1Label = document.createElement('optgroup');
+    season1Label.label = "Season 1";
+    heroDropdown4team2.add(season1Label);
+    for (let i = 0; i < s1.length; i++) {
+        const option = document.createElement('option');
+        option.value = s1[i];
+        option.text = s1[i];
+        season1Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 2 heroes
+    const season2Label = document.createElement('optgroup');
+    season2Label.label = "Season 2";
+    heroDropdown4team2.add(season2Label);
+    for (let i = 0; i < s2.length; i++) {
+        const option = document.createElement('option');
+        option.value = s2[i];
+        option.text = s2[i];
+        season2Label.appendChild(option);
+    }
+    //Populates the dropdown with Season 3 heroes
+    const season3Label = document.createElement('optgroup');
+    season3Label.label = "Season 3";
+    heroDropdown4team2.add(season3Label);
+    for (let i = 0; i < s3.length; i++) {
+        const option = document.createElement('option');
+        option.value = s3[i];
+        option.text = s3[i];
+        season3Label.appendChild(option);
+    }
+    //Populates the dropdown with Spider-geddon heroes
+    const spiderLabel = document.createElement('optgroup');
+    spiderLabel.label = "Spider-geddon";
+    heroDropdown4team2.add(spiderLabel);
+    for (let i = 0; i < sp1.length; i++) {
+        const option = document.createElement('option');
+        option.value = sp1[i];
+        option.text = sp1[i];
+        spiderLabel.appendChild(option);
+    }
+    //Populates the dropdown with promotional heroes
+    const promoLabel = document.createElement('optgroup');
+    promoLabel.label = "Promos";
+    heroDropdown4team2.add(promoLabel);
+    for (let i = 0; i < p1.length; i++) {
+        const option = document.createElement('option');
+        option.value = p1[i];
+        option.text = p1[i];
+        promoLabel.appendChild(option);
+    }
+}
 // populateDropdownVillains() function that populates the villain dropdown
 // param s1 Array of Season 1 villains
 // param s2 Array of Season 2 villains
@@ -342,7 +884,7 @@ function populateDropdownVillains(s1, s2, s3, sp1) {
     }
 }
 
-// expand() function that adds the 'collaps' class to fieldsets based on button pressed
+// expand() function that adds the 'collapse' class to fieldsets based on button pressed
 function expand () {
     //variable for button that was pressed
     let button = event.target.id;
@@ -360,36 +902,78 @@ function expand () {
     }
 }
 
+// showAlternateSelections() function that adds the 'collapse' class to divs based on button pressed
+function showAlternateSelections() {
+    //varaible for radio button that was pressed
+    let optionalMode = event.target.id;
+    //IF the radio button selected was not 'teamvteam' and 'team1herodropdowns' is not collapsed
+    if(optionalMode != 'teamvteam' && document.getElementById('team1herodropdowns').classList.value != 'team1herodropdowns collapse'){
+        //add the collapse class to Team vs Team menus
+        document.getElementById('team1herodropdownslabel').classList.toggle('collapse');
+        document.getElementById('team1herodropdowns').classList.toggle('collapse');
+        document.getElementById('team2herodropdownslabel').classList.toggle('collapse');
+        //remove the collapse class to regular hero menus
+        document.getElementById('team2herodropdowns').classList.toggle('collapse');
+        document.getElementById('herodropdowns').classList.toggle('collapse');
+    }
+    //ELSE IF the radio button selected was 'teamvteam' and 'team1herodropdowns' is collapsed
+    else if(optionalMode == 'teamvteam' && document.getElementById('team1herodropdowns').classList.value == 'team1herodropdowns collapse') {
+        //remove the collapse class to Team vs Team menus
+        document.getElementById('team1herodropdownslabel').classList.toggle('collapse');
+        document.getElementById('team1herodropdowns').classList.toggle('collapse');
+        document.getElementById('team2herodropdownslabel').classList.toggle('collapse');
+        document.getElementById('team2herodropdowns').classList.toggle('collapse');
+        //add the collapse class to regular hero menus
+        document.getElementById('herodropdowns').classList.toggle('collapse');
+    }
+}
+
 // getRelevantAchievements() function that takes user inputs and passes them to relevant functions
 function getRelevantAchievements() {
     //Array to hold chosen heroes
     const selectedHeroes = [];
-    
-    //IF a hero has been selected
-    if (document.getElementById('heroes1').value != 'No Hero') {
-        //gets the selected hero
-        selectedHeroes.push(document.getElementById('heroes1').value);
+
+    //variable for selected game mode
+    const selectedGameMode = getSelectedGameMode();
+    //IF Team vs Team is selected game mode
+    if(selectedGameMode == 'teamvteam') {
+        const selectedTeamHeroes = getTeamInformation();
+        if(selectedTeamHeroes.length == 0) {
+            return;
+        }
+        else {
+            for(let i = 0; i < selectedTeamHeroes.length; i++) {
+                selectedHeroes.push(selectedTeamHeroes[i]);
+            }
+        }
     }
-    //IF a hero has been selected
-    if (document.getElementById('heroes2').value != 'No Hero') {
-        //gets the selected hero
-        selectedHeroes.push(document.getElementById('heroes2').value);
-    }
-    //IF a hero has been selected
-    if (document.getElementById('heroes3').value != 'No Hero') {
-        //gets the selected hero
-        selectedHeroes.push(document.getElementById('heroes3').value);
-    }
-    //IF a hero has been selected
-    if (document.getElementById('heroes4').value != 'No Hero') {
-        //gets the selected hero
-        selectedHeroes.push(document.getElementById('heroes4').value);
+    //ELSE use default dropdowns
+    else {
+        //IF a hero has been selected
+        if (document.getElementById('heroes1').value != 'No Hero') {
+            //gets the selected hero
+            selectedHeroes.push(document.getElementById('heroes1').value);
+        }
+        //IF a hero has been selected
+        if (document.getElementById('heroes2').value != 'No Hero') {
+            //gets the selected hero
+            selectedHeroes.push(document.getElementById('heroes2').value);
+        }
+        //IF a hero has been selected
+        if (document.getElementById('heroes3').value != 'No Hero') {
+            //gets the selected hero
+            selectedHeroes.push(document.getElementById('heroes3').value);
+        }
+        //IF a hero has been selected
+        if (document.getElementById('heroes4').value != 'No Hero') {
+            //gets the selected hero
+            selectedHeroes.push(document.getElementById('heroes4').value);
+        }
     }    
     
     //varaibles for other user selection
     const selectedVillain = document.getElementById('villain').value;
     const selectedChallenges = getSelectedChallenges();
-    const selectedGameMode = getSelectedGameMode();
     const selectedDifficulty = document.getElementById('difficulty').value;
     const selectedAdditionalFactors = getAdditionalFactors();
     
@@ -3292,4 +3876,81 @@ function showRemainingAchievements() {
         label.appendChild(br);
         availableAchievementsSpider.appendChild(label);
     }
+}
+
+// getTeamInformation() function that gets heroes used in Team v Team mode
+function getTeamInformation() {
+    //Arrays to hold chosen heroes for each team
+    const selectedHeroesTeam1 = [];
+    const selectedHeroesTeam2 = [];
+    //Array for combined heroes
+    const allSelectedHeroes = [];
+
+    //IF a hero has been selected
+    if (document.getElementById('heroes1team1').value != 'No Hero') {
+        //gets the selected hero
+        selectedHeroesTeam1.push(document.getElementById('heroes1team1').value);
+    }
+    //IF a hero has been selected
+    if (document.getElementById('heroes2team1').value != 'No Hero') {
+        //gets the selected hero
+        selectedHeroesTeam1.push(document.getElementById('heroes2team1').value);
+    }
+    //IF a hero has been selected
+    if (document.getElementById('heroes3team1').value != 'No Hero') {
+        //gets the selected hero
+        selectedHeroesTeam1.push(document.getElementById('heroes3team1').value);
+    }
+    //IF a hero has been selected
+    if (document.getElementById('heroes4team1').value != 'No Hero') {
+        //gets the selected hero
+        selectedHeroesTeam1.push(document.getElementById('heroes4team1').value);
+    }
+    //IF a hero has been selected
+    if (document.getElementById('heroes1team2').value != 'No Hero') {
+        //gets the selected hero
+        selectedHeroesTeam2.push(document.getElementById('heroes1team2').value);
+    }
+    //IF a hero has been selected
+    if (document.getElementById('heroes2team2').value != 'No Hero') {
+        //gets the selected hero
+        selectedHeroesTeam2.push(document.getElementById('heroes2team2').value);
+    }
+    //IF a hero has been selected
+    if (document.getElementById('heroes3team2').value != 'No Hero') {
+        //gets the selected hero
+        selectedHeroesTeam2.push(document.getElementById('heroes3team2').value);
+    }
+    //IF a hero has been selected
+    if (document.getElementById('heroes4team2').value != 'No Hero') {
+        //gets the selected hero
+        selectedHeroesTeam2.push(document.getElementById('heroes4team2').value);
+    }
+
+    //IF teams do not have same number of heroes
+    if (selectedHeroesTeam1.length != selectedHeroesTeam2.length){
+        //alert user to uneven teams
+        alert('Both teams must be same size');
+    }
+    //ELSE
+    else {
+        //IF at least one hero has been selected
+        if(selectedHeroesTeam1.length != 0) {
+            //FOR all blue team heroes
+            for(let i = 0; i < selectedHeroesTeam1.length; i++) {
+                //add heroes to array
+                allSelectedHeroes.push(selectedHeroesTeam1[i]);
+            }
+        }
+        //IF at least one hero has been selected
+        if(selectedHeroesTeam2.length != 0) {
+            //FOR all gold team heroes
+            for(let i = 0; i < selectedHeroesTeam2.length; i++) {
+                //all heroes to array
+                allSelectedHeroes.push(selectedHeroesTeam2[i]);
+            }
+        }
+    }
+    //return all selected hereos
+    return allSelectedHeroes;
 }
