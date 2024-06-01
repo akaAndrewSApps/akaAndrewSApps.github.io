@@ -1817,13 +1817,29 @@ function getNewAchievements(heroes, villain, challenges, difficulty) {
     if (villain == 'Nimrod' && (heroes.includes('Magneto') || heroes.includes('Magneto (AoA)')) && heroes.includes('Professor X') && heroes.includes('Mystique') && heroes.includes('Emma Frost') && (difficulty == 'hard' || difficulty == 'heroic')) {
         availableAchievements.push('Powers of X: Defeat Nimrod with Magneto, Xavier, Mystique, and Emma Frost, on Hard or Heroic difficulty Challenge');
     }
-    /*FIXME ADD TEAM V TEAM
-    if (villain == '' && heroes.includes('') && heroes.includes('') && heroes.includes('') && heroes.includes('')) {
-        availableAchievements.push('AvX: On Team vs Team Mode, defeat Dark Phoenix with a team of Avengers against a team of X-Men');
+    //FIXME ADD TEAM V TEAM
+    let selectedGameMode = getSelectedGameMode();
+    if(selectedGameMode == 'teamvteam' && villain == 'Dark Phoenix') {
+        //get teams
+        const selectedTeamHeroes = getTeamInformation();
+        const team1 = [];
+        const team2 = [];
+        let halfwayPoint = selectedTeamHeroes.length / 2;
+
+        for(let i = 0; i < halfwayPoint; i++) {
+            team1.push(selectedTeamHeroes[i]);
+        }
+        for(let i = halfwayPoint; i < selectedTeamHeroes.length; i++) {
+            team2.push(selectedTeamHeroes[i]);
+        }
+        //check teams
+        const team1Teams = getAvailableTeams(team1);
+        const team2Teams = getAvailableTeams(team2);
+        if((team1Teams.includes('Avengers') && team2Teams.includes('X-Men')) || (team2Teams.includes('Avengers') && team1Teams.includes('X-Men'))) {
+            availableAchievements.push('AvX: On Team vs Team Mode, defeat Dark Phoenix with a team of Avengers against a team of X-Men');
+            availableAchievements.push('XvA: On Team vs Team Mode, defeat Dark Phoenix with a team of X-Men against a team of Avengers');
+        }
     }
-    if (villain == '' && heroes.includes('') && heroes.includes('') && heroes.includes('') && heroes.includes('')) {
-        availableAchievements.push('XvA: On Team vs Team Mode, defeat Dark Phoenix with a team of X-Men against a team of Avengers');
-    }*/
     if (villain == 'Shadow King' && heroes.includes('Legion') && heroes.includes('Professor X') && (difficulty == 'hard' || difficulty == 'heroic')) {
         availableAchievements.push('Working together: Defeat Shadow King with Legion and Professor X on Hard or Heroic difficulty');
     }
@@ -3536,7 +3552,8 @@ function getAvailableTeams(heroes) {
         {teamName : 'A-Force', roster: ['America Chavez', 'Captain Marvel', 'Dazzler', 'Kate Bishop', 'Medusa', 'Mighty Thor', 'She-Hulk', 'Spectrum', 'Spider-Woman', 'Squirrel Girl', 'Stature']},
         {teamName : 'Alpha Flight', roster: ['Aurora', 'Guardian', 'Northstar', 'Puck', 'Sasquatch', 'Snowbird', 'Wolverine']},
         {teamName : 'Asgardians & Allies', roster: ['Beta Ray Bill', 'Korg', 'Loki', 'Mighty Thor', 'Thor', 'Valkyrie']},
-        {teamName : 'Avengers', roster: ['Ant-Man', 'Black Knight', 'Black Widow', 'Captain America', 'Captain America (Sam)', 'Captain Marvel', 'Falcon', 'Firestar', 'Hawkeye', 'Hercules', 'Hulk', 'Iron Man', 'Quicksilver', 'Scarlet Witch', 'She-Hulk', 'Thor', 'Wasp', 'Winter Soldier']},
+        //checked via card
+        {teamName : 'Avengers', roster: ['Ant-Man', 'Black Knight', 'Black Widow', 'Captain America', 'Captain America (Classic)', 'Captain America (Sam)', 'Captain Marvel', 'Falcon', 'Firestar', 'Gladiator Hulk', 'Hawkeye', 'Hercules', 'Hulk', 'Iron Man','Iron Man (Civil War)','Hulkbuster Iron Man','Quicksilver', 'Scarlet Witch', 'She-Hulk', 'Thor', 'Wasp', 'Winter Soldier']},
         {teamName : 'Champions', roster: ['Angel', 'Black Widow', 'Ghost Rider (Blaze)', 'Hercules', 'Iceman (First Class)', 'Ironheart', 'Miles Morales', 'Ms. Marvel', 'Nova', 'Patriot', 'Silk']},
         {teamName : 'Dark Avengers', roster: ['Ares', 'Daken', 'Moonstone', 'Sentry', 'Songbird', 'U.S. Agent']},
         {teamName : 'Deadpool Team-Up', roster: ['Bob', 'Cable', 'Deadpool', 'Domino', 'Elsa Bloodstone', 'Lady Deadpool', 'Wolverine']},
@@ -3568,7 +3585,8 @@ function getAvailableTeams(heroes) {
         {teamName : 'West Coast Avengers', roster: ['Hawkeye','Iron Man','Mockingbird','Scarlet Witch','Tigra','Vision','War Machine','Wonder-Man']},
         {teamName : 'X-Factor', roster: ['Forge','Havok (X-Factor)','Multiple Man','Polaris','Quicksilver','Strong Guy','Wolfsbane']},
         {teamName : 'X-Force', roster: ['Boom Boom','Cable','Cannonball','Deadpool','Domino','Doop','Feral','Hope Summers','Shatterstar','Sunspot','Siryn','Warpath']},
-        {teamName : 'X-Men', roster: ['Angel','Archangel','Banshee','Beast','Bishop','Blink','Colossus','Cyclops','Dazzler','Emma Frost','Firestar','Forge','Gambit','Gwenpool','Iceman','Jean Grey','Jubilee','Logan','Longshot','Magneto','Marrow','Mystique','Nightcrawler','Pixie','Professor X','Psylocke','Rogue','Storm','Sunfire','Weapon X','Wolverine']},
+        //checked via card
+        {teamName : 'X-Men', roster: ['Angel','Archangel','Banshee','Beast','Beast (First Class)','Bishop','Blink','Colossus','Cyclops','Cyclops (First Class)','Dazzler','Emma Frost','Firestar','Forge','Gambit','Gwenpool','Iceman','Iceman (First Class)','Jean Grey','Jubilee','Juggernaut','Logan','Longshot','Magneto','Magneto (AoA)','Marrow','Marvel Girl','Mystique','Nightcrawler','Pixie','Professor X','Psylocke','Rogue','Storm','Storm (Mohawk)','Sunfire','Weapon X','Wolverine']},
         {teamName : 'Young Avengers', roster: ['America Chavez','Hulkling','Iron Lad','Kate Bishop','Kid Loki','Patriot','Speed','Stature','Wiccan']}];
     //Array to hold all relevant teams
     const tempTeams = [];
