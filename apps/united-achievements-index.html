@@ -9,7 +9,7 @@
 <body>
     <div id="app">
         <h1 align='center'>Achievement Tracker</h1>
-        <div class="herodropdowns">
+        <div class="herodropdowns" id="herodropdowns">
             <div class="hero">
                 <label for="heroes1">Select Hero 1:</label>
                 <select id="heroes1"></select>
@@ -30,6 +30,56 @@
                 <select id="heroes4"></select>
             </div>
         </div>
+        <div class="team1herodropdownslabel collapse" id="team1herodropdownslabel">
+            <label for="team1herodropdowns">Blue Team</label>
+        </div>
+        <div class="team1herodropdowns collapse" id="team1herodropdowns">
+            <div class="hero">
+                <label for="heroes1team1">Select Hero 1:</label>
+                <select id="heroes1team1"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes2team1">Select Hero 2:</label>
+                <select id="heroes2team1"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes3team1">Select Hero 3:</label>
+                <select id="heroes3team1"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes4team1">Select Hero 4:</label>
+                <select id="heroes4team1"></select>
+            </div>
+        </div>
+        <div class="team2herodropdownslabel collapse" id="team2herodropdownslabel">
+            <label for="team2herodropdowns">Gold Team</label>
+        </div>
+        <div class="team2herodropdowns collapse" id="team2herodropdowns">
+            <div class="hero">
+                <label for="heroes1team2">Select Hero 1:</label>
+                <select id="heroes1team2"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes2team2">Select Hero 2:</label>
+                <select id="heroes2team2"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes3team2">Select Hero 3:</label>
+                <select id="heroes3team2"></select>
+            </div>
+
+            <div class="hero">
+                <label for="heroes4team2">Select Hero 4:</label>
+                <select id="heroes4team2"></select>
+            </div>
+        </div>
+            
+        
         
         <label for="villain">Select Villain:</label>
         <div class='villaindiv'>
@@ -107,28 +157,28 @@
             <legend>Optional Modes:</legend>
             <div>
                 <label>
-                    <input type="radio" id='shieldmode' name='gamemodes' value='shieldmode'> S.H.I.E.L.D. Solo Mode
+                    <input type="radio" id='shieldmode' name='gamemodes' value='shieldmode' onclick='showAlternateSelections()'> S.H.I.E.L.D. Solo Mode
                 </label>
                 <label>
-                    <input type="radio" id="solomodex" name="gamemodes" value="solomodex"> Xavier Solo Mode
+                    <input type="radio" id="solomodex" name="gamemodes" value="solomodex" onclick='showAlternateSelections()'> Xavier Solo Mode
                 </label>
                 <label>
-                    <input type="radio" id="commander" name="gamemodes" value="commander"> Commander Solo Mode
+                    <input type="radio" id="commander" name="gamemodes" value="commander" onclick='showAlternateSelections()'> Commander Solo Mode
                 </label>
             </div>
             <div>
                 <label>
-                    <input type="radio" id="supervillain" name="gamemodes" value="supervillain"> Super Villain
+                    <input type="radio" id="supervillain" name="gamemodes" value="supervillain" onclick='showAlternateSelections()'> Super Villain
                 </label>
                 <label>
-                    <input type="radio" id="teamvteam" name="gamemodes" value="teamvteam"> Team vs Team (COMING SOON)
+                    <input type="radio" id="teamvteam" name="gamemodes" value="teamvteam" onclick='showAlternateSelections()'> Team vs Team (COMING SOON)
                 </label></div>
             <div>
                 <label>
-                    <input type="radio" id="registrationclash" name="gamemodes" value="registrationclash"> Registration Clash (COMING SOON)
+                    <input type="radio" id="registrationclash" name="gamemodes" value="registrationclash" onclick='showAlternateSelections()'> Registration Clash (COMING SOON)
                 </label>
                 <label>
-                    <input type="radio" id="clashofheroes" name="gamemodes" value="clashofheroes"> Clash of Heroes (COMING SOON)
+                    <input type="radio" id="clashofheroes" name="gamemodes" value="clashofheroes" onclick='showAlternateSelections()'> Clash of Heroes (COMING SOON)
                 </label>
             </div>
         </fieldset>
