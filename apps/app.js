@@ -3077,24 +3077,93 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
         heroFeatsAchievements.push('Mind Readers: Defeat a Villain with Professor X, Jean Grey, and Emma Frost');
     }
     //BLUE TEAM / GOLD TEAM achievements
-    //FIXME Consider adding checks for team being correct
-    /*if ((gamemode == 'teamvteam') && (heroes.includes('Jubilee') || heroes.includes('Gambit') || heroes.includes('Rogue') || heroes.includes('Psylocke') || heroes.includes('Banshee') || heroes.includes('Archangel') || heroes.includes('Colossus') || heroes.includes('Iceman') || heroes.includes('Bishop') || heroes.includes('Forge'))) {
-        let onlyBlueGold = true;
-        for (let i = 0; i < heroes.length; i++) {
-            if (heroes[i] != 'Jubilee' && heroes[i] != 'Gambit' && heroes[i] != 'Rogue' && heroes[i] != 'Psylocke' && heroes[i] != 'Banshee' && heroes[i] != 'Archangel' && heroes[i] != 'Colossus' && heroes[i] != 'Iceman' && heroes[i] != 'Bishop' && heroes[i] != 'Forge') {
-                onlyBlueGold = false;
+    let selectedGameMode = getSelectedGameMode();
+    if(selectedGameMode == 'teamvteam') {
+        //get teams
+        const selectedTeamHeroes = getTeamInformation();
+        const team1 = [];
+        const team2 = [];
+        let halfwayPoint = selectedTeamHeroes.length / 2;
+
+        for(let i = 0; i < halfwayPoint; i++) {
+            team1.push(selectedTeamHeroes[i]);
+        }
+        for(let i = halfwayPoint; i < selectedTeamHeroes.length; i++) {
+            team2.push(selectedTeamHeroes[i]);
+        }
+        //check teams
+        let team1BlueTeam = true;
+        let team2BlueTeam = true;
+        let team1GoldTeam = true;
+        let team2GoldTeam = true;
+        //FOR each hero on Team 1
+        for (let i = 0; i < team1.length; i++) {
+            //IF the current hero is not a member of Blue Team box
+            if (team1[i] != 'Banshee' && team1[i] != 'Gambit' && team1[i] != 'Jubilee' && team1[i] != 'Psylocke' && team1[i] != 'Rogue') {
+                team1BlueTeam = false;
             }
         }
-        if (onlyBlueGold) {
+        //IF Team 1 is all from Blue Team box
+        if (team1BlueTeam) {
+            //FOR each hero on Team 2
+            for (let i = 0; i < team2.length; i++) {
+                //IF the current hero is not a member of Gold Team box
+                if (team2[i] != 'Archangel' && team2[i] != 'Bishop' && team2[i] != 'Colossus' && team2[i] != 'Forge' && team2[i] != 'Iceman') {
+                    team2GoldTeam = false;
+                }
+            }
+        }
+        //ELSE Team 1 is not all from Blue Team box
+        else {
+            //FOR each hero on Team 1
+            for (let i = 0; i < team1.length; i++) {
+                //IF the current hero is not a member of Gold Team box
+                if (team1[i] != 'Archangel' && team1[i] != 'Bishop' && team1[i] != 'Colossus' && team1[i] != 'Forge' && team1[i] != 'Iceman') {
+                    team1GoldTeam = false;
+                }
+            }
+            //IF Team 1 is all from Blue Team box
+            if(team1GoldTeam) {
+                //FOR each hero on Team 2
+                for (let i = 0; i < team2.length; i++) {
+                    //FOR each hero on Team 2
+                    for (let i = 0; i < team2.length; i++) {
+                        //IF the current hero is not a member of Blue Team box
+                        if (team2[i] != 'Banshee' && team2[i] != 'Gambit' && team2[i] != 'Jubilee' && team2[i] != 'Psylocke' && team2[i] != 'Rogue') {
+                            team2BlueTeam = false;
+                        }
+                    }
+                }
+            }
+        }
+        if ((team1BlueTeam && team2GoldTeam) || (team1GoldTeam && team2BlueTeam)) {
             heroFeatsAchievements.push('Win playing the Heroes from the Blue Team box over the Heroes from the Gold Team box');
             heroFeatsAchievements.push('Win playing the Heroes from the Gold Team box over the Heroes from the Blue Team box');
+        } 
+    }
+    if(selectedGameMode == 'teamvteam') {
+        //get teams
+        const selectedTeamHeroes = getTeamInformation();
+        const team1 = [];
+        const team2 = [];
+        let halfwayPoint = selectedTeamHeroes.length / 2;
+        for(let i = 0; i < halfwayPoint; i++) {
+            team1.push(selectedTeamHeroes[i]);
+        }
+        for(let i = halfwayPoint; i < selectedTeamHeroes.length; i++) {
+            team2.push(selectedTeamHeroes[i]);
+        }
+        let team1HasCyclops = team1.includes('Cyclops') || team1.includes('Cyclops (First Class)');
+        let team1HasWolverine = team1.includes('Wolverine') || team1.includes('Old Man Logan') || team1.includes('Weapon X') || team1.includes('Logan');
+        let team2HasCyclops = team2.includes('Cyclops') || team2.includes('Cyclops (First Class)');
+        let team2HasWolverine = team2.includes('Wolverine') || team2.includes('Old Man Logan') || team2.includes('Weapon X') || team2.includes('Logan');
+
+        if((team1HasCyclops && team2HasWolverine) || (team1HasWolverine && team2HasCyclops)) {
+            heroFeatsAchievements.push('Schism: Win a Team vs Team game with Cyclops while Wolverine is on the other team');
+            heroFeatsAchievements.push('Schism Rematch: Win a Team vs Team game with Wolverine while Cyclops is on the other team');
         }
     }
-    if ((gamemode == 'teamvteam') && (heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && (heroes.includes('Wolverine') || heroes.includes('Old Man Logan') || heroes.includes('Weapon X') || heroes.includes('Logan'))) {
-        heroFeatsAchievements.push('Schism: Win a Team vs Team game with Cyclops while Wolverine is on the other team');
-        heroFeatsAchievements.push('Schism Rematch: Win a Team vs Team game with Wolverine while Cyclops is on the other team');
-        
-    }*/
+    
     if(challenges.includes('deadpool')) {
         heroFeatsAchievements.push('Defeat a Villain using the Deadpool Challenge');
     }
