@@ -7,6 +7,8 @@ const season2Heroes = ["Angel", "Apocalypse", "Archangel", "Banshee", "Beast", "
 const season3Heroes = ["Agent Venom", "Ares", "Aurora", "Black Bolt", "Black Knight", "Captain America (Classic)", "Captain America (Sam)", "Captain Britain (Betsy)", "Captain Carter", "Ch'od", "Chamber", "Corsair", "Cosmic Ghost Rider", "Crystal", "Cyborg Spider-Man", "Cypher", "Daken", "Darkchild", "Darkstar", "Deathlok", "Doc Samson", "Elsa Bloodstone", "Gladiator", "Gladiator Hulk", "Ghost Rider (Blaze)", "Goliath", "Gorgon", "Havok (X-Factor)", "Hephzibah", "Hercules", "Hulkbuster Iron Man", "Hulkling", "Husk", "Ironheart", "Iron Lad", "Iron Man (Civil War)", "Iron Spider", "Karnak", "Kate Bishop", "Kid Loki", "Lilandra", "Lockjaw", "Loki", "M", "Magneto (AoA)", "Man-Thing", "Maria Hill", "Medusa",  "Meggan", "Mighty Thor", "Moondragon", "Moon Girl / Devil Dinosaur", "Moonstone", "Morbius", "Morph", "Nick Fury, Sr.", "Nova (Frankie Raye)", "Nova Prime", "Patriot", "Phyla-Vell", "Quake", "Quasar", "Raza", "Red Guardian", "Red Hulk", "Ronin", "Sabretooth / Wildchild", "Sentry", "Shuri Black Panther", "Siryn", "Songbird", "Spectrum", "Speed", "Spider-Man 2099 (Original)", "Stature", "Tigra", "Triton", "Ursa Major", "U.S. Agent", "Werewolf by Night", "White Widow", "Wiccan", "Wonder-Man", "Wong", "X-Man", "Yellowjacket"];
 //Array of all Spider-geddon Heroes
 const spiderHeroes = ['Anti-Venom', 'Peni Parker', 'Scarlet Spider', 'Silk', 'Spider-Man Noir', 'Spider-Punk', 'Superior Spider-Man', 'Symbiote Spider-Man']
+//Array of all DC Season1 Heroes //FIXME
+const dcSeason1Heroes = ['Aquaman','Batman', 'The Flash', 'Superman', 'Wonder Woman'];
 //Array of all promotional Heroes
 const promoHeroes = ["Deadpool (X-Force)", "Grey Hulk", "Juggernaut", "Mister Sinister"];
 //Array of all Season 1 Villains
@@ -17,7 +19,9 @@ const season2Villains = ["Apocalypse", "Arcade", "Avalanche", "Bob", "Brood Quee
 const season3Villains = ["Abomination ", "Absorbing Man", "Air-Walker", "Annihilus", "Apocalypse (AoA)", "Ares", "Blastaar", "Cabal (Doctor Doom)", "Cabal (Emma Frost)", "Cabal (Iron Patriot)", "Cabal (Loki)", "Cabal (Namor)", "Cabal (Taskmaster)", "Chameleon", "Cosmic Ghost Rider", "Crimson Dynamo", "Crimson Dynamo w/ Winter Guard", "Crossbones", "Daken", "Dark Avengers", "Dark Beast", "Dark Carnage", "Darkchild", "Demogoblin/Doppelganger", "Emperor Doom", "Enchantress", "Fin Fang Foom", "Fire Lord", "Galactus", "Gladiator", "Gladiator Hulk", "Gorr", "Heralds", "High Evolutionary ", "Hobgoblin", "Immortus", "Klaw", "Knull", "Lizard", "Maestro", "Maximus", "Mole Man", "Moonstone", "Morbius", "Nemesis", "New Sinister Six", "Nova (Frankie Raye)", "Purple Man", "Queen Veranke", "Red Hulk", "Scorpion", "Scream", "Sentry", "Shocker", "Shriek", "Sinister Six Assembled", "Skrulls", "Terrax", "Titania", "U.S. Agent", "Vulcan", "White Widow", "Winter Guard", "Wrecking Crew"];
 //Array of all Spider-geddon Villains
 const spiderVillains = ['Anti-Venom', 'Morlun', 'Spot', 'Superior Spider-Man'];
-//Array of all companions
+//Array of all DC Season 1 Villains //FIXME
+const dcSeason1Villains = ['The Cheetah', 'Darkseid', 'The Joker', 'Lex Luther'];
+//Array of all companions //FIXME
 const companions = ['Alligator Loki', 'Cosmo', 'Goose', 'Jeff', 'Lockheed', 'Redwing', 'Throg'];
 
 //variables for dropdowns
@@ -48,11 +52,9 @@ populateDropdown4(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spid
 populateTeam1Dropdown1(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 populateTeam1Dropdown2(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 populateTeam1Dropdown3(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
-populateTeam1Dropdown4(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 populateTeam2Dropdown1(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 populateTeam2Dropdown2(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 populateTeam2Dropdown3(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
-populateTeam2Dropdown4(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 //villain dropdown
 populateDropdownVillains(season1Villains, season2Villains, season3Villains, spiderVillains);
 
@@ -511,71 +513,6 @@ function populateTeam1Dropdown3(s1, s2, s3, p1, sp1) {
         promoLabel.appendChild(option);
     }
 }
-// populateTeam1Dropdown4() function that populates the blue team's fourth hero dropdown
-// param s1 Array of Season 1 heroes
-// param s2 Array of Season 2 heroes
-// param s3 Array of Season 3 heroes
-// param p1 Array of Promotional heroes
-// param sp1 Array of Spider-geddon heroes
-function populateTeam1Dropdown4(s1, s2, s3, p1, sp1) {
-    //Variable for default option
-    const noHero = "No Hero";
-    //Populates the dropdown with default option
-    const defaultOption = document.createElement('option');
-    defaultOption.value = noHero;
-    defaultOption.text = noHero;
-    heroDropdown4team1.add(defaultOption);
-    //Populates the dropdown with Season 1 heroes
-    const season1Label = document.createElement('optgroup');
-    season1Label.label = "Season 1";
-    heroDropdown4team1.add(season1Label);
-    for (let i = 0; i < s1.length; i++) {
-        const option = document.createElement('option');
-        option.value = s1[i];
-        option.text = s1[i];
-        season1Label.appendChild(option);
-    }
-    //Populates the dropdown with Season 2 heroes
-    const season2Label = document.createElement('optgroup');
-    season2Label.label = "Season 2";
-    heroDropdown4team1.add(season2Label);
-    for (let i = 0; i < s2.length; i++) {
-        const option = document.createElement('option');
-        option.value = s2[i];
-        option.text = s2[i];
-        season2Label.appendChild(option);
-    }
-    //Populates the dropdown with Season 3 heroes
-    const season3Label = document.createElement('optgroup');
-    season3Label.label = "Season 3";
-    heroDropdown4team1.add(season3Label);
-    for (let i = 0; i < s3.length; i++) {
-        const option = document.createElement('option');
-        option.value = s3[i];
-        option.text = s3[i];
-        season3Label.appendChild(option);
-    }
-    //Populates the dropdown with Spider-geddon heroes
-    const spiderLabel = document.createElement('optgroup');
-    spiderLabel.label = "Spider-geddon";
-    heroDropdown4team1.add(spiderLabel);
-    for (let i = 0; i < sp1.length; i++) {
-        const option = document.createElement('option');
-        option.value = sp1[i];
-        option.text = sp1[i];
-        spiderLabel.appendChild(option);
-    }
-    //Populates the dropdown with promotional heroes
-    const promoLabel = document.createElement('optgroup');
-    promoLabel.label = "Promos";
-    heroDropdown4team1.add(promoLabel);
-    for (let i = 0; i < p1.length; i++) {
-        const option = document.createElement('option');
-        option.value = p1[i];
-        option.text = p1[i];
-        promoLabel.appendChild(option);
-    }
-}
 // populateTeam2Dropdown1() function that populates the gold team's first hero dropdown
 // param s1 Array of Season 1 heroes
 // param s2 Array of Season 2 heroes
@@ -771,71 +708,6 @@ function populateTeam2Dropdown3(s1, s2, s3, p1, sp1) {
         promoLabel.appendChild(option);
     }
 }
-// populateTeam2Dropdown4() function that populates the gold team's fourth hero dropdown
-// param s1 Array of Season 1 heroes
-// param s2 Array of Season 2 heroes
-// param s3 Array of Season 3 heroes
-// param p1 Array of Promotional heroes
-// param sp1 Array of Spider-geddon heroes
-function populateTeam2Dropdown4(s1, s2, s3, p1, sp1) {
-    //Variable for default option
-    const noHero = "No Hero";
-    //Populates the dropdown with default option
-    const defaultOption = document.createElement('option');
-    defaultOption.value = noHero;
-    defaultOption.text = noHero;
-    heroDropdown4team2.add(defaultOption);
-    //Populates the dropdown with Season 1 heroes
-    const season1Label = document.createElement('optgroup');
-    season1Label.label = "Season 1";
-    heroDropdown4team2.add(season1Label);
-    for (let i = 0; i < s1.length; i++) {
-        const option = document.createElement('option');
-        option.value = s1[i];
-        option.text = s1[i];
-        season1Label.appendChild(option);
-    }
-    //Populates the dropdown with Season 2 heroes
-    const season2Label = document.createElement('optgroup');
-    season2Label.label = "Season 2";
-    heroDropdown4team2.add(season2Label);
-    for (let i = 0; i < s2.length; i++) {
-        const option = document.createElement('option');
-        option.value = s2[i];
-        option.text = s2[i];
-        season2Label.appendChild(option);
-    }
-    //Populates the dropdown with Season 3 heroes
-    const season3Label = document.createElement('optgroup');
-    season3Label.label = "Season 3";
-    heroDropdown4team2.add(season3Label);
-    for (let i = 0; i < s3.length; i++) {
-        const option = document.createElement('option');
-        option.value = s3[i];
-        option.text = s3[i];
-        season3Label.appendChild(option);
-    }
-    //Populates the dropdown with Spider-geddon heroes
-    const spiderLabel = document.createElement('optgroup');
-    spiderLabel.label = "Spider-geddon";
-    heroDropdown4team2.add(spiderLabel);
-    for (let i = 0; i < sp1.length; i++) {
-        const option = document.createElement('option');
-        option.value = sp1[i];
-        option.text = sp1[i];
-        spiderLabel.appendChild(option);
-    }
-    //Populates the dropdown with promotional heroes
-    const promoLabel = document.createElement('optgroup');
-    promoLabel.label = "Promos";
-    heroDropdown4team2.add(promoLabel);
-    for (let i = 0; i < p1.length; i++) {
-        const option = document.createElement('option');
-        option.value = p1[i];
-        option.text = p1[i];
-        promoLabel.appendChild(option);
-    }
-}
 // populateDropdownVillains() function that populates the villain dropdown
 // param s1 Array of Season 1 villains
 // param s2 Array of Season 2 villains
@@ -906,25 +778,214 @@ function expand () {
 function showAlternateSelections() {
     //varaible for radio button that was pressed
     let optionalMode = event.target.id;
-    //IF the radio button selected was not 'teamvteam' and 'team1herodropdowns' is not collapsed
-    if(optionalMode != 'teamvteam' && document.getElementById('team1herodropdowns').classList.value != 'team1herodropdowns collapse'){
-        //add the collapse class to Team vs Team menus
-        document.getElementById('team1herodropdownslabel').classList.toggle('collapse');
-        document.getElementById('team1herodropdowns').classList.toggle('collapse');
-        document.getElementById('team2herodropdownslabel').classList.toggle('collapse');
-        //remove the collapse class to regular hero menus
-        document.getElementById('team2herodropdowns').classList.toggle('collapse');
-        document.getElementById('herodropdowns').classList.toggle('collapse');
+    //Arrays for team titles and team modes
+    const teamTitles = ['Blue Team', 'Gold Team', 'Anti-Registration', 'Pro-Registration', 'Red Team'];
+    const teamOptions = ['teamvteam','registrationclash','clashofheroes','none'];
+    //variable for last team mode selected
+    let lastTeamMode = '';
+    //switch based on which team mode was last
+    switch(document.getElementById('team1herodropdownslabel').classList.value) {
+        case 'team1herodropdownslabel blueteam':
+            lastTeamMode = teamOptions[0];
+            break;
+        case 'team1herodropdownslabel rcblue':
+            lastTeamMode = teamOptions[1];
+            break;
+        case 'team1herodropdownslabel cohblue':
+            lastTeamMode = teamOptions[2];
+            break;
     }
-    //ELSE IF the radio button selected was 'teamvteam' and 'team1herodropdowns' is collapsed
-    else if(optionalMode == 'teamvteam' && document.getElementById('team1herodropdowns').classList.value == 'team1herodropdowns collapse') {
-        //remove the collapse class to Team vs Team menus
+    //variable the is assigned a boolean value based on previous type of game mode
+    let lastModeWasTeam = document.getElementById('herodropdowns').classList.value == 'herodropdowns collapse';
+    //check if game mode is team based or not
+    let teamMode = false;
+    switch(optionalMode) {
+        case 'shieldmode':
+        case 'solomodex':
+        case 'commander':
+        case 'supervillain':
+            teamMode = false;
+            break;        
+        case 'teamvteam':
+        case 'registrationclash':
+        case 'clashofheroes':
+            teamMode = true;
+            break;
+    }
+    //IF it is a teammode and last mode was not a teams mode
+    if (teamMode && !lastModeWasTeam) {
+        //herodropdown should be collapsed
+        document.getElementById('herodropdowns').classList.toggle('collapse');
+        //teamdropdowns should be uncollapsed
         document.getElementById('team1herodropdownslabel').classList.toggle('collapse');
         document.getElementById('team1herodropdowns').classList.toggle('collapse');
         document.getElementById('team2herodropdownslabel').classList.toggle('collapse');
         document.getElementById('team2herodropdowns').classList.toggle('collapse');
-        //add the collapse class to regular hero menus
+        //titles should be cleared if there are any
+        //WHILE the list has a non-null node
+        while (document.getElementById('team1herodropdownslabel').hasChildNodes && document.getElementById('team1herodropdownslabel').firstChild != null) {
+            //remove all nodes
+            document.getElementById('team1herodropdownslabel').removeChild(document.getElementById('team1herodropdownslabel').firstChild);
+        }
+        while (document.getElementById('team2herodropdownslabel').hasChildNodes && document.getElementById('team2herodropdownslabel').firstChild != null) {
+            //remove all nodes
+            document.getElementById('team2herodropdownslabel').removeChild(document.getElementById('team2herodropdownslabel').firstChild);
+        }
+        //colors and titles should be assigned based on which team mode
+        switch(optionalMode) {
+            case 'teamvteam':
+                document.getElementById('team1herodropdownslabel').classList.toggle('blueteam');
+                document.getElementById('team2herodropdownslabel').classList.toggle('goldteam');
+                document.getElementById('team1herodropdowns').classList.toggle('blueteam');
+                document.getElementById('team2herodropdowns').classList.toggle('goldteam');
+                document.getElementById('team1herodropdownslabel').appendChild(document.createTextNode(teamTitles[0]));
+                document.getElementById('team2herodropdownslabel').appendChild(document.createTextNode(teamTitles[1]));
+                break;
+            case 'registrationclash':
+                //villain dropdown should be collapsed
+                document.getElementById('villainlabel').classList.toggle('collapse');
+                document.getElementById('villaindiv').classList.toggle('collapse');
+
+                document.getElementById('team1herodropdownslabel').classList.toggle('rcblue');
+                document.getElementById('team2herodropdownslabel').classList.toggle('rcred');
+                document.getElementById('team1herodropdowns').classList.toggle('rcblue');
+                document.getElementById('team2herodropdowns').classList.toggle('rcred');
+                document.getElementById('team1herodropdownslabel').appendChild(document.createTextNode(teamTitles[2]));
+                document.getElementById('team2herodropdownslabel').appendChild(document.createTextNode(teamTitles[3]));
+                break;
+            case 'clashofheroes':
+                //villain dropdown should be collapsed
+                document.getElementById('villainlabel').classList.toggle('collapse');
+                document.getElementById('villaindiv').classList.toggle('collapse');
+
+                document.getElementById('team1herodropdownslabel').classList.toggle('cohblue');
+                document.getElementById('team2herodropdownslabel').classList.toggle('cohred');
+                document.getElementById('team1herodropdowns').classList.toggle('cohblue');
+                document.getElementById('team2herodropdowns').classList.toggle('cohred');
+                document.getElementById('team1herodropdownslabel').appendChild(document.createTextNode(teamTitles[0]));
+                document.getElementById('team2herodropdownslabel').appendChild(document.createTextNode(teamTitles[4]));
+                break;
+        }
+        //set lastModeWasTeam to true
+        lastModeWasTeam = true;
+    }
+    //if it is not a teammode and last mode was a team mode
+    else if (!teamMode && lastModeWasTeam) {
+        //herodropdown should be uncollapsed
         document.getElementById('herodropdowns').classList.toggle('collapse');
+        //teamdropdowns should be collapsed
+        document.getElementById('team1herodropdownslabel').classList.toggle('collapse');
+        document.getElementById('team1herodropdowns').classList.toggle('collapse');
+        document.getElementById('team2herodropdownslabel').classList.toggle('collapse');
+        document.getElementById('team2herodropdowns').classList.toggle('collapse');
+        //colors should be unassigned based on which team mode
+        switch(lastTeamMode) {
+            case 'teamvteam':
+                document.getElementById('team1herodropdownslabel').classList.toggle('blueteam');
+                document.getElementById('team2herodropdownslabel').classList.toggle('goldteam');
+                document.getElementById('team1herodropdowns').classList.toggle('blueteam');
+                document.getElementById('team2herodropdowns').classList.toggle('goldteam');
+                break;
+            case 'registrationclash':
+                //villain dropdown should be uncollapsed
+                document.getElementById('villainlabel').classList.toggle('collapse');
+                document.getElementById('villaindiv').classList.toggle('collapse');
+
+                document.getElementById('team1herodropdownslabel').classList.toggle('rcblue');
+                document.getElementById('team2herodropdownslabel').classList.toggle('rcred');
+                document.getElementById('team1herodropdowns').classList.toggle('rcblue');
+                document.getElementById('team2herodropdowns').classList.toggle('rcred');
+                break;
+            case 'clashofheroes':
+                //villain dropdown should be uncollapsed
+                document.getElementById('villainlabel').classList.toggle('collapse');
+                document.getElementById('villaindiv').classList.toggle('collapse');
+
+                document.getElementById('team1herodropdownslabel').classList.toggle('cohblue');
+                document.getElementById('team2herodropdownslabel').classList.toggle('cohred');
+                document.getElementById('team1herodropdowns').classList.toggle('cohblue');
+                document.getElementById('team2herodropdowns').classList.toggle('cohred');
+                break;
+        }
+        //set lastModeWasTeam to false
+        lastModeWasTeam = false;
+    }
+    //if it is a teammode and last mode was a team mode
+    else if (teamMode && lastModeWasTeam) {
+        //colors should be unassigned based on which team mode
+        switch(lastTeamMode) {
+            case 'teamvteam':
+                document.getElementById('team1herodropdownslabel').classList.toggle('blueteam');
+                document.getElementById('team2herodropdownslabel').classList.toggle('goldteam');
+                document.getElementById('team1herodropdowns').classList.toggle('blueteam');
+                document.getElementById('team2herodropdowns').classList.toggle('goldteam');
+                break;
+            case 'registrationclash':
+                //villain dropdown should be uncollapsed
+                document.getElementById('villainlabel').classList.toggle('collapse');
+                document.getElementById('villaindiv').classList.toggle('collapse');
+
+                document.getElementById('team1herodropdownslabel').classList.toggle('rcblue');
+                document.getElementById('team2herodropdownslabel').classList.toggle('rcred');
+                document.getElementById('team1herodropdowns').classList.toggle('rcblue');
+                document.getElementById('team2herodropdowns').classList.toggle('rcred');
+                break;
+            case 'clashofheroes':
+                //villain dropdown should be uncollapsed
+                document.getElementById('villainlabel').classList.toggle('collapse');
+                document.getElementById('villaindiv').classList.toggle('collapse');
+
+                document.getElementById('team1herodropdownslabel').classList.toggle('cohblue');
+                document.getElementById('team2herodropdownslabel').classList.toggle('cohred');
+                document.getElementById('team1herodropdowns').classList.toggle('cohblue');
+                document.getElementById('team2herodropdowns').classList.toggle('cohred');
+                break;
+        }
+        //titles should be unassigned
+        //WHILE the list has a non-null node
+        while (document.getElementById('team1herodropdownslabel').hasChildNodes && document.getElementById('team1herodropdownslabel').firstChild != null) {
+            //remove all nodes
+            document.getElementById('team1herodropdownslabel').removeChild(document.getElementById('team1herodropdownslabel').firstChild);
+        }
+        while (document.getElementById('team2herodropdownslabel').hasChildNodes && document.getElementById('team2herodropdownslabel').firstChild != null) {
+            //remove all nodes
+            document.getElementById('team2herodropdownslabel').removeChild(document.getElementById('team2herodropdownslabel').firstChild);
+        }
+        //colors and titles should be assigned based on which team mode
+        switch(optionalMode) {
+            case 'teamvteam':
+                document.getElementById('team1herodropdownslabel').classList.toggle('blueteam');
+                document.getElementById('team2herodropdownslabel').classList.toggle('goldteam');
+                document.getElementById('team1herodropdowns').classList.toggle('blueteam');
+                document.getElementById('team2herodropdowns').classList.toggle('goldteam');
+                document.getElementById('team1herodropdownslabel').appendChild(document.createTextNode(teamTitles[0]));
+                document.getElementById('team2herodropdownslabel').appendChild(document.createTextNode(teamTitles[1]));
+                break;
+            case 'registrationclash':
+                //villain dropdown should be collapsed
+                document.getElementById('villainlabel').classList.toggle('collapse');
+                document.getElementById('villaindiv').classList.toggle('collapse');
+
+                document.getElementById('team1herodropdownslabel').classList.toggle('rcblue');
+                document.getElementById('team2herodropdownslabel').classList.toggle('rcred');
+                document.getElementById('team1herodropdowns').classList.toggle('rcblue');
+                document.getElementById('team2herodropdowns').classList.toggle('rcred');
+                document.getElementById('team1herodropdownslabel').appendChild(document.createTextNode(teamTitles[2]));
+                document.getElementById('team2herodropdownslabel').appendChild(document.createTextNode(teamTitles[3]));
+                break;
+            case 'clashofheroes':
+                //villain dropdown should be collapsed
+                document.getElementById('villainlabel').classList.toggle('collapse');
+                document.getElementById('villaindiv').classList.toggle('collapse');
+
+                document.getElementById('team1herodropdownslabel').classList.toggle('cohblue');
+                document.getElementById('team2herodropdownslabel').classList.toggle('cohred');
+                document.getElementById('team1herodropdowns').classList.toggle('cohblue');
+                document.getElementById('team2herodropdowns').classList.toggle('cohred');
+                document.getElementById('team1herodropdownslabel').appendChild(document.createTextNode(teamTitles[0]));
+                document.getElementById('team2herodropdownslabel').appendChild(document.createTextNode(teamTitles[4]));
+                break;
+        }
     }
 }
 
@@ -935,12 +996,29 @@ function getRelevantAchievements() {
 
     //variable for selected game mode
     const selectedGameMode = getSelectedGameMode();
+    //check if game mode is team based or not
+    let teamMode = false;
+    switch(selectedGameMode) {
+        case 'shieldmode':
+        case 'solomodex':
+        case 'commander':
+        case 'supervillain':
+            teamMode = false;
+            break;        
+        case 'teamvteam':
+        case 'registrationclash':
+        case 'clashofheroes':
+            teamMode = true;
+            break;
+    }
     //IF Team vs Team is selected game mode
-    if(selectedGameMode == 'teamvteam') {
+    if(teamMode) {
         const selectedTeamHeroes = getTeamInformation();
+        //IF the array is empty
         if(selectedTeamHeroes.length == 0) {
             return;
         }
+        //ELSE add the heroes to selectedHeroes array
         else {
             for(let i = 0; i < selectedTeamHeroes.length; i++) {
                 selectedHeroes.push(selectedTeamHeroes[i]);
@@ -970,9 +1048,16 @@ function getRelevantAchievements() {
             selectedHeroes.push(document.getElementById('heroes4').value);
         }
     }    
+
+    //variable for selected villain
+    let selectedVillain = document.getElementById('villain').value;
+    //IF Registration Clash or Clash of Heroes is selected
+    if(selectedGameMode == 'registrationclash' || selectedGameMode == 'clashofheroes') {
+        //set selectedVillain to none
+        selectedVillain = 'None';
+    }
     
     //varaibles for other user selection
-    const selectedVillain = document.getElementById('villain').value;
     const selectedChallenges = getSelectedChallenges();
     const selectedDifficulty = document.getElementById('difficulty').value;
     const selectedAdditionalFactors = getAdditionalFactors();
@@ -1817,24 +1902,26 @@ function getNewAchievements(heroes, villain, challenges, difficulty) {
     if (villain == 'Nimrod' && (heroes.includes('Magneto') || heroes.includes('Magneto (AoA)')) && heroes.includes('Professor X') && heroes.includes('Mystique') && heroes.includes('Emma Frost') && (difficulty == 'hard' || difficulty == 'heroic')) {
         availableAchievements.push('Powers of X: Defeat Nimrod with Magneto, Xavier, Mystique, and Emma Frost, on Hard or Heroic difficulty Challenge');
     }
-    //FIXME ADD TEAM V TEAM
+    //TEAM V TEAM
     let selectedGameMode = getSelectedGameMode();
     if(selectedGameMode == 'teamvteam' && villain == 'Dark Phoenix') {
-        //get teams
+        //seperate the heroes into their respective teams
         const selectedTeamHeroes = getTeamInformation();
         const team1 = [];
         const team2 = [];
         let halfwayPoint = selectedTeamHeroes.length / 2;
-
+        //get team 1
         for(let i = 0; i < halfwayPoint; i++) {
             team1.push(selectedTeamHeroes[i]);
         }
+        //get team 2
         for(let i = halfwayPoint; i < selectedTeamHeroes.length; i++) {
             team2.push(selectedTeamHeroes[i]);
         }
-        //check teams
+        //check teams against Avengers and X-Men rosters
         const team1Teams = getAvailableTeams(team1);
         const team2Teams = getAvailableTeams(team2);
+        //IF one team has Avenger heores only and the other has X-Men heroes only
         if((team1Teams.includes('Avengers') && team2Teams.includes('X-Men')) || (team2Teams.includes('Avengers') && team1Teams.includes('X-Men'))) {
             availableAchievements.push('AvX: On Team vs Team Mode, defeat Dark Phoenix with a team of Avengers against a team of X-Men');
             availableAchievements.push('XvA: On Team vs Team Mode, defeat Dark Phoenix with a team of X-Men against a team of Avengers');
@@ -3076,22 +3163,23 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     if(heroes.includes('Professor X') && heroes.includes('Emma Frost') && (heroes.include('Jean Grey') || heroes.includes('Marvel Girl'))) {
         heroFeatsAchievements.push('Mind Readers: Defeat a Villain with Professor X, Jean Grey, and Emma Frost');
     }
-    //BLUE TEAM / GOLD TEAM achievements
+    //TEAM V TEAM achievements
     let selectedGameMode = getSelectedGameMode();
     if(selectedGameMode == 'teamvteam') {
-        //get teams
+        //seperate the heroes into their respective teams
         const selectedTeamHeroes = getTeamInformation();
         const team1 = [];
         const team2 = [];
         let halfwayPoint = selectedTeamHeroes.length / 2;
-
+        //get team1
         for(let i = 0; i < halfwayPoint; i++) {
             team1.push(selectedTeamHeroes[i]);
         }
+        //get team2
         for(let i = halfwayPoint; i < selectedTeamHeroes.length; i++) {
             team2.push(selectedTeamHeroes[i]);
         }
-        //check teams
+        //check the teams against Blue/Gold rosters
         let team1BlueTeam = true;
         let team2BlueTeam = true;
         let team1GoldTeam = true;
@@ -3136,34 +3224,37 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
                 }
             }
         }
+        //IF one team has blue heores only and the other has gold heroes only
         if ((team1BlueTeam && team2GoldTeam) || (team1GoldTeam && team2BlueTeam)) {
             heroFeatsAchievements.push('Win playing the Heroes from the Blue Team box over the Heroes from the Gold Team box');
             heroFeatsAchievements.push('Win playing the Heroes from the Gold Team box over the Heroes from the Blue Team box');
         } 
     }
     if(selectedGameMode == 'teamvteam') {
-        //get teams
+        //seperate the heroes into their respective teams
         const selectedTeamHeroes = getTeamInformation();
         const team1 = [];
         const team2 = [];
         let halfwayPoint = selectedTeamHeroes.length / 2;
+        //get team1 roster
         for(let i = 0; i < halfwayPoint; i++) {
             team1.push(selectedTeamHeroes[i]);
         }
+        //get team2 roster
         for(let i = halfwayPoint; i < selectedTeamHeroes.length; i++) {
             team2.push(selectedTeamHeroes[i]);
         }
+        //check the teams for Cyclops and Wolverine
         let team1HasCyclops = team1.includes('Cyclops') || team1.includes('Cyclops (First Class)');
         let team1HasWolverine = team1.includes('Wolverine') || team1.includes('Old Man Logan') || team1.includes('Weapon X') || team1.includes('Logan');
         let team2HasCyclops = team2.includes('Cyclops') || team2.includes('Cyclops (First Class)');
         let team2HasWolverine = team2.includes('Wolverine') || team2.includes('Old Man Logan') || team2.includes('Weapon X') || team2.includes('Logan');
-
+        //IF one team has Cyclops and the other has Wolverine
         if((team1HasCyclops && team2HasWolverine) || (team1HasWolverine && team2HasCyclops)) {
             heroFeatsAchievements.push('Schism: Win a Team vs Team game with Cyclops while Wolverine is on the other team');
             heroFeatsAchievements.push('Schism Rematch: Win a Team vs Team game with Wolverine while Cyclops is on the other team');
         }
     }
-    
     if(challenges.includes('deadpool')) {
         heroFeatsAchievements.push('Defeat a Villain using the Deadpool Challenge');
     }
@@ -3989,11 +4080,6 @@ function getTeamInformation() {
         selectedHeroesTeam1.push(document.getElementById('heroes3team1').value);
     }
     //IF a hero has been selected
-    if (document.getElementById('heroes4team1').value != 'No Hero') {
-        //gets the selected hero
-        selectedHeroesTeam1.push(document.getElementById('heroes4team1').value);
-    }
-    //IF a hero has been selected
     if (document.getElementById('heroes1team2').value != 'No Hero') {
         //gets the selected hero
         selectedHeroesTeam2.push(document.getElementById('heroes1team2').value);
@@ -4008,12 +4094,7 @@ function getTeamInformation() {
         //gets the selected hero
         selectedHeroesTeam2.push(document.getElementById('heroes3team2').value);
     }
-    //IF a hero has been selected
-    if (document.getElementById('heroes4team2').value != 'No Hero') {
-        //gets the selected hero
-        selectedHeroesTeam2.push(document.getElementById('heroes4team2').value);
-    }
-
+    
     //IF teams do not have same number of heroes
     if (selectedHeroesTeam1.length != selectedHeroesTeam2.length){
         //alert user to uneven teams
