@@ -8,7 +8,7 @@ const season3Heroes = ["Agent Venom", "Ares", "Aurora", "Black Bolt", "Black Kni
 //Array of all Spider-geddon Heroes
 const spiderHeroes = ['Anti-Venom', 'Peni Parker', 'Scarlet Spider', 'Silk', 'Spider-Man Noir', 'Spider-Punk', 'Superior Spider-Man', 'Symbiote Spider-Man']
 //Array of all DC Season1 Heroes //FIXME
-const dcSeason1Heroes = ['Aquaman','Batman', 'The Flash', 'Superman', 'Wonder Woman'];
+const dcSeason1Heroes = ['Aquaman','The Atom','Atom Smasher','Batman','Beast Boy','Black Adam','Black Canary','Black Lightning','Blue Beetle','Booster Gold', 'Cyborg','Cyclone','Doctor Fate','Etrigan the Demon','The Flash','Gleek','Hawkgirl','Hawkman','Jayna','Jonah Hex','Krypto','Martian Manhunter','Mera','Power Girl','Raven','Red Tornado', 'Robin (Dick Grayson)','Shazam!','Starfire','Steel','Superboy','Supergirl', 'Superman','Vixen','Wildcat', 'Wonder Woman','Zan'];
 //Array of all promotional Heroes
 const promoHeroes = ["Deadpool (X-Force)", "Grey Hulk", "Juggernaut", "Mister Sinister"];
 //Array of all Season 1 Villains
@@ -16,13 +16,15 @@ const season1Villains = ["Baron Zemo", "Black Dwarf", "Bullseye", "Carnage", "Co
 //Array of all Season 2 Villains
 const season2Villains = ["Apocalypse", "Arcade", "Avalanche", "Bob", "Brood Queen", "Callisto", "Colossus (Phoenix Force)", "Cyclops (Phoenix Force)", "Dark Phoenix", "Deadpool", "Deathbird", "Doctor Doom", "Emma Frost", "Emma Frost (Phoenix Force)", "Four Horsemen", "Juggernaut", "Lady Deathstrike", "Legion", "Magik (Phoenix Force)", "Magneto", "Marrow", "Mastermind", "Mister Sinister", "Mojo", "Mystique", "Namor", "Namor (Phoenix Force)", "Nimrod", "Omega Red", "Onslaught", "Phoenix Force", "Quicksilver & Scarlet Witch", "Sabretooth", "Sauron", "Shadow King", "Silver Samurai", "Spiral", "Scarlet Witch & Quicksilver", "Sebastian Shaw", "Stryfe", "Super Skrull", "Toad + Blob + Pyro"];
 //Array of all Season 3 Villains
-const season3Villains = ["Abomination ", "Absorbing Man", "Air-Walker", "Annihilus", "Apocalypse (AoA)", "Ares", "Blastaar", "Cabal (Doctor Doom)", "Cabal (Emma Frost)", "Cabal (Iron Patriot)", "Cabal (Loki)", "Cabal (Namor)", "Cabal (Taskmaster)", "Chameleon", "Cosmic Ghost Rider", "Crimson Dynamo", "Crimson Dynamo w/ Winter Guard", "Crossbones", "Daken", "Dark Avengers", "Dark Beast", "Dark Carnage", "Darkchild", "Demogoblin/Doppelganger", "Emperor Doom", "Enchantress", "Fin Fang Foom", "Fire Lord", "Galactus", "Gladiator", "Gladiator Hulk", "Gorr", "Heralds", "High Evolutionary ", "Hobgoblin", "Immortus", "Klaw", "Knull", "Lizard", "Maestro", "Maximus", "Mole Man", "Moonstone", "Morbius", "Nemesis", "New Sinister Six", "Nova (Frankie Raye)", "Purple Man", "Queen Veranke", "Red Hulk", "Scorpion", "Scream", "Sentry", "Shocker", "Shriek", "Sinister Six Assembled", "Skrulls", "Terrax", "Titania", "U.S. Agent", "Vulcan", "White Widow", "Winter Guard", "Wrecking Crew"];
+const season3Villains = ["Abomination ", "Absorbing Man", "Air-Walker", "Annihilus", "Apocalypse (AoA)", "Ares", "Blastaar", "Cabal (Doctor Doom)", "Cabal (Emma Frost)", "Cabal (Iron Patriot)", "Cabal (Loki)", "Cabal (Namor)", "Cabal (Taskmaster)", "Chameleon", "Cosmic Ghost Rider", "Crimson Dynamo", "Crimson Dynamo w/ Winter Guard", "Crossbones", "Daken", "Dark Avengers", "Dark Beast", "Dark Carnage", "Darkchild", "Demogoblin/Doppelganger", "Emperor Doom", "Enchantress", "Fin Fang Foom", "Firelord", "Galactus", "Gladiator", "Gorr", "Heralds", "High Evolutionary ", "Hobgoblin", "Immortus", "Klaw", "Knull", "Lizard", "Maestro", "Maximus", "Mole Man", "Moonstone", "Morbius", "Nemesis", "New Sinister Six", "Nova (Frankie Raye)", "Purple Man", "Queen Veranke", "Red Hulk", "Scorpion", "Scream", "Shocker", "Shriek", "Sinister Six Assembled", "Skrulls", "Terrax", "Titania", "U.S. Agent", "The Void", "Vulcan", "White Widow", "Winter Guard", "World Breaker Hulk", "Wrecking Crew"];
 //Array of all Spider-geddon Villains
 const spiderVillains = ['Anti-Venom', 'Morlun', 'Spot', 'Superior Spider-Man'];
 //Array of all DC Season 1 Villains //FIXME
-const dcSeason1Villains = ['The Cheetah', 'Darkseid', 'The Joker', 'Lex Luther'];
+const dcSeason1Villains = ['Black Adam','Black Manta','Black Mask','Brainiac','Captain Cold','The Cheetah','Condiment King', 'Darkseid','Deathstroke','Despero','Doomsday','Gorilla Grodd', 'The Joker', 'Lex Luthor','Ocean Master','Parasite',`Ra's al Ghul`,'Steppenwolf','Trigon'];
 //Array of all companions //FIXME
 const companions = ['Alligator Loki', 'Cosmo', 'Goose', 'Jeff', 'Lockheed', 'Redwing', 'Throg'];
+//Array of all support characters //FIXME
+const supportCharacters = ['Jimmy Olsen', 'Lois Lane'];
 
 //variables for dropdowns
 //default hero selection
@@ -41,6 +43,11 @@ const heroDropdown3team2 = document.getElementById('heroes3team2');
 const heroDropdown4team2 = document.getElementById('heroes4team2');
 //villain selection
 const villainDropdown = document.getElementById('villain');
+/**  companion selection    NOT CURRENTLY NEEDED FOR ACHIEVEMENTS
+const companionDropdown1 = document.getElementById('companions1');
+const companionDropdown2 = document.getElementById('companions2');
+const companionDropdown3 = document.getElementById('companions3');
+const companionDropdown4 = document.getElementById('companions4');**/
 
 //Populates the various dropdowns
 //default hero dropdowns
@@ -57,6 +64,11 @@ populateTeam2Dropdown2(season1Heroes, season2Heroes, season3Heroes, promoHeroes,
 populateTeam2Dropdown3(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 //villain dropdown
 populateDropdownVillains(season1Villains, season2Villains, season3Villains, spiderVillains);
+//companion dropdown
+popualteDropdownCompanion1(companions);
+popualteDropdownCompanion2(companions);
+popualteDropdownCompanion3(companions);
+popualteDropdownCompanion4(companions);
 
 // populateDropdown1() function that populates the first hero dropdown
 // param s1 Array of Season 1 heroes
@@ -755,6 +767,78 @@ function populateDropdownVillains(s1, s2, s3, sp1) {
         spiderLabel.appendChild(option);
     }
 }
+// populateDropdownCompanion1() function that populates the first companion dropdown
+// param c Array of companions
+function popualteDropdownCompanion1(c) {
+    //Variable for default option
+    const noCompanion = "No Companion";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noCompanion;
+    defaultOption.text = noCompanion;
+    companionDropdown1.add(defaultOption);
+    //Populates the dropdown with companions
+    for (let i = 0; i < c.length; i++) {
+        const option = document.createElement('option');
+        option.value = c[i];
+        option.text = c[i];
+        companionDropdown1.add(option);
+    }
+}
+// populateDropdownCompanion2() function that populates the second companion dropdown
+// param c Array of companions
+function popualteDropdownCompanion2(c) {
+    //Variable for default option
+    const noCompanion = "No Companion";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noCompanion;
+    defaultOption.text = noCompanion;
+    companionDropdown2.add(defaultOption);
+    //Populates the dropdown with companions
+    for (let i = 0; i < c.length; i++) {
+        const option = document.createElement('option');
+        option.value = c[i];
+        option.text = c[i];
+        companionDropdown2.add(option);
+    }
+}
+// populateDropdownCompanion3() function that populates the third companion dropdown
+// param c Array of companions
+function popualteDropdownCompanion3(c) {
+    //Variable for default option
+    const noCompanion = "No Companion";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noCompanion;
+    defaultOption.text = noCompanion;
+    companionDropdown3.add(defaultOption);
+    //Populates the dropdown with companions
+    for (let i = 0; i < c.length; i++) {
+        const option = document.createElement('option');
+        option.value = c[i];
+        option.text = c[i];
+        companionDropdown3.add(option);
+    }
+}
+// populateDropdownCompanion4() function that populates the fourth companion dropdown
+// param c Array of companions
+function popualteDropdownCompanion4(c) {
+    //Variable for default option
+    const noCompanion = "No Companion";
+    //Populates the dropdown with default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = noCompanion;
+    defaultOption.text = noCompanion;
+    companionDropdown4.add(defaultOption);
+    //Populates the dropdown with companions
+    for (let i = 0; i < c.length; i++) {
+        const option = document.createElement('option');
+        option.value = c[i];
+        option.text = c[i];
+        companionDropdown4.add(option);
+    }
+}
 
 // expand() function that adds the 'collapse' class to fieldsets based on button pressed
 function expand () {
@@ -1061,6 +1145,29 @@ function getRelevantAchievements() {
     const selectedChallenges = getSelectedChallenges();
     const selectedDifficulty = document.getElementById('difficulty').value;
     const selectedAdditionalFactors = getAdditionalFactors();
+
+    //Array to hold chosen companions
+    const selectedCompanions = [];
+    //IF a companion has been selected
+    if (document.getElementById('companions1').value != 'No Companion') {
+        //gets the selected companion
+        selectedCompanions.push(document.getElementById('companions1').value);
+    }
+    //IF a companion has been selected
+    if (document.getElementById('companions2').value != 'No Companion') {
+        //gets the selected companion
+        selectedCompanions.push(document.getElementById('companions2').value);
+    }
+    //IF a companion has been selected
+    if (document.getElementById('companions3').value != 'No Companion') {
+        //gets the selected companion
+        selectedCompanions.push(document.getElementById('companions3').value);
+    }
+    //IF a companion has been selected
+    if (document.getElementById('companions4').value != 'No Companion') {
+        //gets the selected companion
+        selectedCompanions.push(document.getElementById('companions4').value);
+    }
     
     //get Season 1 Achievements
     let achievements = getAchievements(selectedHeroes, selectedVillain, selectedChallenges, selectedDifficulty, selectedGameMode);
@@ -1074,9 +1181,12 @@ function getRelevantAchievements() {
     //get Spider-geddon Achievements
     let spiderAchievements = getSpiderAchievements(selectedHeroes, selectedVillain, selectedChallenges, selectedDifficulty, selectedGameMode);
     spiderAchievements = removeCompletedAchievements(spiderAchievements);
+    //get Multiverse Achievements
+    let multiAchievements = getMultiAchievements(selectedGameMode, selectedHeroes, selectedDifficulty, selectedVillain, selectedChallenges);
+    multiAchievements = removeCompletedAchievements(multiAchievements);
     
     //passes the achievements to be displayed
-    displayAchievements(achievements, xAchievements, newAchievements, spiderAchievements, selectedHeroes);
+    displayAchievements(achievements, xAchievements, newAchievements, spiderAchievements, multiAchievements, selectedHeroes);
 }
 
 // getSelectedChallenges() function that gets the selected challenges
@@ -1132,7 +1242,7 @@ function getAdditionalFactors() {
 // param newAchievements the Array of new achievements
 // param spiderAchievements the Array of Spider-geddon achievements
 // param selectedHeroes the Array of selected heroes
-function displayAchievements(achievements, xAchievements, newAchievements, spiderAchievements, selectedHeroes) {
+function displayAchievements(achievements, xAchievements, newAchievements, spiderAchievements, multiAchievements, selectedHeroes) {
     //Season 1 Achievements
     //variable for relevant list element
     const availableAchievements = document.getElementById('available-achievements');
@@ -1235,6 +1345,33 @@ function displayAchievements(achievements, xAchievements, newAchievements, spide
         label.appendChild(br);
         availableAchievementsSpider.appendChild(label);
     }
+
+    //Multi Achievements
+    //variable for relevant list element
+    const availableAchievementsMulti = document.getElementById('available-achievements-multi');
+    //WHILE the list has a non-null node
+    while (availableAchievementsMulti.hasChildNodes && availableAchievementsMulti.firstChild != null) {
+        //remove all nodes
+        availableAchievementsMulti.removeChild(availableAchievementsMulti.firstChild);
+    }
+    //FOR each achievment add a checkbox element with label
+    for (let i = 0; i < multiAchievements.length; i++) {
+        const label = document.createElement('label');
+        const box = document.createElement('input');
+        box.type = 'checkbox';
+        box.id = `multiachievement${i}`;
+        box.name = "achieves"
+        box.value = multiAchievements[i];
+        
+        let text = document.createTextNode(multiAchievements[i]);
+        //Allows a break after each acievement
+        let br = document.createElement('br');
+        label.appendChild(box);
+        label.appendChild(text);
+        label.appendChild(br);
+        availableAchievementsMulti.appendChild(label);
+    }
+
     //gets any relevant team and displays them
     const availableTeams = getAvailableTeams(selectedHeroes);
     //IF no teams are available
@@ -2021,6 +2158,94 @@ function getSpiderAchievements(heroes, villain, challenges, difficulty, gamemode
     }
     return availableAchievements;
 }
+//getMultiAchievements() function that gets relevant Multiverse achievments
+// param gamemode the varaible of the selected game mode
+// param heroes the Array of selected heroes
+// param difficulty the varaible of the selected difficulty
+function getMultiAchievements(gamemode, heroes, difficulty, villain, challenges) {
+    //Array that holds all relevant achievements
+    const availableAchievements = [];
+    //IF gamemode is Commander
+    if (gamemode == 'commander') {
+        availableAchievements.push("Win a game in Commander Solo Mode (Multiverse)");
+    }
+    //IF 2-4 heroes were selected
+    if (heroes.length == 2) {
+        availableAchievements.push("Win a game with 2 Players (Multiverse)");
+    }
+    if (heroes.length == 3) {
+        availableAchievements.push("Win a game with 3 Players (Multiverse)");
+    }
+    if (heroes.length == 4) {
+        availableAchievements.push("Win a game with 4 Players (Multiverse)");
+    }
+    availableAchievements.push('Complete all Mission cards (Multiverse)');
+    //IF difficulty is moderate or higher
+    if (difficulty == 'moderate' || difficulty == 'hard' || difficulty == 'heroic') {
+        availableAchievements.push("Complete all Mission cards with Moderate Challenge (Multiverse)");
+    }
+    //IF difficulty is hard or higher
+    if (difficulty == 'hard' || difficulty == 'heroic') {
+        availableAchievements.push("Complete all Mission cards with Hard Challenge (Multiverse)");
+    }
+    availableAchievements.push("Win without any Hero being KO'd (Multiverse)");
+    if (difficulty == 'moderate' || difficulty == 'hard' || difficulty == 'heroic') {
+        availableAchievements.push("Win without any Hero being KO'd with Moderate Challenge (Multiverse)");
+    }
+    //IF difficulty is hard or higher
+    if (difficulty == 'hard' || difficulty == 'heroic') {
+        availableAchievements.push("Win without any Hero being KO'd with Hard Challenge (Multiverse)");
+    }
+    availableAchievements.push('Win without the Villain ever triggering an Overflow (Multiverse)');
+    availableAchievements.push('Win before the 6th Master Plan card is played (Multiverse)');
+    availableAchievements.push('Win without using any Special Effect cards (Multiverse)');
+    availableAchievements.push('Win without any Hero taking damage (Multiverse)');
+    availableAchievements.push('Win without using any Action tokens (Multiverse)');
+    //FIXME consider adding check for equipment
+    availableAchievements.push('Win with all Equipment in play facedown by the end');
+    availableAchievements.push('Win without ever using any Equipment in play');
+    //IF game mode is Super Villain
+    if (gamemode == 'superVillain') {
+        //IF 2-4 heroes were selected
+        if(heroes.length == 2) {
+            availableAchievements.push('Defeat the Super Villain with 2 Heroes (Multiverse)');
+            availableAchievements.push('Play all Super Hero cards on a single Villain turn (with 2 Heroes) (Multiverse)');
+        }
+        if(heroes.length == 3) {
+            availableAchievements.push('Defeat the Super Villain with 3 Heroes (Multiverse)');
+            availableAchievements.push('Play all Super Hero cards on a single Villain turn (with 3 Heroes) (Multiverse)');
+        }
+        if(heroes.length == 4) {
+            availableAchievements.push('Defeat the Super Villain with 4 Heroes (Multiverse)');
+            availableAchievements.push('Play all Super Hero cards on a single Villain turn (with 4 Heroes) (Multiverse)');
+        }
+        availableAchievements.push('Defeat the Super Villain without using any Super Hero card (Multiverse)');
+        availableAchievements.push('Defeat the Super Villain without using any Action Tokens (Multiverse)');
+        availableAchievements.push('Defeat the Super Villain without ever using any Equipment in play');
+        availableAchievements.push('Win as the Super Villain without using any Super Villain card (Multiverse)');
+    }
+
+    //IF difficulty is hard or higher
+    if (difficulty == 'hard' || difficulty == 'heroic') {
+        //Array that holds Villain Fights Achievements
+        const villainFightsAchievements = getMultiVillainFights(villain, challenges);
+        //IF the array is not empty
+        if (villainFightsAchievements.length > 0) {
+            for (let i = 0; i < villainFightsAchievements.length; i++) {
+                availableAchievements.push(villainFightsAchievements[i]);            
+            }
+        }
+    }
+    //Array that holds Hero Feats Achievements
+    const heroFightsAchievements = getMultiHeroFeats(difficulty, villain, heroes, challenges);
+    //IF the array is not empty
+    if (heroFightsAchievements.length > 0) {
+        for (let i = 0; i < heroFightsAchievements.length; i++) {
+            availableAchievements.push(heroFightsAchievements[i]);            
+        }
+    }
+    return availableAchievements;
+}
 
 // getVillainFights() function that gets relevant Seaosn 1 Villain Fights achievements
 // param villain the varaible of the selected villain
@@ -2723,6 +2948,7 @@ const season2Villains = ["Apocalypse", "Arcade", "Avalanche", "Bob", "Brood Quee
         }
         villainFightsAchievements.push(`Defeat ${villainName} with Spiral still in play`);
         villainFightsAchievements.push(`Defeat ${villainName} with the Ratings track in the white zone`);
+        villainFightsAchievements.push(`Defeat ${villainName} with the Ratings track in the red zone`);
     }
     if (villain == 'Namor') {
         const villainName = "Namor";
@@ -2840,6 +3066,203 @@ function getSpiderVillainFights(villain, difficulty) {
         }
         villainFightsAchievements.push('Defeat Anti-Venom with the AntiVenom track at 3 or less');
     }
+    return villainFightsAchievements;
+}
+// getMultiVillainFights() function that gets relevant Multiverse Villain Fights achievements
+// param villain the varaible of the selected villain
+// param challenges the Array of selected challenges
+function getMultiVillainFights(villain, challenges) {
+    //Array that holds all relevant Villain Fights Achievements
+    const villainFightsAchievements = [];
+    if (villain == 'Emperor Doom') {
+        villainFightsAchievements.push('Defeat Emperor Doom without the Heroic Goal');
+    }
+    if (villain == 'Cosmic Ghost Rider') {
+        villainFightsAchievements.push('Defeat Cosmic Ghost Rider with the Punishment Tracker at 10 or less');
+    }
+    if (villain == 'Maestro') {
+        villainFightsAchievements.push('Defeat Maestro without Rick Jones in the same location as him');
+    }
+    if (villain == 'Immortus') {
+        villainFightsAchievements.push('Defeat Immortus with 3 or more Master Plan cards in the Master Plan deck');
+    }
+    if (villain == 'Demogoblin/Doppelganger') {
+        villainFightsAchievements.push('Defeat Demogoblin & Doppelganger without losing any Mission');
+        villainFightsAchievements.push('Defeat both Demogoblin & Doppelganger on the same Hero turn');
+    }
+    if (villain == 'Scorpion') {
+        villainFightsAchievements.push('Defeat Scorpion with no more than 1 Hero with a KO token');
+    }
+    if (villain == 'Scream') {
+        villainFightsAchievements.push('Defeat Scream with no more than 1 Crisis token on the Assassination Mission card');
+    }
+    if (villain == 'Shriek') {
+        villainFightsAchievements.push('Defeat Shriek with 3 or more Civilians in play');
+    }
+    if (villain == 'Morbius') {
+        villainFightsAchievements.push('Defeat Morbius with the Heroes having 4 or less Crisis tokens overall');
+    }
+    if (villain == 'New Sinister Six') {
+        villainFightsAchievements.push('Defeat the New Sinister Six with 3 or more cards left in the Master Plan deck');
+    }
+    if (villain == 'World Breaker Hulk') {
+        villainFightsAchievements.push('Defeat World Breaker Hulk with no Hero having an Obedience Disk when he’s defeated');
+    }
+    if (villain == 'The Void') {
+        villainFightsAchievements.push('Defeat The Void with 3 or more cards in his Master Plan deck');
+    }
+    if (villain == 'Ares') {
+        villainFightsAchievements.push('Defeat Ares with 5 or less Crisis tokens on Locations');
+    }
+    if (villain == 'Firelord') {
+        villainFightsAchievements.push('Defeat Firelord');
+    }
+    if (villain == 'Nova (Frankie Raye)') {
+        villainFightsAchievements.push('Defeat Nova with no Location with 3 Crisis tokens');
+    }
+    if (villain == 'Terrax') {
+        villainFightsAchievements.push('Defeat Terrax with his Domination Track on space 4 or lower');
+    }
+    if (villain == 'Air-Walker') {
+        villainFightsAchievements.push('Defeat Air-Walker with no Hero with more than 2 Crisis tokens');
+    }
+    //FIXME add Heralds as selectable
+    if (villain == 'Heralds of Galactus') {
+        villainFightsAchievements.push('Defeat the Heralds of Galactus');
+    }
+    if (villain == 'Galactus') {
+        villainFightsAchievements.push('Defeat Galactus');
+    }
+    if (villain == 'Dark Beast') {
+        villainFightsAchievements.push('Defeat Dark Beast');
+    }
+    if (villain == 'Nemesis') {
+        villainFightsAchievements.push('Defeat Nemesis with 4 or less Crisis tokens on his dashboard');
+    }
+    if (villain == 'Apocalypse (AoA)') {
+        villainFightsAchievements.push('Defeat Apocalypse without any Hero being KO’d');
+    }
+    if (villain == 'Skrulls') {
+        villainFightsAchievements.push('Defeat the Skrulls with 3 or more cards left in the Master Plan deck');
+    }
+    if (villain == 'Queen Veranke') {
+        villainFightsAchievements.push('Defeat Queen Veranke with all 3 Missions completed');
+    }
+    if (villain == 'Gladiator') {
+        villainFightsAchievements.push('Defeat Gladiator with his Duel Track at 1 or less');
+    }
+    if (villain == 'Vulcan') {
+        villainFightsAchievements.push('Defeat Vulcan with the Heroes having 2 or less KO tokens');
+    }
+    if (villain == 'Annihilus') {
+        villainFightsAchievements.push('Defeat Annihilus with the Annihilation Track at 8 or less');
+    }
+    //FIXME check this achievement
+    if(challenges.includes('complications')) {
+        villainFightsAchievements.push('Defeat any Villain with 1 Complication added');
+        villainFightsAchievements.push('Defeat any Villain with 2 Complications added');
+        villainFightsAchievements.push('Defeat any Villain with 3 Complications added');
+        villainFightsAchievements.push('Defeat any Villain with 4 Complications added');
+    }
+    if (villain == 'Abomination') {
+        villainFightsAchievements.push('Defeat Abomination before he plays his 4th Master Plan card');
+    }
+    //FIXME consider adding Titania challenge to challenges
+    if (villain == 'Absorbing Man') {
+        villainFightsAchievements.push('Defeat Absorbing Man with the additional Titania Challenge');
+    }
+    if (villain == 'Blastaar') {
+        villainFightsAchievements.push('Defeat Blastaar while no Hero is on the Negative Zone card');
+    }
+    if (villain == 'Cabal (Doctor Doom)' || villain == 'Cabal (Emma Frost)' || villain == 'Cabal (Iron Patriot)' || villain == 'Cabal (Loki)' || villain == 'Cabal (Namor)' || villain == 'Cabal (Taskmaster)') {
+        villainFightsAchievements.push('Defeat the Cabal 6 times, with 6 different main Villains');
+    }
+    if (villain == 'Chameleon') {
+        villainFightsAchievements.push('Defeat Chameleon after having found him at least 4 times.');
+        villainFightsAchievements.push('Defeat Chamaleon with this additional rule: Every time a Hero tries to damage Chamaleon and none of the revealed tokens shows Chamaleon, another Hero must discard 1 card from their hand.');
+    }
+    //FIXME consider adding Crimson Dynamo with Winter Guard
+    if (villain == 'Crimson Dynamo') {
+        villainFightsAchievements.push('Defeat Crimson Dynamo with 4 or less Crisis tokens on the Power Struggle Mission');
+    }
+    if (villain == 'Crossbones') {
+        villainFightsAchievements.push('Defeat Crossbones with the Headmoney Track at 4 or less');
+        villainFightsAchievements.push('Defeat Crossbones after completing all 3 Missions');
+    }
+    if (villain == 'Daken') {
+        villainFightsAchievements.push('Defeat Daken with the Challenge Track at 3 or 4');
+    }
+    if (villain == 'Dark Avengers') {
+        villainFightsAchievements.push('Defeat the Dark Avengers with 3 or more cards in their Master Plan deck');
+        villainFightsAchievements.push('Defeat the Dark Avengers 7 times, each time leaving out of the game a different Villain');
+    }
+    if (villain == 'Darkchild') {
+        villainFightsAchievements.push('Defeat Darkchild without any Hero ever going to Limbo');
+    }
+    if (villain == 'Enchantress') {
+        villainFightsAchievements.push('Defeat Enchantress with Skurge the Executioner still in play');
+    }
+    if (villain == 'Fin Fang Foom' && challenges.length > 0) {
+        villainFightsAchievements.push('Defeat Fin Fang Foom with any additional Challenge of your choice');
+    }
+    if (villain == 'Gorr') {
+        villainFightsAchievements.push('Defeat Gorr with no more than 1 Hero removed from the game');
+        villainFightsAchievements.push('Defeat Gorr with no Heroes removed from the game');
+    }
+    if (villain == 'High Evolutionary') {
+        villainFightsAchievements.push('Defeat High Evolutionary without any Hero ever getting 3 or more Crisis tokens');
+        villainFightsAchievements.push('Defeat High Evolutionary with no Threats remaining in play');
+    }
+    if (villain == 'Hobgoblin') {
+        villainFightsAchievements.push('Defeat Hobgoblin without activating his Special Rule when he would be defeated the first time');
+        villainFightsAchievements.push('Defeat Hobgoblin without clearing any Threat. Once in the game, you can delay the next Villain turn');
+    }
+    if (villain == 'Klaw') {
+        villainFightsAchievements.push('Defeat Klaw with 3 or more cards in his Master Plan deck');
+    }
+    if (villain == 'Knull') {
+        villainFightsAchievements.push('Defeat Knull with no more than 1 Hero being turned into a Symbiote');
+        villainFightsAchievements.push('Defeat Knull in a 6-Hero game, with exactly 4 Heroes turned into Symbiote Henchmen');
+    }
+    if (villain == 'Lizard') {
+        villainFightsAchievements.push('Defeat Lizard without any Hero ever being KO’d');
+        villainFightsAchievements.push('Defeat Lizard without ever triggering an Overflow');
+    }
+    if (villain == 'Maximus') {
+        villainFightsAchievements.push('Defeat Maximus with 3 or more cards in his Master Plan deck');
+    }
+    if (villain == 'Mole Man') {
+        villainFightsAchievements.push('Defeat Mole Man with no more than 1 Location filled with Crisis tokens');
+    }
+    if (villain == 'Moonstone') {
+        villainFightsAchievements.push('Defeat Moonstone by delivering 3 or more damage on the Hero turn she’s defeated');
+    }
+    if (villain == 'Purple Man') {
+        villainFightsAchievements.push('Defeat Purple Man with 3 or more cards in his Master Plan deck');
+    }
+    if (villain == 'Red Hulk') {
+        villainFightsAchievements.push('Defeat Red Hulk with the Revenge Track at 3 or less');
+    }
+    if (villain == 'Shocker') {
+        villainFightsAchievements.push('Defeat Shocker with him fulfilling no more than 1 of his Achievements');
+    }
+    //FIXME consider adding Absorbing Man challenge to challenges
+    if (villain == 'Titania') {
+        villainFightsAchievements.push('Defeat Titania with the additional Absorbing Man Challenge');
+    }
+    if (villain == 'U.S. Agent') {
+        villainFightsAchievements.push('Defeat U.S.Agent with 3 or more cards in his Master Plan deck');
+    }
+    if (villain == 'White Widow') {
+        villainFightsAchievements.push('Defeat White Widow with 3 or less Crisis tokens among Heroes');
+    }
+    if (villain == 'Winter Guard') {
+        villainFightsAchievements.push('Defeat the Winter Guard with the Interrogation Track at 2 or less');
+    }
+    if (villain == 'Wrecking Crew') {
+        villainFightsAchievements.push('Defeat the Wrecking Crew while they’re trying to win with their Plan B');
+    }
+
     return villainFightsAchievements;
 }
 
@@ -3573,7 +3996,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     if (villain == 'Callisto' && (heroes.includes('Storm') || heroes.includes('Storm (Mohawk)'))) {
         heroFeatsAchievements.push('Fight for Leadership: Defeat Callisto with Storm in your team');
     }
-    if (villain == 'Dark Phoenix' && heroes.push('Phoenix') && (heroes.includes('Jean Grey') || heroes.includes('Jean Grey (Fisrt Class)'))) {
+    if (villain == 'Dark Phoenix' && heroes.push('Phoenix') && (heroes.includes('Jean Grey') || heroes.includes('Marvel Girl'))) {
         heroFeatsAchievements.push('Phoenix Fight: Defeat Dark Phoenix with Phoenix and Jean Gray in your team');
     }
     if (villain == 'Namor') {
@@ -3646,6 +4069,322 @@ function getSpiderHeroFeats(heroes, villain, challenges) {
     }
     return heroFeatsAchievements;
 }
+// getMultiHeroFeats() function that gets relevant Multiverse Hero Feats achievements
+// param difficulty the varaible of the selected difficulty
+// param villain the varaible of the selected villain
+// param heroes the Array of selected heroes
+// param challenges the Array of selected challenges
+
+// returns 'heroFeatsAchievements', an Array with all relevant achievements
+function getMultiHeroFeats(difficulty, villain, heroes, challenges) {
+    //Array that holds all relevant Hero Feats Achievements
+    const heroFeatsAchievements = [];
+    let heroTeams = getAvailableTeams(heroes);
+    if (difficulty == 'hard' || difficulty == 'heroic') {
+        heroFeatsAchievements.push('Defeat any Villain with Hard Mode Challenge and no Equipment');
+    }
+    if (villain == 'Sinister Six' || villain == 'New Sinister Six' || villain == 'Sinister Six Assembled') {
+        let spiderArmy = false;
+        if(heroes.includes('Morbius')) {
+            heroFeatsAchievements.push('Calling Dr. Morbius: Defeat any version of the Sinister Six with Morbius in your team')
+        }
+        if (heroTeams.includes('Spider-Army')) {
+            heroFeatsAchievements.push('Spider-Family: Defeat any version of the Sinister Six with only Heroes belonging to the Spider-Army in your team (Spider-Man, Miles Morales, Ghost Spider, Spider-Man 2099, Scarlet Spider, Peni Parker, Spider-Punk, Spider-Man Noir, Silk, Spider-Man (Symbiote Suit), Spider-Woman, Cyborg Spider-Man, Spider-Ham, Agent Venom, Superior Spider-Man, Black Cat, Venom)');
+            spiderArmy = true;
+        }
+        if (heroes.includes('Spider-Man') && heroes.includes('Scarlet Spider') && heroes.includes('Symbiote Spider-Man')) {
+            heroFeatsAchievements.push('It’s Clone Time: Defeat any version of the Sinister Six with Spider-Man, Scarlet Spider, and Spider-Man (Symbiote Suit) in your team');
+        }
+        if (!spiderArmy) {
+            heroFeatsAchievements.push('Weird Crossover: Defeat any version of the Sinister Six with no member of the Spider-Army in your team');
+        }
+    }
+    if (villain == 'World Breaker Hulk' && heroes.includes('Black Bolt') && (heroes.includes('Iron Man') || heroes.includes('Iron Man (Civil War)') || heroes.includes('Hulkbuster Iron Man')) && heroes.includes('Doctor Strange') && heroes.includes('Mister Fantastic')) {
+        heroFeatsAchievements.push('Prologue: Defeat World Breaker Hulk with Black Bolt, Iron Man, Doctor Strange, and Mr. Fantastic as your team');
+    }
+    if (villain == 'World Breaker Hulk' && heroes.includes('Sentry')) {
+        heroFeatsAchievements.push('Robert and Bruce: Defeat World Breaker Hulk with Sentry in your team');
+    }
+    if (villain == 'Galactus') {
+        if (heroes.includes('Invisible Woman') && heroes.includes('The Thing') && heroes.includes('Human Torch') && heroes.includes('Mister Fantastic')){
+            heroFeatsAchievements.push('Family Ties: Defeat Galactus with all 4 members of the Fantastic Four as your team');
+        }
+        heroFeatsAchievements.push('Silver Herald: Defeat Galactus with Silver Surfer as one of the Heralds');
+        if (heroes.includes('Silver Surfer')) {
+            heroFeatsAchievements.push('Silver Hero: Defeat Galactus with Silver Surfer in your team');
+        }
+        if ((heroes.includes('Thor') || heroes.includes('Mighty Thor')) && (heroes.includes('Iron Man') || heroes.includes('Iron Man (Civil War)') || heroes.includes('Hulkbuster Iron Man')) && (heroes.includes('Captain America') || heroes.includes('Captain America (Classic)') || heroes.includes('Captain America (Sam)')) && heroes.includes('Wasp')) {
+            heroFeatsAchievements.push('Avengers vs Galactus: Defeat Galactus with Thor, Iron Man, Captain America, and Wasp as your team');
+        }
+    }
+    if (villain == 'Dark Beast') {
+        heroFeatsAchievements.push('Defeat Dark Beast with Dark Beast Laboratory as his starting Location and one of his Henchmen starting there');
+    }
+    //FIXME check shield
+    if ((villain == 'Queen Veranke' || villain == 'Skrulls') && heroTeams.includes('S.H.I.E.L.D.')) {
+        heroFeatsAchievements.push('It’s a S.H.I.E.L.D. Matter: Defeat either Villain in this set with only members of S.H.I.E.L.D. in your team (Black Widow, Agent Venom, Songbird, War Machine, Mirage, Spider-Woman, Mockingbird, Falcon, Captain America (Sam Wilson), Captain Carter, Nick Fury, U.S.Agent, Nick Fury Sr., Maria Hill, Quake, White Widow)');
+    }
+    if (heroes.includes('Nick Fury') && heroes.includes('Nick Fury Sr.')) {
+        heroFeatsAchievements.push('My name is Fury, kid… and so is yours: Defeat any Villain with Nick Fury and Nick Fury Sr. in your team');
+    }
+    //check Starjammers & GotG
+    if (villain == 'Gladiator' || villain == 'Vulcan') {
+        if(heroTeams.includes('Starjammers')) {
+            heroFeatsAchievements.push('Space Adventures: Defeat Gladiator or Vulcan with only members of the Starjammers in your team (Corsair, Ch’od, Hepzibah, Raza, Havok, Polaris, Lilandra)');
+        }
+        if (heroTeams.includes('Guardians of the Galaxy')) {
+            heroFeatsAchievements.push('Space Oddity: Defeat Gladiator or Vulcan with only members of the Guardians of the Galaxy in your team (Star-Lord, Rocket, Groot, Gamora, Drax, Mantis, Phyla-Vell, Nebula, Adam Warlock, Nova Prime, Cosmic Ghost Rider, Quasar)');
+        }
+    }
+    if (villain == 'Annihilus') {
+        heroFeatsAchievements.push('Defeat Annihilus with Harvester of Sorrow as his Starting location and Nova Corps Headquarters Location not in play');
+        if (heroes.includes('Nova Prime') && heroes.includes('Drax') && heroes.includes('Phyla-Vell') && heroes.includes('Silver Surfer')) {
+            heroFeatsAchievements.push('Defeat Annihilus with Nova Prime, Drax, Phila-Vell, and Silver Surfer as your team');
+        }
+    }
+    if (difficulty == 'hard' || difficulty == 'heroic') {
+        if (heroes.includes('Loki') && heroes.includes('Thor') && heroes.includes('Kid Loki') && heroes.length == 3) {
+            heroFeatsAchievements.push('All in the Family: Win with Loki, Thor, and Kid Loki as your team. Optionally, one of your Heroes should have Crocodile Loki as their Companion');
+        }
+        if (heroes.includes('Black Widow') && heroes.includes('White Widow') && heroes.length == 2) {
+            heroFeatsAchievements.push('Soviet Sisterhood: Win with Black Widow and White Widow as your Team');
+        }
+        if (heroes.includes('Hulk') && heroes.includes('Grey Hulk') && heroes.includes('Red Hulk') && heroes.length == 3) {
+            heroFeatsAchievements.push('3 Shades of Hulk: Win with Hulk, Grey Hulk, and Red Hulk as your team');
+        }
+        if (heroes.includes('Ghost Rider') && heroes.includes('Ghost Rider (Johnny Blaze') && heroes.includes('Cosmic Ghost Rider') && heroes.length == 3) {
+            heroFeatsAchievements.push('Ghosts in the Machine: Win with Ghost Rider, Ghost Rider (Jonny Blaze), and Cosmic Ghost Rider as your team');
+        }
+        if (heroes.includes('Black Knight') && heroes.includes('Moon Knight') && heroes.length == 2) {
+            heroFeatsAchievements.push('Knights in not so Shiny Armor: Win with Black Knight and Moon Knight as your team');
+        }
+        if (heroes.includes('Black Bolt') && heroes.includes('Black Knight') && heroes.includes('Black Cat') && heroes.length == 3) {
+            heroFeatsAchievements.push('Back in Black: Win with Black Bolt, Black Knight, and Black Cat as your team');
+        }
+        if ((heroes.includes('Captain America (Sam)') || heroes.includes('Falcon')) && heroes.includes('Winter Soldier') && heroes.length == 2) {
+            heroFeatsAchievements.push('Falcon and the Soldier: Win with Captain America (Sam Wilson) and Winter Soldier as your team');
+        }
+        if (heroes.includes('Aurora') && heroes.includes('Northstar') && heroes.length == 2) {
+            heroFeatsAchievements.push('Twins Reunited: Win with Aurora and Northstar as your team');
+        }
+        if (heroes.includes('Moon Girl / Devil Dinosaur')) {
+            let onlyInhumans = true;
+            for (let i = 0; i < heroes.length; i++) {
+                if (heroes[i] != 'Moon Girl / Devil Dinosaur' && heroes[i] != 'Black Bolt' && heroes[i] != 'Medusa' && heroes[i] != 'Lockjaw' && heroes[i] != 'Crystal' && heroes[i] != 'Karnak' && heroes[i] != 'Gorgon' && heroes[i] != 'Triton' && heroes[i] != 'Ms. Marvel') {
+                    onlyInhumans = false;
+                }
+            }
+            if (onlyInhumans) {
+                availableAchievements.push('I Am Inhuman… or I Will Be: Win with Moon Girl & Devil Dinosaur and only other Inhumans in your team (Black Bolt, Medusa, Lockjaw, Crystal, Karnak, Gorgon, Triton, Ms. Marvel)');
+            } 
+        }
+        if (heroes.includes('Red Guardian') && heroes.includes('Ursa Major') && heroes.includes('Darkstar') && heroes.length == 3) {
+            heroFeatsAchievements.push('Winter Guardians: Win with Red Guardian, Ursa Major, and Darkstar as your team');
+        }
+        if (heroes.includes('Else Bloodstone') && (heroes.includes('Deadpool') || heroes.includes('Deadpool (X-Force)'))&& heroes.length == 2) {
+            heroFeatsAchievements.push('Deadly Duo: Win with Elsa Bloodstone and Deadpool as your team');
+        }
+        if (heroes.includes('M')) {
+            heroFeatsAchievements.push('Only M: Win with M in your team without ever swapping into Penance Form');
+            heroFeatsAchievements.push('Feel the Pain: Win with M in your team without playing cards with a Special Effect that works if you are in M form');
+        }
+        if (heroes.includes('Siryn') && heroes.includes('Banshee') && heroes.length == 2) {
+            heroFeatsAchievements.push('Cassidy Family: Win with Siryn and Banshee as your team');
+        }
+        if (heroes.includes('Siryn') && heroes.includes('Multiple Man') && heroes.length == 2) {
+            heroFeatsAchievements.push('Theresa and Jamie: Win with Siryn and Multiple Man as your team');
+        }
+        if ((heroes.includes('Havok') || heroes.includes('Havok (X-Factor)')) && (heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && heroes.length == 2) {
+            heroFeatsAchievements.push('The Summers: Win with Havok and Cyclops as your team');
+        }
+        if ((heroes.includes('Havok') || heroes.includes('Havok (X-Factor)')) && (heroes.includes('Cyclops') || heroes.includes('Cyclops (First Class)')) && (heroes.includes('Jean Grey') || heroes.includes('Marvel Girl')) && heroes.includes('Polaris')) {
+            heroFeatsAchievements.push('Double Date: Win with Havok, Cyclops, Jean Grey, and Polaris as your team');
+        }
+        if (heroes.includes('Meggan') && heroes.includes('Nightcrawler') && heroes.length == 2) {
+            heroFeatsAchievements.push('Pointy Ears Team-Up: Win with Meggan and Nightcrawler as your team');
+        }
+        //FIXME consider Captain Britain Betsy
+        if (heroes.includes('Meggan') && heroes.includes('Captain Britain') && heroes.length == 2) {
+            heroFeatsAchievements.push('Fairy Tales: Win with Meggan and Captain Britain as your team');
+        }
+        if (heroes.includes('Wiccan') && heroes.includes('Hulkling') && heroes.length == 2) {
+            heroFeatsAchievements.push('Wedding Vows: Win with Wiccan and Hulkling as your team');
+        }
+        if (heroes.includes('Wiccan') || heroes.includes('Doctor Strange') || heroes.includes('Wong') || heroes.includes('Doctor Doom') || heroes.includes('Scarlet Witch') || heroes.includes('Magik') || heroes.includes('Darkchild')) {
+            let onlyMagesWitches = true;
+            for (let i = 0; i < heroes.length; i++) {
+                if (heroes[i] != 'Wiccan' && heroes[i] != 'Doctor Strange' && heroes[i] != 'Wong' && heroes[i] != 'Doctor Doom' && heroes[i] != 'Scarlet Witch' && heroes[i] != 'Magik' && heroes[i] != 'Darkchild') {
+                    onlyMagesWitches = false;
+                }
+            }
+            if (onlyMagesWitches) {
+                heroFeatsAchievements.push('Mages and Witches United: Win with any combination of Wiccan, Doctor Strange, Wong, Doctor Doom, Scarlet Witch, and Magik as your team');
+            }
+        }
+        if (heroes.includes('Husk') && heroes.includes('Cannonball') && heroes.length == 2) {
+            heroFeatsAchievements.push('Guthrie Brother and Sister: Win with Husk and Cannonball as your team');
+        }
+        if ((heroes.includes('Husk') && (heroes.includes('Chamber') || heroes.includes('Archangel')) && heroes.length == 2) || (heroes.includes('Husk') && heroes.includes('Chamber') && heroes.includes('Archangel') && heroes.length == 3)) {
+            heroFeatsAchievements.push('Complicated Relationships: Win with Husk and either Chamber or Archangel as your team. You can also play with all 3 if you wish');
+        }
+        if ((heroes.includes('Mystique') && heroes.includes('Husk') && heroes.includes('Morph') && heroes.length == 3) || (heroes.includes('Mystique') && heroes.includes('Husk') && heroes.includes('Morph') && heroes.includes('Ms Marvel'))) {
+            heroFeatsAchievements.push('Shapeshifters: Win with Mystique, Husk, and Morph as your team. Or add Ms. Marvel to the team');
+        }
+        if (heroes.includes('Stature') && heroes.includes('Ant-Man') && heroes.includes('Wasp') && heroes.includes('Yellowjacket')) {
+            heroFeatsAchievements.push('Pym Particle Team-Up: Win with Stature, Ant-Man, Wasp, and Yellowjacket as your team ');
+        }
+        if (heroes.includes('Daken') && (heroes.includes('Wolverine') || heroes.includes('Old Man Logan') || heroes.includes('Weapon X') || heroes.includes('Logan')) && heroes.length == 2) {
+            heroFeatsAchievements.push('Difficult Father-Son Relationship: Win with Daken and Wolverine as your team');
+        }
+        if (heroes.includes('Aurora') && heroes.includes('Daken') && heroes.length == 2) {
+            heroFeatsAchievements.push('Light and Dark: Win with Aurora and Daken as your team');
+        }
+        if (heroes.includes('Songbird')) {
+            heroFeatsAchievements.push('Lethal Song: Win with Songbird in your team and using Manipulating Song to deal the final blow to a Henchmen or Villain');
+        }
+        if (heroes.includes('Man-Thing')) {
+            heroFeatsAchievements.push('Whether They Want It or Not: Win with Man-Thing in your team and use Reality Displacement to remove another Hero from play');
+        }
+        if (heroes.includes('Cypher') && heroes.includes('Wolfsbane')) {
+            heroFeatsAchievements.push('I’ll Never Do It Again: Win with Cypher and Wolfsbane in your team. During the game, Cypher must be KO’d while in the same Location as Wolfsbane');
+        }
+        if (heroes.includes('Captain Britain (Betsy)') && heroes.includes('Psylocke') && heroes.length == 2) {
+            heroFeatsAchievements.push('Conflicting Identities: Win with Captain Britain (Betsy Braddock) and Psylocke as your team');
+        }
+        if (heroes.includes('Darkchild') && heroes.includes('Magik') && heroes.length == 2) {
+            heroFeatsAchievements.push('Even More Conflicting Identities: Win with Darkchild and Magik as your team');
+        }
+        if (heroes.includes('Cyborg Spider-Man') && (heroes.includes('Deathlok') || heroes.includes('Winter Soldier') || heroes.includes('War Machine') || heroes.includes('Cable') || heroes.includes('Forge')) && heroes.length == 4) {
+            let onlyCyberTeam = true;
+            for (let i = 0; i < heroes.length; i++) {
+                if (heroes[i] != 'Cyborg Spider-Man' && heroes[i] != 'Deathlok' && heroes[i] != 'Winter Soldier' && heroes[i] != 'War Machine' && heroes[i] != 'Cable' && heroes[i] != 'Forge') {
+                    onlyCyberTeam = false;
+                }
+            }
+            if (onlyCyberTeam) {
+                heroFeatsAchievements.push('Cyber-Team: Win with Cyborg Spiderman, Deathlok, Winter Soldier, and War Machine as your team. Optionally, you can replace one of them other than Cyborg Spiderman with Cable or Forge');
+            }
+        }
+        if (heroes.includes('Patriot') && (heroes.includes('Captain America') || heroes.includes('Captain America (Classic)') || heroes.includes('Captain America (Sam)')) && heroes.length == 2) {
+            heroFeatsAchievements.push('Oh Captain, My Captain!: Win with Patriot and Captain America (any version) as your team');
+        }
+        if (heroes.includes('Patriot') && heroes.includes('Iron Lad') && heroes.length == 2) {
+            heroFeatsAchievements.push('Strolling through Time: Win with Patriot and Iron Lad as your team');
+        }
+        //FIXME consider adding Kid Loki
+        if (heroes.includes('Iron Lad') && heroes.includes('Loki') && heroes.includes('Cable') && heroes.length == 3) {
+            heroFeatsAchievements.push('Time Travelers: Win with Iron Lad, Loki, and Cable as your team');
+        }
+        if (heroes.includes('Speed') && heroes.includes('Wiccan') && heroes.includes('Scarlet Witch') && heroes.includes('Vision')) {
+            heroFeatsAchievements.push('Weird Family Reunion: Win with Speed, Wiccan, Scarlet Witch, and Vision as your team');
+        }
+        if (heroes.includes('Speed') && heroes.includes('Wiccan') && heroes.length == 2) {
+            heroFeatsAchievements.push('Twinstars: Win with Speed and Wiccan as your team');
+        }
+        if (heroes.includes('US Agent') && (heroes.includes('Captain America') || heroes.includes('Captain America (Classic)') || heroes.includes('Captain America (Sam)')) && heroes.length == 2) {
+            heroFeatsAchievements.push('The Blue and the Red: Win with U.S.Agent and Captain America (any version) as your team');
+        }
+        if (heroes.includes('US Agent') && (heroes.includes('Captain America') || heroes.includes('Captain America (Classic)')) && heroes.includes('Captain America (Sam)') && heroes.length == 3) {
+            heroFeatsAchievements.push('Multi-Shielded: Win with U.S.Agent, Captain America, and Captain America (Sam Wilson) as your team');
+        }
+        if (heroes.includes('Agent Venom') && (heroes.includes('Spider-Man') || heroes.includes('Cyborg Spider-Man') || heroes.includes('Symbiote Spider-Man') || heroes.includes('Iron Spider')) && heroes.length == 2) {
+            heroFeatsAchievements.push('Old School Buddies: Win with Agent Venom and Spider-Man as your team');
+        }
+        if (heroes.includes('Agent Venom') && heroes.includes('Anti-Venom') && heroes.includes('Symbiote Spider-Man') && heroes.length == 3) {
+            heroFeatsAchievements.push('Symbiosis: Win with Agent Venom, Anti-Venom, and Symbiote Spider-Man as your team');
+        }
+        if (heroes.includes('Wong') && heroes.includes('Doctor Strange') && heroes.length == 2) {
+            heroFeatsAchievements.push('Partners in Magic: Win with Wong and Doctor Strange as your team');
+        }
+        if (heroes.includes('Moonstone') && heroes.includes('Doc Samson') && heroes.length == 2) {
+            heroFeatsAchievements.push('Getting in Your Head: Win with Moonstone and Doc Samson as your team');
+        }
+        if (heroes.includes('Moonstone') && heroes.includes('Werewolf by Night') && heroes.includes('Moon Knight') && heroes.length == 3) {
+            heroFeatsAchievements.push('Dancing in the Moonlight: Win with Moonstone, Werewolf by Night, and Moon Knight as your team');
+        }
+        if (villain == 'Maximus' && heroes.includes('Black Bolt')) {
+            let onlyInhumans = true;
+            for (let i = 0; i < heroes.length; i++) {
+                if (heroes[i] != 'Black Bolt' && heroes[i] != 'Medusa' && heroes[i] != 'Lockjaw' && heroes[i] != 'Crystal' && heroes[i] != 'Karnak' && heroes[i] != 'Gorgon' && heroes[i] != 'Triton' && heroes[i] != 'Ms. Marvel') {
+                    onlyInhumans = false;
+                }
+            }
+            if (onlyInhumans) {
+                heroFeatsAchievements.push('Taking Back Attilan: Defeat Maximus with Black Bolt and only other Inhuman Heroes in your team');
+            }
+        }
+        if (villain == 'Fin Fang Foom') {
+            heroFeatsAchievements.push('Wake the Dragon: Defeat Fin Fang Foom with no cards left in the Awake Master Plan deck');
+        }
+        if (challenges.includes('finfangfoom')) {
+            heroFeatsAchievements.push('Defeat any Villain with Fin Fang Foom as an additional Challenge');
+        }
+        if (villain == 'Mole Man' && heroes.includes('Mister Fantaatic') && heroes.includes('Invisible Woman') && heroes.includes('The Thing') && heroes.includes('Human Torch')) {
+            heroFeatsAchievements.push('Number 1: Defeat Mole Man with all 4 members of the Fantastic Four as your team');
+        }
+        if (villain == 'Blastaar' && (heroes.includes('Nova') || heroes.includes('Nova Prime'))) {
+            heroFeatsAchievements.push('Have a Blast: Defeat Blastaar with Nova (any version) in your team');
+        }
+        if (villain == 'White Widow' && heroes.includes('Black Widow')) {
+            heroFeatsAchievements.push('Settling Scores: Defeat White Widow with Black Widow in your team');
+        }
+        if (villain == 'Red Hulk' && (heroes.includes('Hulk') || heroes.includes('Grey Hulk') || heroes.includes('Gladiator Hulk'))) {
+            heroFeatsAchievements.push('Should I Stay or Should I Go?: Defeat Red Hulk with Hulk in your team');
+        }
+        if (villain == 'Gorr' && (heroes.includes('Thor') || heroes.includes('Mighty Thor')) && (heroes.includes('Loki') || heroes.includes('Kid Loki')) && heroes.includes('Ares') && heroes.includes('Hercules')) {
+            heroFeatsAchievements.push('God Butcher: Defeat Gorr with Thor, Loki, Ares, and Hercules as your team');
+        }
+        if (villain == 'Abomination' && (heroes.includes('Hulk') || heroes.includes('Grey Hulk') || heroes.includes('Gladiator Hulk')) && heroes.includes('Silver Surfer') && heroes.length == 2) {
+            heroFeatsAchievements.push('Stranger than Strange: Defeat Abomination with Hulk and Silver Surfer as your team');
+        }
+        if (villain == 'Wrecking Crew' && (heroes.includes('Thor') || heroes.includes('Mighty Thor')) && heroes.includes('She-Hulk') && heroes.includes('The Thing') && heroes.length == 3) {
+            heroFeatsAchievements.push('Muscular Battle: Defeat the Wrecking Crew with Thor, She-Hulk, and The Thing as your team');
+        }
+        if (villain == 'Winter Guard' && (heroes.includes('Iron Man') || heroes.includes('Iron Man (Civil War)') || heroes.includes('Hulkbuster Iron Man')) && heroes.includes('Doc Samson') && heroes.includes('She-Hulk') && heroes.length == 3) {
+            heroFeatsAchievements.push('Russian Answer to the Avengers: Defeat the Winter Guard with Iron Man, Doc Samson, and She-Hulk as your team');
+        }
+        if (villain == 'Crymson Dynamo' && ((heroes.includes('Iron Man') || heroes.includes('Iron Man (Civil War)') || heroes.includes('Hulkbuster Iron Man')))) {
+            heroFeatsAchievements.push('Battle of Armors: Defeat Crymson Dinamo with Iron Man in your team');
+        }
+        if (villain == 'Enchantress') {
+            let taleTeam = true;
+            for (let i = 0; i < heroes.length; i++) {
+                if (heroes[i] != 'Thor' && heroes[i] != 'Mighty Thor' && heroes[i] != 'Valkyrie' && heroes[i] != 'Korg' && heroes[i] != 'Loki' && heroes[i] != 'Kid Loki' && heroes[i] != 'Beta Ray Bill') {
+                    taleTeam = false;
+                }
+            }
+            if (taleTeam) {
+                heroFeatsAchievements.push('Amora(l) Tales: Defeat Enchantress with any combination of these Heroes as your team: Thor, Valkyrie, Korg, Loki, Beta Ray Bill');
+            }
+            heroFeatsAchievements.push('Don’t Make Her Cry: Defeat Enchantress without ever defeating Skurge the Executioner Henchman');
+        }
+        if (villain == 'Klaw' && heroes.includes('Black Panther') && (heroes.includes('Mister Fantastic') || heroes.includes('Invisible Woman') || heroes.includes('Human Torch') || heroes.includes('The Thing'))) {
+            heroFeatsAchievements.push('Defenders of Wakanda: Defeat Klaw with Black Panther and any member of the Fantastic Four in your team');
+        }
+        if (villain == 'Daken' && (heroes.includes('Wolverine') || heroes.includes('Old Man Logan') || heroes.includes('Weapon X') || heroes.includes('Logan'))) {
+            heroFeatsAchievements.push('Daddy Issues: Defeat Daken with Wolverine in your team');
+        }
+        if (villain == 'US Agent' && (heroes.includes('Captain America') || heroes.includes('Captain America (Classic)')) && heroes.includes('Captain America (Sam)') && heroes.length == 2) {
+            heroFeatsAchievements.push('There’s Only One Captain: Defeat U.S.Agent with Captain America and Captain America (Sam Wilson) as your team');
+        }
+        if (villain == 'Purple Man' && (heroes.includes('Jessica Jones') && heroes.includes('Luke Cage') && heroes.includes('Daredevil')) && (heroes.includes('Shang-Chi') || heroes.includes('Mockingbird'))) {
+            heroFeatsAchievements.push('You’ll Get What You Deserve: Defeat Purple Man with Jessica Jones, Luke Cage, Daredevil, and either Shang-Chi or Mockingbird as your team');
+        }
+        if (villain == 'Moonstone') {
+            let strikeForce = true;
+            for (let i = 0; i < heroes.length; i++) {
+                if (heroes[i] != 'Blade' && heroes[i] != 'Spectrum' && heroes[i] != 'Wiccan' && heroes[i] != 'Spider-Woman' && heroes[i] != 'Winter Soldier') {
+                    strikeForce = false;
+                }
+            }
+            if (strikeForce) {
+                heroFeatsAchievements.push('Striking Force: Defeat Moonstone with any combination of these Heroes as your team: Blade, Spectrum, Wiccan, Spider-Woman, Winter Soldier');
+            }
+        }
+    }
+
+    return heroFeatsAchievements;
+}
 
 // checkAntiHero() function that checks selected heroes for anti heroes
 // param heroes the Array of selected heroes
@@ -3709,44 +4448,79 @@ function checkStartingHandHeroes(heroes) {
 function getAvailableTeams(heroes) {
     //Array of Objects with a team name and a roster
     const teams = [
+        //checked via card CHECK DAZZLER
         {teamName : 'A-Force', roster: ['America Chavez', 'Captain Marvel', 'Dazzler', 'Kate Bishop', 'Medusa', 'Mighty Thor', 'She-Hulk', 'Spectrum', 'Spider-Woman', 'Squirrel Girl', 'Stature']},
+        //checked via card
         {teamName : 'Alpha Flight', roster: ['Aurora', 'Guardian', 'Northstar', 'Puck', 'Sasquatch', 'Snowbird', 'Wolverine']},
+        //checked via card
         {teamName : 'Asgardians & Allies', roster: ['Beta Ray Bill', 'Korg', 'Loki', 'Mighty Thor', 'Thor', 'Valkyrie']},
         //checked via card
         {teamName : 'Avengers', roster: ['Ant-Man', 'Black Knight', 'Black Widow', 'Captain America', 'Captain America (Classic)', 'Captain America (Sam)', 'Captain Marvel', 'Falcon', 'Firestar', 'Gladiator Hulk', 'Hawkeye', 'Hercules', 'Hulk', 'Iron Man','Iron Man (Civil War)','Hulkbuster Iron Man','Quicksilver', 'Scarlet Witch', 'She-Hulk', 'Thor', 'Wasp', 'Winter Soldier']},
+        //checked via card
         {teamName : 'Champions', roster: ['Angel', 'Black Widow', 'Ghost Rider (Blaze)', 'Hercules', 'Iceman (First Class)', 'Ironheart', 'Miles Morales', 'Ms. Marvel', 'Nova', 'Patriot', 'Silk']},
+        //checked via card
         {teamName : 'Dark Avengers', roster: ['Ares', 'Daken', 'Moonstone', 'Sentry', 'Songbird', 'U.S. Agent']},
-        {teamName : 'Deadpool Team-Up', roster: ['Bob', 'Cable', 'Deadpool', 'Domino', 'Elsa Bloodstone', 'Lady Deadpool', 'Wolverine']},
-        {teamName : 'Defenders', roster: ['Beast', 'Black Knight', 'Black Panther', 'Daredevil', 'Doctor Strange', 'Elsa Bloodstone', 'Ghost Rider (Blaze)', 'Howard the Duck', 'Hulk', 'Mirage', 'Mister Fantastic', 'Namor', 'Nova Prime', 'Silver Surfer', 'U.S. Agent', 'Valkyrie', 'Yondu']},
+        //checked via card
+        {teamName : 'Deadpool Team-Up', roster: ['Bob', 'Cable', 'Deadpool','Deadpool (X-Force)', 'Domino', 'Elsa Bloodstone', 'Lady Deadpool', 'Wolverine']},
+        //checked via card
+        {teamName : 'Defenders', roster: ['Beast','Beast (First Class)', 'Black Knight', 'Black Panther', 'Daredevil', 'Doctor Strange', 'Elsa Bloodstone', 'Ghost Rider (Blaze)','Gladiator Hulk', 'Howard the Duck', 'Hulk', 'Mirage', 'Mister Fantastic', 'Namor','Nova (Frankie Raye)', 'Nova Prime', 'Silver Surfer', 'U.S. Agent', 'Valkyrie', 'Yondu']},
+        //checked via card
         {teamName : 'Defenders (Manhattan)', roster: ['Daredevil', 'Iron Fist', 'Jessica Jones', 'Luke Cage']},
+        //checked via card
         {teamName : 'Excalibur', roster: ['Captain Britain','Captain Britain (Betsy)', 'Colossus', 'Kitty Pryde', 'Meggan', 'Nightcrawler', 'Phoenix']},
+        //checked via card
         {teamName : 'Fantastic Four', roster : ['Human Torch', 'Invisible Woman', 'Mister Fantastic', 'The Thing']},
-        {teamName : 'Force Works', roster: ['Iron Man','Maria Hill','Mockingbird','Quake','Scarlet Witch','Spider-Woman','U.S. Agent','War Machine','Wonder-Man']},
+        //checked via card
+        {teamName : 'Force Works', roster: ['Hulkbuster Iron Man','Iron Man','Iron Man (Civil War)','Maria Hill','Mockingbird','Quake','Scarlet Witch','Spider-Woman','U.S. Agent','War Machine','Wonder-Man']},
+        //checked via card
         {teamName : 'Gen-X', roster: ['Banshee','Chamber','Emma Frost','Husk','Jubilee','M']},
+        //checked via card
         {teamName : 'Guardians of the Galaxy', roster: ['Adam Warlock','Cosmic Ghost Rider','Drax','Gamora','Gladiator','Groot','Mantis','Nebula','Nova Prime','Phyla-Vell','Quasar','Rocket Racoon','Star-Lord']},
-        {teamName : 'Illuminati', roster: ['Black Bolt','Black Panther','Doctor Strange','Iron Man','Mister Fantastic','Namor','Professor X']},
+        //checked via card
+        {teamName : 'Illuminati', roster: ['Black Bolt','Black Panther','Doctor Strange','Iron Man','Iron Man (Civil War)','Hulkbuster Iron Man','Mister Fantastic','Namor','Professor X']},
+        //checked via card
         {teamName : 'Infinity Watch', roster: ['Adam Warlock','Black Widow','Captain Marvel','Doctor Strange','Drax','Gamora','Moondragon','Star-Lord']},
+        //checked via card
         {teamName : 'Inhumans', roster: ['Black Bolt','Crystal','Gorgon','Karnak','Lockjaw','Medusa','Moon Girl / Devil Dinosaur','Ms. Marvel','Triton']},
+        //checked via card
         {teamName : 'Marvel Knights', roster: ['Black Widow','Dagger','Daredevil','Luke Cage','Moon Knight','Shang-Chi']},
+        //checked via card FIXME check Wong with physical card
         {teamName : 'Midnight Sons', roster: ['Blade','Darkchild','Doctor Strange','Elsa Bloodstone','Ghost Rider (Blaze)','Iron Fist','Man-Thing','Moon Knight','Morbius','Werewolf by Night','Wong']},
-        {teamName : 'New Avengers', roster: ['Captain America','Iron Man','Logan','Luke Cage','Ronin','Sentry','Spider-Man','Spider-Woman','Squirrel Girl','The Thing','Weapon X','Wolverine']},
+        //checked via card
+        {teamName : 'New Avengers', roster: ['Captain America','Captain America (Classic)','Iron Man','Iron Man (Civil War)','Hulkbuster Iron Man','Logan','Luke Cage','Ronin','Sentry','Spider-Man','Spider-Woman','Squirrel Girl','The Thing','Weapon X','Wolverine']},
+        //checked via card
         {teamName : 'New Mutants', roster: ['Cannonball','Cypher','Darkchild','Legion','Magik','Mirage','Sunspot','Warlock','Wolfsbane','X-Man']},
-        {teamName : 'Pro-Registration', roster: ['Bishop','Black Widow','Blade','Deadpool','Doc Samson','Iron Man (Civil War)','Iron Spider','Mister Fantastic','Sentry','She-Hulk','Songbird','Tigra','Wasp','Wonder-Man','Yellowjacket']},
-        {teamName : `Red Hulk's Thunderbolts`, roster: ['Agent Venom','Deadpool','Elektra','Ghost Rider (Blaze)','Punisher','Red Hulk']},
+        //checked via card
+        {teamName : 'Pro-Registration', roster: ['Bishop','Black Widow','Blade','Deadpool','Deadpool (X-Force)','Doc Samson','Iron Man','Iron Man (Civil War)','Hulkbuster Iron Man','Iron Spider','Mister Fantastic','Sentry','She-Hulk','Songbird','Tigra','Wasp','Wonder-Man','Yellowjacket']},
+        //chceked via card
+        {teamName : `Red Hulk's Thunderbolts`, roster: ['Agent Venom','Deadpool','Deadpool (X-Force)','Elektra','Ghost Rider (Blaze)','Punisher','Red Hulk']},
+        //checked via card
         {teamName : 'Resistance Against Apocalypse', roster: ['Bishop','Blink','Magneto (AoA)','Morph','Sabretooth / Wildchild','X-Man']},
+        //checked via card
         {teamName : 'S.H.I.E.L.D.', roster: ['Agent Venom','Black Widow','Captain America (Sam)','Captain Carter','Falcon','Maria Hill','Mirage','Mockingbird','Nick Fury','Nick Fury, Sr.','Quake','Songbird','Spider-Woman','U.S. Agent','War Machine','White Widow']},
-        {teamName : 'Savage Avengers', roster: ['Black Knight','Black Widow','Daredevil','Darkchild','Doctor Doom','Doctor Strange','Elektra','Ghost Rider','Ghost Rider (Blaze)','Juggernaut','Logan','Magik','Weapon X','Wolverine']},
-        {teamName : 'Secret Avengers', roster: ['Black Panther','Captain America (Classic)','Cloak','Dagger','Daredevil','Falcon','Goliath','Hercules','Hulkling','Human Torch','Invisible Woman','Kate Bishop','Luke Cage','Punisher','Spectrum','Spider-Woman','Storm','Vision','Wiccan']},
-        {teamName : 'Spider-Army', roster: ['Agent Venom','Black Cat','Cyborg Spider-Man','Ghost-Spider','Miles Morales','Peni Parker','Scarlet Spider','Silk','Spider-Ham','Spider-Man','Spider-Man 2099 (Classic)','Spider-Man Noir','Spider-Punk','Spider-Woman','Superior Spider-Man','Symbiote Spider-Man','Venom']},
+        //checked via card
+        {teamName : 'Savage Avengers', roster: ['Black Knight','Black Widow','Daredevil','Darkchild','Doctor Doom','Elektra','Ghost Rider','Ghost Rider (Blaze)','Juggernaut','Logan','Magik','Weapon X','Wolverine']},
+        //checked via card  CHECK SPIDER_MAN
+        {teamName : 'Secret Avengers', roster: ['Black Panther','Captain America','Captain America (Classic)','Cloak','Dagger','Daredevil','Falcon','Goliath','Hercules','Hulkling','Human Torch','Invisible Woman','Kate Bishop','Luke Cage','Punisher','Spectrum','Spider-Man','Spider-Woman','Storm','Storm (Mohawk)','Vision','Wiccan']},
+        //checked via card
+        {teamName : 'Spider-Army', roster: ['Agent Venom','Black Cat','Cyborg Spider-Man','Ghost-Spider','Iron Spider','Miles Morales','Peni Parker','Scarlet Spider','Silk','Spider-Ham','Spider-Man','Spider-Man 2099','Spider-Man 2099 (Classic)','Spider-Man Noir','Spider-Punk','Spider-Woman','Superior Spider-Man','Symbiote Spider-Man','Venom']},
+        //checked via card FIXME check with physical card
         {teamName : 'Starjammers', roster: [`Ch'od`,'Corsair','Havok','Hepzibah','Lilandra','Polaris','Raza']},
-        {teamName : 'Swordbearers of Krakoa', roster: ['Apocalypse','Cable','Captain Britain','Captain Britain (Betsy)','Cypher','Darkchild','Logan','Magik','Storm','Weapon X','Wolverine']},
-        {teamName : 'Uncanny X-Force', roster: ['Archangel','Deadpool','Deathlok','Fantomex','Logan','Psylocke','Spiral','Weapon X','Wolverine','X-23']},
+        //checked via card FIXME add check Magik OR Darkchild, Storm OR Storm Mohawk, Wolverines
+        {teamName : 'Swordbearers of Krakoa', roster: ['Apocalypse','Cable','Captain Britain','Captain Britain (Betsy)','Cypher','Magik','Darkchild','Storm','Storm (Mohawk)','Wolverine','Logan','Weapon X']},
+        //checked via card
+        {teamName : 'Uncanny X-Force', roster: ['Archangel','Deadpool','Deadpool (X-Force)','Deathlok','Fantomex','Logan','Psylocke','Spiral','Weapon X','Wolverine','X-23']},
+        //checked via card
         {teamName : 'Wakandans', roster: ['Black Panther','Okoye','Shuri','Shuri Black Panther','Winter Soldier']},
-        {teamName : 'West Coast Avengers', roster: ['Hawkeye','Iron Man','Mockingbird','Scarlet Witch','Tigra','Vision','War Machine','Wonder-Man']},
+        //checked via card
+        {teamName : 'West Coast Avengers', roster: ['Hawkeye','Iron Man','Iron Man (Civil War)','Hulkbuster Iron Man','Mockingbird','Scarlet Witch','Tigra','Vision','War Machine','Wonder-Man']},
+        //checked via card
         {teamName : 'X-Factor', roster: ['Forge','Havok (X-Factor)','Multiple Man','Polaris','Quicksilver','Strong Guy','Wolfsbane']},
-        {teamName : 'X-Force', roster: ['Boom Boom','Cable','Cannonball','Deadpool','Domino','Doop','Feral','Hope Summers','Shatterstar','Sunspot','Siryn','Warpath']},
+        //checked via card
+        {teamName : 'X-Force', roster: ['Boom Boom','Cable','Cannonball','Deadpool','Deadpool (X-Force)','Domino','Doop','Feral','Hope Summers','Shatterstar','Siryn','Sunspot','Warpath']},
         //checked via card
         {teamName : 'X-Men', roster: ['Angel','Archangel','Banshee','Beast','Beast (First Class)','Bishop','Blink','Colossus','Cyclops','Cyclops (First Class)','Dazzler','Emma Frost','Firestar','Forge','Gambit','Gwenpool','Iceman','Iceman (First Class)','Jean Grey','Jubilee','Juggernaut','Logan','Longshot','Magneto','Magneto (AoA)','Marrow','Marvel Girl','Mystique','Nightcrawler','Pixie','Professor X','Psylocke','Rogue','Storm','Storm (Mohawk)','Sunfire','Weapon X','Wolverine']},
+        //checked via card
         {teamName : 'Young Avengers', roster: ['America Chavez','Hulkling','Iron Lad','Kate Bishop','Kid Loki','Patriot','Speed','Stature','Wiccan']}];
     //Array to hold all relevant teams
     const tempTeams = [];
@@ -3857,7 +4631,7 @@ function showAllAchievements() {
     }
     
     //Array with all achievements from Season 2
-    let xAchievements = ["Win a game in Xavier Solo Mode", 'Win a game with an Anti-Hero as a Hero', 'Win a game using only Anti-Heroes as Heroes', "Win a game with 2 Players (X-Men)", "Win a game with 3 Players (X-Men)", "Win a game with 4 Players (X-Men)", "Complete all Mission cards (X-Men)", "Win without any Hero being KO'd (X-Men)", "Complete all Mission cards with Moderate Challenge (X-Men)", "Win without any Hero being KO'd with Moderate Challenge (X-Men)", "Complete all Mission cards with Hard Challenge (X-Men)", "Win without any Hero being KO'd with Hard Challenge (X-Men)", "Complete all Mission cards with Heroic Challenge (X-Men)", "Win without any Hero being KO'd with Heroic Challenge (X-Men)", 'Win without the Villain ever triggering an Overflow', 'Win before the 6th Master Plan card is played', 'Win without using any Special Effect cards', 'Win without any Hero taking damage', 'Win without using any Action tokens', "Defeat the Super Villain with 2 Heroes", "Play all Super Hero cards on a single Villain turn (with 2 Heroes)", "Defeat the Super Villain with 3 Heroes", "Play all Super Hero cards on a single Villain turn (with 3 Heroes)", "Defeat the Super Villain with 4 Heroes", "Play all Super Hero cards on a single Villain turn (with 4 Heroes)", "Defeat the Super Villain without using any Super Hero card", "Defeat the Super Villain without using any Action tokens", "Win as the Super Villain without using any Super Villain card", "Win as the Super Villain without taking a single damage", "Win as the Super Villain before the Heroes solve any Mission", "Win as the Super Villain with a single Health left", "Win as the Super Villain by fulfilling your Villainous Plot", "Win as the Super Villain by running out of Master Plan cards", 'Defeat the Villain using the Accelerated Villain Challenge', 'Your team wins without the other team dealing a single damage to the Villain', 'Your team wins delivering the final blow to the Villain', `Defeat Magneto with Hard Challenge`, `Defeat Magneto with Heroic Challenge`, `Defeat Magneto without completing the Cerebro Mission`, `Defeat Mystique with Hard Challenge`, `Defeat Mystique with Heroic Challenge`, `Defeat Mystique without her ever triggering an Overflow`, `Defeat Sabretooth with Hard Challenge`, `Defeat Sabretooth with Heroic Challenge`, `Defeat Sabretooth without any Hero being KO'd`, `Defeat Juggernaut with Hard Challenge`, `Defeat Juggernaut with Heroic Challenge`, `Defeat Juggernaut without completing the Clear Threats Mission`, `Defeat Mister Sinister with Hard Challenge`, `Defeat Mister Sinister with Heroic Challenge`, `Defeat Mister Sinister before he takes more than 5 DNA Samples`, `Defeat Mister Sinister without any hero losing all their DNA Samples`, `Defeat Sebastian Shaw with Hard Challenge`, `Defeat Sebastian Shaw with Heroic Challenge`, `Defeat Sebastian Shaw with both Black Queen and White Queen still in play`, `Score 15 or more points against Deadpool`, `Score 30 or more points against Deadpool`, `Score 50 or more points against Deadpool`, `Defeat Bob with Hard Challenge`, `Defeat Bob with Heroic Challenge`, `Defeat Bob with the Retirement Track on 6 or less`, `Defeat Bob with the Retirement Track on 10 or less`, `Defeat Bob with the Retirement Track on 11`, `Defeat Doctor Doom with Hard Challenge`, `Defeat Doctor Doom with Heroic Challenge`, `Defeat Doctor Doom with the Doom track on 19`, `Defeat Super Skrull with Hard Challenge`, `Defeat Super Skrull with Heroic Challenge`, `Defeat Super Skrull without completing the Clear Threats Mission`, `Defeat Scarlet Witch & Quicksilver with Hard Challenge`, `Defeat Scarlet Witch & Quicksilver with Heroic Challenge`, `Defeat both Scarlet Witch & Quicksilver on the same Hero turn`, `Defeat Scarlet Witch & Quicksilver with a single Reality Warping in the Storyline`, `Defeat Scarlet Witch & Quicksilver with both Reality Warping in the Storyline`, `Defeat Nimrod with Hard Challenge`, `Defeat Nimrod with Heroic Challenge`, `Defeat Nimrod with Nimrod Activation track in the white zone`, `Defeat Nimrod with Nimrod Activation track in the yellow zone`, `Defeat Nimrod with Nimrod Activation track in the red zone`, `Win the Phoenix Five campaign`, `Win the Phoenix Five campaign with Moderate Challenge`, `Win the Phoenix Five campaign with Hard Challenge`, `Win the Phoenix Five campaign with Heroic Challenge`, `Defeat Namor as the final Phoenix Five Villain`, `Defeat Magik as the final Phoenix Five Villain`, `Defeat Colossus as the final Phoenix Five Villain`, `Defeat Emma Frost as the final Phoenix Five Villain`, `Defeat Cyclops as the final Phoenix Five Villain`,`Defeat Stryfe with Hard Challenge`, `Defeat Stryfe with Heroic Challenge`, `Defeat Stryfe without completing the Defeat Thugs Mission`, `Defeat Apocalypse with Hard Challenge`, `Defeat Apocalypse with Heroic Challenge`, `Defeat Apocalypse after defeating all four Horsemen in the prelude`, `Defeat Apocalypse with no Horsemen left in play`, `Defeat Apocalypse with all Horsemen in play`, `Defeat Apocalypse without playing the prelude first`, `Defeat Apocalypse with the Apocalypse tracker on 15`, `Defeat Arcade with Hard Challenge`, `Defeat Arcade with Heroic Challenge`, `Defeat Arcade without any Hero being Ko'd`, `Defeat Avalanche with Hard Challenge`, `Defeat Avalanche with Heroic Challenge`, `Defeat Avalanche with 6 or less faceup Master Plan cards in the Storyline`, `Defeat Brood Queen with Hard Challenge`, `Defeat Brood Queen with Heroic Challenge`, `Defeat Brood Queen with no Brood in play`, `Defeat Brood Queen with 5 Brood in play`, `Defeat Callisto with Hard Challenge`, `Defeat Callisto with Heroic Challenge`, `Defeat Callisto without defeating any Henchmen`, `Defeat Dark Phoenix with Hard Challenge`, `Defeat Dark Phoenix with Heroic Challenge`, `Defeat Dark Phoenix with no Locations facedown`, `Defeat Deathbird with Hard Challenge`, `Defeat Deathbird with Heroic Challenge`, `Defeat Deathbird with Vulcan still in play`, `Defeat Emma Frost with Hard Challenge`, `Defeat Emma Frost with Heroic Challenge`, `Defeat Emma Frost with no Henchmen still in play`, `Defeat Lady Deathstrike with Hard Challenge`, `Defeat Lady Deathstrike with Heroic Challenge`, `Defeat Lady Deathstrike with the Hunted Hero delivering the final blow`, `Defeat Legion with Hard Challenge`, `Defeat Legion with Heroic Challenge`, `Defeat Legion with both Endgame cards in the Storyline`, `Defeat Marrow with Hard Challenge`, `Defeat Marrow with Heroic Challenge`, `Defeat Marrow with both Dual Heart cards facedown in the Storyline`, `Defeat Mastermind with Hard Challenge`, `Defeat Mastermind with Heroic Challenge`, `Defeat Mastermind without using effects that affect the Master Plan deck`, `Defeat Mojo with Hard Challenge`, `Defeat Mojo with Heroic Challenge`, `Defeat Mojo with Spiral still in play`, `Defeat Mojo with the Ratings track in the white zone`, `Defeat Namor with Hard Challenge`, `Defeat Namor with Heroic Challenge`, `Defeat Namor with all 6 Imperius Rex cards in the Storyline`, `Defeat Omega Red with Hard Challenge`, `Defeat Omega Red with Heroic Challenge`, `Defeat Omega Red with all Heroes having Crisis tokens`, `Defeat Onslaught with Hard Challenge`, `Defeat Onslaught with Heroic Challenge`, `Defeat Onslaught with his Master Plan deck depleted`, `Defeat Sauron with Hard Challenge`, `Defeat Sauron with Heroic Challenge`, `Defeat Sauron with no Crisis tokens on his Dashboard`, `Defeat Shadow King with Hard Challenge`, `Defeat Shadow King with Heroic Challenge`, `Defeat Shadow King without Heroes ever damaging each other`, `Defeat Silver Samurai with Hard Challenge`, `Defeat Silver Samurai with Heroic Challenge`, `Defeat Silver Samurai after facing all 4 Tachyon Field Sword Duels without losing any`, `Defeat Spiral with Hard Challenge`, `Defeat Spiral with Heroic Challenge`, `Defeat Spiral without any Hero being KO'd`, `Defeat Toad + Blob + Pyro with Hard Challenge`, `Defeat Toad + Blob + Pyro with Heroic Challenge`, `Defeat Toad + Blob + Pyro leaving Toad for last`, `Defeat Toad + Blob + Pyro leaving Blob for last`, `Defeat Toad + Blob + Pyro leaving Pyro for last`, 'Defeat Magneto with Professor X and any other original X-Men team', 'Stepbrothers: Defeat Juggernaut with Professor X in your team', 'Mind Readers: Defeat a Villain with Professor X, Jean Grey, and Emma Frost', 'Win playing the Heroes from the Blue Team box over the Heroes from the Gold Team box', 'Win playing the Heroes from the Gold Team box over the Heroes from the Blue Team box', 'Schism: Win a Team vs Team game with Cyclops while Wolverine is on the other team', 'Schism Rematch: Win a Team vs Team game with Wolverine while Cyclops is on the other team', 'Defeat a Villain using the Deadpool Challenge', 'Besties: Win with Deadpool and Bob in your team', 'Defeat a Villain using the Takeover Challenge', 'Defeat a Villain using the Aggressive Takeover Challenge', 'Teamwork: Defeat Doctor Doom with only members of the Fantastic Four', 'Unlikely Allies: Win with Mister Fantastic and Doctor Doom in your team', 'Fantastic Family Sinergy: Win playing at least 4 Teamwork cards in the Storyline', 'Self-limitations: Win with Silver Surfer in your team without playing Cosmic Awareness', 'Win without using the Danger Room', 'Win using the Danger Room at least 6 times', 'Win after emptying the Training deck', 'Defeat a Villain using the Sentinel I Challenge', 'Defeat a Villain using the Sentinel II Challenge', 'Defeat a Villain using the Sentinel III Challenge', 'Win the Phoenix 5 campaign without Hope Summers in your team', 'Defeat a Villain using the Hazardous Locations Challenge', 'Defeat a Villain without using the Starlight Citadel effect', 'Win using only members of the original X-Men team', 'Jumpstart: Win using only Heroes with a Starting Hand card', 'Multiplicity: Win a 2-Hero game using two different versions of the same character', 'There is only one Wolverine: Win with only versions of Wolverine in your team', 'Fastball Special: Win with Colossus and Wolverine in your team, delivering the final blow with a Fastball Special using Wolverine', 'Summers Family: Win with Cyclops, Havok, Jean Grey, and Hope Summers as your team', 'Wagner Family: With with Mystique and Nightcrawler in your team', 'Les Liaisons Dangereuses: Win with Jean Grey, Cyclops, and Wolverine in your team', 'Les Liaisons Dangereuses II: Win with Magneto, Rogue, and Gambit in your team', 'Les Liaisons Dangereuses III: Win with Mister Fantastic, Invisible Woman, and Namor in your team', 'Ultimate Danger: Win with Cable, Domino, and Deadpool in your team', 'Cloak & Dagger: Win a 2-Hero game with Cloak and Dagger', 'Strong Bond: Win with Cloak and Dagger in your team and both Bond cards in the Storyline', 'Ultimate Team-up: Win with Deadpool and Cable in your team', 'Pooling Together: Win with Deadpool, Lady Deadpool, and Gwenpool in your team', 'Brothers in Arms: Win with Cyclops and Havok in your team', 'Opposites Attract: Win with Havok and Polaris in your team', 'Brother and Sister: Win with Colossus and Magik in your team', 'Just like Mother and Daughter: Win with Mystique and Rogue in your team', 'This Love is a Blast: Win with Boom Boom and Cannonball in your team', 'Banding Together: Win with Dazzler and Strong Guy in your team', 'Show Must Go On: Win with Jubilee and Dazzler in your team', 'All the Dupes: Win with Multiple Man placing at least 1 Dupe token in each Location', 'Multiple Personality: Win with Legion playing at least 5 of his special abilities', 'Mutant Town Investigations: Win with Strong Guy and Multiple Man in your team', 'Phoenix Cry: Win with Phoenix delivering the final blow with the Phoenix Cry special effect', 'Twin Heart: Win with Marrow having used her Dual Hearts special effect', 'Native Alliance: Win with Forge, Warpath, and Mirage in your team', 'Weirdest Team-up Ever: Win a 2-Hero game with Doop and Wolverine', 'Beast Pack: Win with Beast, Feral, and Wolfsbane in your team', 'Redemption Path: Win with Warpath, Sunfire, Mystique and Rogue as your team', 'A Stunning Team: Win with Iceman, Psylocke, Banshee, and Pixie as your team, all using a Stunned token at some point', 'Magnetic Personalities: Win with Magneto and Polaris in your team', 'Burn, Baby, Burn: Win with Sunfire, Firestar, and Boom Boom in your team', 'Anti-Heroes United: Win Apocalypse, Doctor Doom, Magneto, and Namor as your team', 'A Tale of Ice, Fire, and Amazing Friendship: Win a 3-Hero game with Firestar, Iceman, and a third Hero of your choice', 'Xavier’s School for Gifted Youngsters: Win with Professor X in your team, using the Danger Room Challenge', 'Xavier Institute for Higher Learning: Win with Cyclops and Emma Frost in your team, using the Danger Room Challenge', 'Jean Grey School for Higher Learning: Win with Wolverine and Kitty Pride in your team, using the Danger Room Challenge', 'Alternate Headmaster: Win with Magneto in your team, using the Danger Room Challenge', 'The Apocalypse Solution: Win with Psylocke, Archangel, Fantomex, and Deadpool as your team', 'New Mutants: Win with only New Mutants members in your team (Cannonball, Mirage, Wolfsbane, Sunspot, Warlock, Magik, or Feral)', 'X-treme Team: Win with Storm, Psylocke, and Warpath in your team', 'Alpha Strike: Win game with only Alpha Flight members in your team', 'Alpha Teamplay: Win with only Alpha Flight members in your team and having played at least 3 Alpha Team cards', 'Excalibur: Win with Captain Britain, Nightcrawler, Kitty Pride, and Phoenix as your team', 'Exiled: Win with Blink, Beast, Forge, and Polaris as your team', 'Where walks the Juggernaut: Defeat Juggernaut with Human Torch in your team', 'Clones War: Defeat Stryfe with Cable in your team', 'All in the Family: Defeat Mister Sinister with Jean Grey, Cyclops, and Cable in your team', 'Rebels: Defeat Mojo with Spiral, Longshot, and Dazzler in your team', 'The Wizard of X: Defeat Mojo with Cyclops, Rogue, Wolverine, and Dazzler as your team', 'Biting the Hand: Defeat Callisto with Marrow in your team', 'Clashing Claws: Defeat Lady Deathstrike with Wolverine in your team', 'Going Mental: Defeat Shadow King with Professor X, Magneto, and Emma Frost in your team', 'Thief’s Gambit: Defeat Shadow King with Gambit in your team', 'Anarchy in the UK: Defeat Shadow King with Psylocke and Captain Britain in your team', 'Live on TV: Defeat Spiral with Longshot, Shatterstar, Psylocke, and Dazzler as your team', 'Back in the USSR: Defeat Omega Red with Colossus and Magik in your team', 'The Red and the Blue: Defeat Omega Red with Rogue, Gambit, Psylocke, and Jubilee as your team', 'Healing Factor: Defeat the Brood Queen with Wolverine and Deadpool in your team', 'Lovers’ Quarrels: Defeat Deathbird with Bishop in your team', 'Fight for Leadership: Defeat Callisto with Storm in your team', 'Phoenix Fight: Defeat Dark Phoenix with Phoenix and Jean Gray in your team', 'The Sub-Mariner: Defeat Namor with only members of the Fantastic Four in your team', 'Father and Son: Defeat Legion with Professor X in your team'];
+    let xAchievements = ["Win a game in Xavier Solo Mode", 'Win a game with an Anti-Hero as a Hero', 'Win a game using only Anti-Heroes as Heroes', "Win a game with 2 Players (X-Men)", "Win a game with 3 Players (X-Men)", "Win a game with 4 Players (X-Men)", "Complete all Mission cards (X-Men)", "Win without any Hero being KO'd (X-Men)", "Complete all Mission cards with Moderate Challenge (X-Men)", "Win without any Hero being KO'd with Moderate Challenge (X-Men)", "Complete all Mission cards with Hard Challenge (X-Men)", "Win without any Hero being KO'd with Hard Challenge (X-Men)", "Complete all Mission cards with Heroic Challenge (X-Men)", "Win without any Hero being KO'd with Heroic Challenge (X-Men)", 'Win without the Villain ever triggering an Overflow', 'Win before the 6th Master Plan card is played', 'Win without using any Special Effect cards', 'Win without any Hero taking damage', 'Win without using any Action tokens', "Defeat the Super Villain with 2 Heroes", "Play all Super Hero cards on a single Villain turn (with 2 Heroes)", "Defeat the Super Villain with 3 Heroes", "Play all Super Hero cards on a single Villain turn (with 3 Heroes)", "Defeat the Super Villain with 4 Heroes", "Play all Super Hero cards on a single Villain turn (with 4 Heroes)", "Defeat the Super Villain without using any Super Hero card", "Defeat the Super Villain without using any Action tokens", "Win as the Super Villain without using any Super Villain card", "Win as the Super Villain without taking a single damage", "Win as the Super Villain before the Heroes solve any Mission", "Win as the Super Villain with a single Health left", "Win as the Super Villain by fulfilling your Villainous Plot", "Win as the Super Villain by running out of Master Plan cards", 'Defeat the Villain using the Accelerated Villain Challenge', 'Your team wins without the other team dealing a single damage to the Villain', 'Your team wins delivering the final blow to the Villain', `Defeat Magneto with Hard Challenge`, `Defeat Magneto with Heroic Challenge`, `Defeat Magneto without completing the Cerebro Mission`, `Defeat Mystique with Hard Challenge`, `Defeat Mystique with Heroic Challenge`, `Defeat Mystique without her ever triggering an Overflow`, `Defeat Sabretooth with Hard Challenge`, `Defeat Sabretooth with Heroic Challenge`, `Defeat Sabretooth without any Hero being KO'd`, `Defeat Juggernaut with Hard Challenge`, `Defeat Juggernaut with Heroic Challenge`, `Defeat Juggernaut without completing the Clear Threats Mission`, `Defeat Mister Sinister with Hard Challenge`, `Defeat Mister Sinister with Heroic Challenge`, `Defeat Mister Sinister before he takes more than 5 DNA Samples`, `Defeat Mister Sinister without any hero losing all their DNA Samples`, `Defeat Sebastian Shaw with Hard Challenge`, `Defeat Sebastian Shaw with Heroic Challenge`, `Defeat Sebastian Shaw with both Black Queen and White Queen still in play`, `Score 15 or more points against Deadpool`, `Score 30 or more points against Deadpool`, `Score 50 or more points against Deadpool`, `Defeat Bob with Hard Challenge`, `Defeat Bob with Heroic Challenge`, `Defeat Bob with the Retirement Track on 6 or less`, `Defeat Bob with the Retirement Track on 10 or less`, `Defeat Bob with the Retirement Track on 11`, `Defeat Doctor Doom with Hard Challenge`, `Defeat Doctor Doom with Heroic Challenge`, `Defeat Doctor Doom with the Doom track on 19`, `Defeat Super Skrull with Hard Challenge`, `Defeat Super Skrull with Heroic Challenge`, `Defeat Super Skrull without completing the Clear Threats Mission`, `Defeat Scarlet Witch & Quicksilver with Hard Challenge`, `Defeat Scarlet Witch & Quicksilver with Heroic Challenge`, `Defeat both Scarlet Witch & Quicksilver on the same Hero turn`, `Defeat Scarlet Witch & Quicksilver with a single Reality Warping in the Storyline`, `Defeat Scarlet Witch & Quicksilver with both Reality Warping in the Storyline`, `Defeat Nimrod with Hard Challenge`, `Defeat Nimrod with Heroic Challenge`, `Defeat Nimrod with Nimrod Activation track in the white zone`, `Defeat Nimrod with Nimrod Activation track in the yellow zone`, `Defeat Nimrod with Nimrod Activation track in the red zone`, `Win the Phoenix Five campaign`, `Win the Phoenix Five campaign with Moderate Challenge`, `Win the Phoenix Five campaign with Hard Challenge`, `Win the Phoenix Five campaign with Heroic Challenge`, `Defeat Namor as the final Phoenix Five Villain`, `Defeat Magik as the final Phoenix Five Villain`, `Defeat Colossus as the final Phoenix Five Villain`, `Defeat Emma Frost as the final Phoenix Five Villain`, `Defeat Cyclops as the final Phoenix Five Villain`,`Defeat Stryfe with Hard Challenge`, `Defeat Stryfe with Heroic Challenge`, `Defeat Stryfe without completing the Defeat Thugs Mission`, `Defeat Apocalypse with Hard Challenge`, `Defeat Apocalypse with Heroic Challenge`, `Defeat Apocalypse after defeating all four Horsemen in the prelude`, `Defeat Apocalypse with no Horsemen left in play`, `Defeat Apocalypse with all Horsemen in play`, `Defeat Apocalypse without playing the prelude first`, `Defeat Apocalypse with the Apocalypse tracker on 15`, `Defeat Arcade with Hard Challenge`, `Defeat Arcade with Heroic Challenge`, `Defeat Arcade without any Hero being Ko'd`, `Defeat Avalanche with Hard Challenge`, `Defeat Avalanche with Heroic Challenge`, `Defeat Avalanche with 6 or less faceup Master Plan cards in the Storyline`, `Defeat Brood Queen with Hard Challenge`, `Defeat Brood Queen with Heroic Challenge`, `Defeat Brood Queen with no Brood in play`, `Defeat Brood Queen with 5 Brood in play`, `Defeat Callisto with Hard Challenge`, `Defeat Callisto with Heroic Challenge`, `Defeat Callisto without defeating any Henchmen`, `Defeat Dark Phoenix with Hard Challenge`, `Defeat Dark Phoenix with Heroic Challenge`, `Defeat Dark Phoenix with no Locations facedown`, `Defeat Deathbird with Hard Challenge`, `Defeat Deathbird with Heroic Challenge`, `Defeat Deathbird with Vulcan still in play`, `Defeat Emma Frost with Hard Challenge`, `Defeat Emma Frost with Heroic Challenge`, `Defeat Emma Frost with no Henchmen still in play`, `Defeat Lady Deathstrike with Hard Challenge`, `Defeat Lady Deathstrike with Heroic Challenge`, `Defeat Lady Deathstrike with the Hunted Hero delivering the final blow`, `Defeat Legion with Hard Challenge`, `Defeat Legion with Heroic Challenge`, `Defeat Legion with both Endgame cards in the Storyline`, `Defeat Marrow with Hard Challenge`, `Defeat Marrow with Heroic Challenge`, `Defeat Marrow with both Dual Heart cards facedown in the Storyline`, `Defeat Mastermind with Hard Challenge`, `Defeat Mastermind with Heroic Challenge`, `Defeat Mastermind without using effects that affect the Master Plan deck`, `Defeat Mojo with Hard Challenge`, `Defeat Mojo with Heroic Challenge`, `Defeat Mojo with Spiral still in play`, `Defeat Mojo with the Ratings track in the white zone`,`Defeat Mojo with the Ratings track in the red zone` ,`Defeat Namor with Hard Challenge`, `Defeat Namor with Heroic Challenge`, `Defeat Namor with all 6 Imperius Rex cards in the Storyline`, `Defeat Omega Red with Hard Challenge`, `Defeat Omega Red with Heroic Challenge`, `Defeat Omega Red with all Heroes having Crisis tokens`, `Defeat Onslaught with Hard Challenge`, `Defeat Onslaught with Heroic Challenge`, `Defeat Onslaught with his Master Plan deck depleted`, `Defeat Sauron with Hard Challenge`, `Defeat Sauron with Heroic Challenge`, `Defeat Sauron with no Crisis tokens on his Dashboard`, `Defeat Shadow King with Hard Challenge`, `Defeat Shadow King with Heroic Challenge`, `Defeat Shadow King without Heroes ever damaging each other`, `Defeat Silver Samurai with Hard Challenge`, `Defeat Silver Samurai with Heroic Challenge`, `Defeat Silver Samurai after facing all 4 Tachyon Field Sword Duels without losing any`, `Defeat Spiral with Hard Challenge`, `Defeat Spiral with Heroic Challenge`, `Defeat Spiral without any Hero being KO'd`, `Defeat Toad + Blob + Pyro with Hard Challenge`, `Defeat Toad + Blob + Pyro with Heroic Challenge`, `Defeat Toad + Blob + Pyro leaving Toad for last`, `Defeat Toad + Blob + Pyro leaving Blob for last`, `Defeat Toad + Blob + Pyro leaving Pyro for last`, 'Defeat Magneto with Professor X and any other original X-Men team', 'Stepbrothers: Defeat Juggernaut with Professor X in your team', 'Mind Readers: Defeat a Villain with Professor X, Jean Grey, and Emma Frost', 'Win playing the Heroes from the Blue Team box over the Heroes from the Gold Team box', 'Win playing the Heroes from the Gold Team box over the Heroes from the Blue Team box', 'Schism: Win a Team vs Team game with Cyclops while Wolverine is on the other team', 'Schism Rematch: Win a Team vs Team game with Wolverine while Cyclops is on the other team', 'Defeat a Villain using the Deadpool Challenge', 'Besties: Win with Deadpool and Bob in your team', 'Defeat a Villain using the Takeover Challenge', 'Defeat a Villain using the Aggressive Takeover Challenge', 'Teamwork: Defeat Doctor Doom with only members of the Fantastic Four', 'Unlikely Allies: Win with Mister Fantastic and Doctor Doom in your team', 'Fantastic Family Sinergy: Win playing at least 4 Teamwork cards in the Storyline', 'Self-limitations: Win with Silver Surfer in your team without playing Cosmic Awareness', 'Win without using the Danger Room', 'Win using the Danger Room at least 6 times', 'Win after emptying the Training deck', 'Defeat a Villain using the Sentinel I Challenge', 'Defeat a Villain using the Sentinel II Challenge', 'Defeat a Villain using the Sentinel III Challenge', 'Win the Phoenix 5 campaign without Hope Summers in your team', 'Defeat a Villain using the Hazardous Locations Challenge', 'Defeat a Villain without using the Starlight Citadel effect', 'Win using only members of the original X-Men team', 'Jumpstart: Win using only Heroes with a Starting Hand card', 'Multiplicity: Win a 2-Hero game using two different versions of the same character', 'There is only one Wolverine: Win with only versions of Wolverine in your team', 'Fastball Special: Win with Colossus and Wolverine in your team, delivering the final blow with a Fastball Special using Wolverine', 'Summers Family: Win with Cyclops, Havok, Jean Grey, and Hope Summers as your team', 'Wagner Family: With with Mystique and Nightcrawler in your team', 'Les Liaisons Dangereuses: Win with Jean Grey, Cyclops, and Wolverine in your team', 'Les Liaisons Dangereuses II: Win with Magneto, Rogue, and Gambit in your team', 'Les Liaisons Dangereuses III: Win with Mister Fantastic, Invisible Woman, and Namor in your team', 'Ultimate Danger: Win with Cable, Domino, and Deadpool in your team', 'Cloak & Dagger: Win a 2-Hero game with Cloak and Dagger', 'Strong Bond: Win with Cloak and Dagger in your team and both Bond cards in the Storyline', 'Ultimate Team-up: Win with Deadpool and Cable in your team', 'Pooling Together: Win with Deadpool, Lady Deadpool, and Gwenpool in your team', 'Brothers in Arms: Win with Cyclops and Havok in your team', 'Opposites Attract: Win with Havok and Polaris in your team', 'Brother and Sister: Win with Colossus and Magik in your team', 'Just like Mother and Daughter: Win with Mystique and Rogue in your team', 'This Love is a Blast: Win with Boom Boom and Cannonball in your team', 'Banding Together: Win with Dazzler and Strong Guy in your team', 'Show Must Go On: Win with Jubilee and Dazzler in your team', 'All the Dupes: Win with Multiple Man placing at least 1 Dupe token in each Location', 'Multiple Personality: Win with Legion playing at least 5 of his special abilities', 'Mutant Town Investigations: Win with Strong Guy and Multiple Man in your team', 'Phoenix Cry: Win with Phoenix delivering the final blow with the Phoenix Cry special effect', 'Twin Heart: Win with Marrow having used her Dual Hearts special effect', 'Native Alliance: Win with Forge, Warpath, and Mirage in your team', 'Weirdest Team-up Ever: Win a 2-Hero game with Doop and Wolverine', 'Beast Pack: Win with Beast, Feral, and Wolfsbane in your team', 'Redemption Path: Win with Warpath, Sunfire, Mystique and Rogue as your team', 'A Stunning Team: Win with Iceman, Psylocke, Banshee, and Pixie as your team, all using a Stunned token at some point', 'Magnetic Personalities: Win with Magneto and Polaris in your team', 'Burn, Baby, Burn: Win with Sunfire, Firestar, and Boom Boom in your team', 'Anti-Heroes United: Win Apocalypse, Doctor Doom, Magneto, and Namor as your team', 'A Tale of Ice, Fire, and Amazing Friendship: Win a 3-Hero game with Firestar, Iceman, and a third Hero of your choice', 'Xavier’s School for Gifted Youngsters: Win with Professor X in your team, using the Danger Room Challenge', 'Xavier Institute for Higher Learning: Win with Cyclops and Emma Frost in your team, using the Danger Room Challenge', 'Jean Grey School for Higher Learning: Win with Wolverine and Kitty Pride in your team, using the Danger Room Challenge', 'Alternate Headmaster: Win with Magneto in your team, using the Danger Room Challenge', 'The Apocalypse Solution: Win with Psylocke, Archangel, Fantomex, and Deadpool as your team', 'New Mutants: Win with only New Mutants members in your team (Cannonball, Mirage, Wolfsbane, Sunspot, Warlock, Magik, or Feral)', 'X-treme Team: Win with Storm, Psylocke, and Warpath in your team', 'Alpha Strike: Win game with only Alpha Flight members in your team', 'Alpha Teamplay: Win with only Alpha Flight members in your team and having played at least 3 Alpha Team cards', 'Excalibur: Win with Captain Britain, Nightcrawler, Kitty Pride, and Phoenix as your team', 'Exiled: Win with Blink, Beast, Forge, and Polaris as your team', 'Where walks the Juggernaut: Defeat Juggernaut with Human Torch in your team', 'Clones War: Defeat Stryfe with Cable in your team', 'All in the Family: Defeat Mister Sinister with Jean Grey, Cyclops, and Cable in your team', 'Rebels: Defeat Mojo with Spiral, Longshot, and Dazzler in your team', 'The Wizard of X: Defeat Mojo with Cyclops, Rogue, Wolverine, and Dazzler as your team', 'Biting the Hand: Defeat Callisto with Marrow in your team', 'Clashing Claws: Defeat Lady Deathstrike with Wolverine in your team', 'Going Mental: Defeat Shadow King with Professor X, Magneto, and Emma Frost in your team', 'Thief’s Gambit: Defeat Shadow King with Gambit in your team', 'Anarchy in the UK: Defeat Shadow King with Psylocke and Captain Britain in your team', 'Live on TV: Defeat Spiral with Longshot, Shatterstar, Psylocke, and Dazzler as your team', 'Back in the USSR: Defeat Omega Red with Colossus and Magik in your team', 'The Red and the Blue: Defeat Omega Red with Rogue, Gambit, Psylocke, and Jubilee as your team', 'Healing Factor: Defeat the Brood Queen with Wolverine and Deadpool in your team', 'Lovers’ Quarrels: Defeat Deathbird with Bishop in your team', 'Fight for Leadership: Defeat Callisto with Storm in your team', 'Phoenix Fight: Defeat Dark Phoenix with Phoenix and Jean Gray in your team', 'The Sub-Mariner: Defeat Namor with only members of the Fantastic Four in your team', 'Father and Son: Defeat Legion with Professor X in your team'];
     //variable for relevant list element
     const availableAchievementsX = document.getElementById('available-achievements-x');
     //WHILE the list has a non-null node
@@ -3936,6 +4710,51 @@ function showAllAchievements() {
         label.appendChild(br);
         availableAchievementsSpider.appendChild(label);
     }
+
+    //Array with all achievements from Multiverse
+    let multiAchievements = ["Win a game in Commander Solo Mode (Multiverse)","Win a game with 2 Players (Multiverse)","Win a game with 3 Players (Multiverse)","Win a game with 4 Players (Multiverse)","Complete all Mission cards (Multiverse)","Complete all Mission cards with Moderate Challenge (Multiverse)","Complete all Mission cards with Hard Challenge (Multiverse)","Win without any Hero being KO’d (Multiverse)","Win without any Hero being KO’d with Moderate Challenge (Multiverse)","Win without any Hero being KO’d with Hard Challenge (Multiverse)","Win without the Villain ever triggering an Overflow (Multiverse)","Win before the 6th Master Plan card is played (Multiverse)","Win without using any Special Effect cards (Multiverse)","Win without any Hero taking damage (Multiverse)","Win without using any Action Tokens (Multiverse)","Win with all Equipment in play facedown by the end","Win without ever using any Equipment in play","Defeat the Super Villain with 2 Heroes (Multiverse)","Defeat the Super Villain with 3 Heroes (Multiverse)","Defeat the Super Villain with 4 Heroes (Multiverse)","Defeat the Super Villain without using any Super Hero card (Multiverse)","Defeat the Super Villain without using any Action Tokens (Multiverse)","Defeat the Super Villain without ever using any Equipment in play","Play all Super Hero cards on a single Villain turn (with 2 Heroes) (Multiverse)","Play all Super Hero cards on a single Villain turn (with 3 Heroes) (Multiverse)","Play all Super Hero cards on a single Villain turn (with 4 Heroes) (Multiverse)","Win as the Super Villain without using any Super Villain card (Multiverse)","Defeat Emperor Doom without the Heroic Goal","Defeat Cosmic Ghost Rider with the Punishment Tracker at 10 or less","Defeat Maestro without Rick Jones in the same location as him","Defeat Immortus with 3 or more Master Plan cards in the Master Plan deck","Defeat Demogoblin & Doppelganger without losing any Mission","Defeat both Demogoblin & Doppelganger on the same Hero turn","Defeat Scorpion with no more than 1 Hero with a KO token","Defeat Scream with no more than 1 Crisis token on the Assassination Mission card","Defeat Shriek with 3 or more Civilians in play","Defeat Morbius with the Heroes having 4 or less Crisis tokens overall","Defeat the New Sinister Six with 3 or more cards left in the Master Plan deck","Defeat World Breaker Hulk with no Hero having an Obedience Disk when he’s defeated","Defeat The Void with 3 or more cards in his Master Plan deck","Defeat Ares with 5 or less Crisis tokens on Locations","Defeat Firelord","Defeat Nova with no Location with 3 Crisis tokens","Defeat Terrax with his Domination Track on space 4 or lower","Defeat Air-Walker with no Hero with more than 2 Crisis tokens","Defeat the Heralds of Galactus","Defeat Galactus","Defeat Dark Beast","Defeat Nemesis with 4 or less Crisis tokens on his dashboard","Defeat Apocalypse without any Hero being KO’d","Defeat the Skrulls with 3 or more cards left in the Master Plan deck","Defeat Queen Veranke with all 3 Missions completed","Defeat Gladiator with his Duel Track at 1 or less","Defeat Vulcan with the Heroes having 2 or less KO tokens","Defeat Annihilus with the Annihilation Track at 8 or less","Defeat any Villain with 1 Complication added","Defeat any Villain with 2 Complications added","Defeat any Villain with 3 Complications added","Defeat any Villain with 4 Complications added","Defeat Abomination before he plays his 4th Master Plan card","Defeat Absorbing Man with the additional Titania Challenge","Defeat Blastaar while no Hero is on the Negative Zone card","Defeat the Cabal 6 times, with 6 different main Villains","Defeat Chameleon after having found him at least 4 times. Defeat Chamaleon with this additional rule: Every time a Hero tries to damage Chamaleon and none of the revealed tokens shows Chamaleon, another Hero must discard 1 card from their hand","Defeat Crimson Dynamo with 4 or less Crisis tokens on the Power Struggle Mission","Defeat Crossbones with the Headmoney Track at 4 or less","Defeat Crossbones after completing all 3 Missions","Defeat Daken with the Challenge Track at 3 or 4","Defeat the Dark Avengers with 3 or more cards in their Master Plan deck","Defeat the Dark Avengers 7 times, each time leaving out of the game a different Villain","Defeat Darkchild without any Hero ever going to Limbo","Defeat Enchantress with Skurge the Executioner still in play","Defeat Fin Fang Foom with any additional Challenge of your choice","Defeat Gorr with no more than 1 Hero removed from the game","Defeat Gorr with no Heroes removed from the game","Defeat High Evolutionary without any Hero ever getting 3 or more Crisis tokens","Defeat High Evolutionary with no Threats remaining in play","Defeat Hobgoblin without activating his Special Rule when he would be defeated the first time Defeat Hobgoblin without clearing any Threat. Once in the game, you can delay the next Villain turn","Defeat Klaw with 3 or more cards in his Master Plan deck","Defeat Knull with no more than 1 Hero being turned into a Symbiote","Defeat Knull in a 6-Hero game, with exactly 4 Heroes turned into Symbiote Henchmen","Defeat Lizard without any Hero ever being KO’d","Defeat Lizard without ever triggering an Overflow","Defeat Maximus with 3 or more cards in his Master Plan deck","Defeat Mole Man with no more than 1 Location filled with Crisis tokens","Defeat Moonstone by delivering 3 or more damage on the Hero turn she’s defeated","Defeat Purple Man with 3 or more cards in his Master Plan deck","Defeat Red Hulk with the Revenge Track at 3 or less","Defeat Shocker with him fulfilling no more than 1 of his Achievements","Defeat Titania with the additional Absorbing Man Challenge","Defeat U.S.Agent with 3 or more cards in his Master Plan deck","Defeat White Widow with 3 or less Crisis tokens among Heroes","Defeat the Winter Guard with the Interrogation Track at 2 or less","Defeat the Wrecking Crew while they’re trying to win with their Plan B","Defeat any Villain with Hard Mode Challenge and no Equipment","Calling Dr. Morbius: Defeat any version of the Sinister Six with Morbius in your team","Spider-Family: Defeat any version of the Sinister Six with only Heroes belonging to the Spider-Army in your team (Spider-Man, Miles Morales, Ghost Spider, Spider-Man 2099, Scarlet Spider, Peni Parker, Spider-Punk, Spider-Man Noir, Silk, Spider-Man (Symbiote Suit), Spider-Woman, Cyborg Spider-Man, Spider-Ham, Agent Venom, Superior Spider-Man, Black Cat, Venom)","It’s Clone Time: Defeat any version of the Sinister Six with Spider-Man, Scarlet Spider, and Spider-Man (Symbiote Suit) in your team","Weird Crossover: Defeat any version of the Sinister Six with no member of the Spider-Army in your team","Prologue: Defeat World Breaker Hulk with Black Bolt, Iron Man, Doctor Strange, and Mr. Fantastic as your team","Robert and Bruce: Defeat World Breaker Hulk with Sentry in your team","Family Ties: Defeat Galactus with all 4 members of the Fantastic Four as your team","Silver Herald: Defeat Galactus with Silver Surfer as one of the Heralds","Silver Hero: Defeat Galactus with Silver Surfer in your team","Avengers vs Galactus: Defeat Galactus with Thor, Iron Man, Captain America, and Wasp as your team","Defeat Dark Beast with Dark Beast Laboratory as his starting Location and one of his Henchmen starting there","It’s a S.H.I.E.L.D. Matter: Defeat either Villain in this set with only members of S.H.I.E.L.D. in your team (Black Widow, Agent Venom, Songbird, War Machine, Mirage, Spider-Woman, Mockingbird, Falcon, Captain America (Sam Wilson), Captain Carter, Nick Fury, U.S.Agent, Nick Fury Sr., Maria Hill, Quake, White Widow)","My name is Fury, kid… and so is yours: Defeat any Villain with Nick Fury and Nick Fury Sr. in your team","Space Adventures: Defeat Gladiator or Vulcan with only members of the Starjammers in your team (Corsair, Ch’od, Hepzibah, Raza, Havok, Polaris, Lilandra)","Space Oddity: Defeat Gladiator or Vulcan with only members of the Guardians of the Galaxy in your team (Star-Lord, Rocket, Groot, Gamora, Drax, Mantis, Phyla-Vell, Nebula, Adam Warlock, Nova Prime, Cosmic Ghost Rider, Quasar)","Defeat Annihilus with Harvester of Sorrow as his Starting location and Nova Corps Headquarters Location not in play","Defeat Annihilus with Nova Prime, Drax, Phila-Vell, and Silver Surfer as your team","All in the Family: Win with Loki, Thor, and Kid Loki as your team. Optionally, one of your Heroes should have Crocodile Loki as their Companion","Soviet Sisterhood: Win with Black Widow and White Widow as your Team","3 Shades of Hulk: Win with Hulk, Grey Hulk, and Red Hulk as your team","Ghosts in the Machine: Win with Ghost Rider, Ghost Rider (Jonny Blaze), and Cosmic Ghost Rider as your team","Knights in not so Shiny Armor: Win with Black Knight and Moon Knight as your team","Back in Black: Win with Black Bolt, Black Knight, and Black Cat as your team","Falcon and the Soldier: Win with Captain America (Sam Wilson) and Winter Soldier as your team","Twins Reunited: Win with Aurora and Northstar as your team","I Am Inhuman… or I Will Be: Win with Moon Girl & Devil Dinosaur and only other Inhumans in your team (Black Bolt, Medusa, Lockjaw, Crystal, Karnak, Gorgon, Triton, Ms. Marvel)","Winter Guardians: Win with Red Guardian, Ursa Major, and Darkstar as your team","Deadly Duo: Win with Elsa Bloodstone and Deadpool as your team","Only M: Win with M in your team without ever swapping into Penance Form Feel the Pain: Win with M in your team without playing cards with a Special Effect that works if you are in M form","Cassidy Family: Win with Siryn and Banshee as your team","Theresa and Jamie: Win with Siryn and Multiple Man as your team","The Summers: Win with Havok and Cyclops as your team","Double Date: Win with Havok, Cyclops, Jean Grey, and Polaris as your team","Pointy Ears Team-Up: Win with Meggan and Nightcrawler as your team","Fairy Tales: Win with Meggan and Captain Britain as your team","Wedding Vows: Win with Wiccan and Hulkling as your team","Mages and Witches United: Win with any combination of Wiccan, Doctor Strange, Wong, Doctor Doom, Scarlet Witch, and Magik as your team","Guthrie Brother and Sister: Win with Husk and Cannonball as your team","Complicated Relationships: Win with Husk and either Chamber or Archangel as your team. You can also play with all 3 if you wish","Shapeshifters: Win with Mystique, Husk, and Morph as your team. Or add Ms. Marvel to the team","Pym Particle Team-Up: Win with Stature, Ant-Man, Wasp, and Yellowjacket as your team Difficult Father-Son Relationship: Win with Daken and Wolverine as your team","Light and Dark: Win with Aurora and Daken as your team","Lethal Song: Win with Songbird in your team and using Manipulating Song to deal the final blow to a Henchmen or Villain","Whether They Want It or Not: Win with Man-Thing in your team and use Reality Displacement to remove another Hero from play","I’ll Never Do It Again: Win with Cypher and Wolfsbane in your team. During the game, Cypher must be KO’d while in the same Location as Wolfsbane","Conflicting Identities: Win with Captain Britain (Betsy Braddock) and Psylocke as your team","Even More Conflicting Identities: Win with Darkchild and Magik as your team","Cyber-Team: Win with Cyborg Spiderman, Deathlok, Winter Soldier, and War Machine as your team. Optionally, you can replace one of them other than Cyborg Spiderman with Cable or Forge","Oh Captain, My Captain!: Win with Patriot and Captain America (any version) as your team","Strolling through Time: Win with Patriot and Iron Lad as your team","Time Travelers: Win with Iron Lad, Loki, and Cable as your team","Weird Family Reunion: Win with Speed, Wiccan, Scarlet Witch, and Vision as your team","Twinstars: Win with Speed and Wiccan as your team","The Blue and the Red: Win with U.S.Agent and Captain America (any version) as your team","Multi-Shielded: Win with U.S.Agent, Captain America, and Captain America (Sam Wilson) as your team","Old School Buddies: Win with Agent Venom and Spider-Man as your team","Symbiosis: Win with Agent Venom, Anti-Venom, and Symbiote Spider-Man as your team","Partners in Magic: Win with Wong and Doctor Strange as your team","Getting in Your Head: Win with Moonstone and Doc Samson as your team","Dancing in the Moonlight: Win with Moonstone, Werewolf by Night, and Moon Knight as your team. Taking Back Attilan: Defeat Maximus with Black Bolt and only other Inhuman Heroes in your team","Wake the Dragon: Defeat Fin Fang Foom with no cards left in the Awake Master Plan deck","Defeat any Villain with Fin Fang Foom as an additional Challenge","Number 1: Defeat Mole Man with all 4 members of the Fantastic Four as your team","Have a Blast: Defeat Blastaar with Nova (any version) in your team","Settling Scores: Defeat White Widow with Black Widow in your team","Should I Stay or Should I Go?: Defeat Red Hulk with Hulk in your team","God Butcher: Defeat Gorr with Thor, Loki, Ares, and Hercules as your team","Stranger than Strange: Defeat Abomination with Hulk and Silver Surfer as your team","Muscular Battle: Defeat the Wrecking Crew with Thor, She-Hulk, and The Thing as your team","Russian Answer to the Avengers: Defeat the Winter Guard with Iron Man, Doc Samson, and She-Hulk as your team","Battle of Armors: Defeat Crymson Dinamo with Iron Man in your team","Amora(l) Tales: Defeat Enchantress with any combination of these Heroes as your team: Thor, Valkyrie, Korg, Loki, Beta Ray Bill","Don’t Make Her Cry: Defeat Enchantress without ever defeating Skurge the Executioner Henchman","Defenders of Wakanda: Defeat Klaw with Black Panther and any member of the Fantastic Four in your team","Daddy Issues: Defeat Daken with Wolverine in your team","There’s Only One Captain: Defeat U.S.Agent with Captain America and Captain America (Sam Wilson) as your team","You’ll Get What You Deserve: Defeat Purple Man with Jessica Jones, Luke Cage, Daredevil, and either Shang-Chi or Mockingbird as your team","Striking Force: Defeat Moonstone with any combination of these Heroes as your team: Blade, Spectrum, Wiccan, Spider-Woman, Winter Soldier"];
+    //Array with all achievements that must be completed on Hard that don't specifically mention it in the text
+    let hardAchievements = ["Defeat Emperor Doom without the Heroic Goal","Defeat Cosmic Ghost Rider with the Punishment Tracker at 10 or less","Defeat Maestro without Rick Jones in the same location as him","Defeat Immortus with 3 or more Master Plan cards in the Master Plan deck","Defeat Demogoblin & Doppelganger without losing any Mission","Defeat both Demogoblin & Doppelganger on the same Hero turn","Defeat Scorpion with no more than 1 Hero with a KO token","Defeat Scream with no more than 1 Crisis token on the Assassination Mission card","Defeat Shriek with 3 or more Civilians in play","Defeat Morbius with the Heroes having 4 or less Crisis tokens overall","Defeat the New Sinister Six with 3 or more cards left in the Master Plan deck","Defeat World Breaker Hulk with no Hero having an Obedience Disk when he’s defeated","Defeat The Void with 3 or more cards in his Master Plan deck","Defeat Ares with 5 or less Crisis tokens on Locations","Defeat Firelord","Defeat Nova with no Location with 3 Crisis tokens","Defeat Terrax with his Domination Track on space 4 or lower","Defeat Air-Walker with no Hero with more than 2 Crisis tokens","Defeat the Heralds of Galactus","Defeat Galactus","Defeat Dark Beast","Defeat Nemesis with 4 or less Crisis tokens on his dashboard","Defeat Apocalypse without any Hero being KO’d","Defeat the Skrulls with 3 or more cards left in the Master Plan deck","Defeat Queen Veranke with all 3 Missions completed","Defeat Gladiator with his Duel Track at 1 or less","Defeat Vulcan with the Heroes having 2 or less KO tokens","Defeat Annihilus with the Annihilation Track at 8 or less","Defeat any Villain with 1 Complication added","Defeat any Villain with 2 Complications added","Defeat any Villain with 3 Complications added","Defeat any Villain with 4 Complications added","Defeat Abomination before he plays his 4th Master Plan card","Defeat Absorbing Man with the additional Titania Challenge","Defeat Blastaar while no Hero is on the Negative Zone card","Defeat the Cabal 6 times, with 6 different main Villains","Defeat Chameleon after having found him at least 4 times. Defeat Chamaleon with this additional rule: Every time a Hero tries to damage Chamaleon and none of the revealed tokens shows Chamaleon, another Hero must discard 1 card from their hand","Defeat Crimson Dynamo with 4 or less Crisis tokens on the Power Struggle Mission","Defeat Crossbones with the Headmoney Track at 4 or less","Defeat Crossbones after completing all 3 Missions","Defeat Daken with the Challenge Track at 3 or 4","Defeat the Dark Avengers with 3 or more cards in their Master Plan deck","Defeat the Dark Avengers 7 times, each time leaving out of the game a different Villain","Defeat Darkchild without any Hero ever going to Limbo","Defeat Enchantress with Skurge the Executioner still in play","Defeat Fin Fang Foom with any additional Challenge of your choice","Defeat Gorr with no more than 1 Hero removed from the game","Defeat Gorr with no Heroes removed from the game","Defeat High Evolutionary without any Hero ever getting 3 or more Crisis tokens","Defeat High Evolutionary with no Threats remaining in play","Defeat Hobgoblin without activating his Special Rule when he would be defeated the first time Defeat Hobgoblin without clearing any Threat. Once in the game, you can delay the next Villain turn","Defeat Klaw with 3 or more cards in his Master Plan deck","Defeat Knull with no more than 1 Hero being turned into a Symbiote","Defeat Knull in a 6-Hero game, with exactly 4 Heroes turned into Symbiote Henchmen","Defeat Lizard without any Hero ever being KO’d","Defeat Lizard without ever triggering an Overflow","Defeat Maximus with 3 or more cards in his Master Plan deck","Defeat Mole Man with no more than 1 Location filled with Crisis tokens","Defeat Moonstone by delivering 3 or more damage on the Hero turn she’s defeated","Defeat Purple Man with 3 or more cards in his Master Plan deck","Defeat Red Hulk with the Revenge Track at 3 or less","Defeat Shocker with him fulfilling no more than 1 of his Achievements","Defeat Titania with the additional Absorbing Man Challenge","Defeat U.S.Agent with 3 or more cards in his Master Plan deck","Defeat White Widow with 3 or less Crisis tokens among Heroes","Defeat the Winter Guard with the Interrogation Track at 2 or less","Defeat the Wrecking Crew while they’re trying to win with their Plan B","All in the Family: Win with Loki, Thor, and Kid Loki as your team. Optionally, one of your Heroes should have Crocodile Loki as their Companion","Soviet Sisterhood: Win with Black Widow and White Widow as your Team","3 Shades of Hulk: Win with Hulk, Grey Hulk, and Red Hulk as your team","Ghosts in the Machine: Win with Ghost Rider, Ghost Rider (Jonny Blaze), and Cosmic Ghost Rider as your team","Knights in not so Shiny Armor: Win with Black Knight and Moon Knight as your team","Back in Black: Win with Black Bolt, Black Knight, and Black Cat as your team","Falcon and the Soldier: Win with Captain America (Sam Wilson) and Winter Soldier as your team","Twins Reunited: Win with Aurora and Northstar as your team","I Am Inhuman… or I Will Be: Win with Moon Girl & Devil Dinosaur and only other Inhumans in your team (Black Bolt, Medusa, Lockjaw, Crystal, Karnak, Gorgon, Triton, Ms. Marvel)","Winter Guardians: Win with Red Guardian, Ursa Major, and Darkstar as your team","Deadly Duo: Win with Elsa Bloodstone and Deadpool as your team","Only M: Win with M in your team without ever swapping into Penance Form Feel the Pain: Win with M in your team without playing cards with a Special Effect that works if you are in M form","Cassidy Family: Win with Siryn and Banshee as your team","Theresa and Jamie: Win with Siryn and Multiple Man as your team","The Summers: Win with Havok and Cyclops as your team","Double Date: Win with Havok, Cyclops, Jean Grey, and Polaris as your team","Pointy Ears Team-Up: Win with Meggan and Nightcrawler as your team","Fairy Tales: Win with Meggan and Captain Britain as your team","Wedding Vows: Win with Wiccan and Hulkling as your team","Mages and Witches United: Win with any combination of Wiccan, Doctor Strange, Wong, Doctor Doom, Scarlet Witch, and Magik as your team","Guthrie Brother and Sister: Win with Husk and Cannonball as your team","Complicated Relationships: Win with Husk and either Chamber or Archangel as your team. You can also play with all 3 if you wish","Shapeshifters: Win with Mystique, Husk, and Morph as your team. Or add Ms. Marvel to the team","Pym Particle Team-Up: Win with Stature, Ant-Man, Wasp, and Yellowjacket as your team Difficult Father-Son Relationship: Win with Daken and Wolverine as your team","Light and Dark: Win with Aurora and Daken as your team","Lethal Song: Win with Songbird in your team and using Manipulating Song to deal the final blow to a Henchmen or Villain","Whether They Want It or Not: Win with Man-Thing in your team and use Reality Displacement to remove another Hero from play","I’ll Never Do It Again: Win with Cypher and Wolfsbane in your team. During the game, Cypher must be KO’d while in the same Location as Wolfsbane","Conflicting Identities: Win with Captain Britain (Betsy Braddock) and Psylocke as your team","Even More Conflicting Identities: Win with Darkchild and Magik as your team","Cyber-Team: Win with Cyborg Spiderman, Deathlok, Winter Soldier, and War Machine as your team. Optionally, you can replace one of them other than Cyborg Spiderman with Cable or Forge","Oh Captain, My Captain!: Win with Patriot and Captain America (any version) as your team","Strolling through Time: Win with Patriot and Iron Lad as your team","Time Travelers: Win with Iron Lad, Loki, and Cable as your team","Weird Family Reunion: Win with Speed, Wiccan, Scarlet Witch, and Vision as your team","Twinstars: Win with Speed and Wiccan as your team","The Blue and the Red: Win with U.S.Agent and Captain America (any version) as your team","Multi-Shielded: Win with U.S.Agent, Captain America, and Captain America (Sam Wilson) as your team","Old School Buddies: Win with Agent Venom and Spider-Man as your team","Symbiosis: Win with Agent Venom, Anti-Venom, and Symbiote Spider-Man as your team","Partners in Magic: Win with Wong and Doctor Strange as your team","Getting in Your Head: Win with Moonstone and Doc Samson as your team","Dancing in the Moonlight: Win with Moonstone, Werewolf by Night, and Moon Knight as your team. Taking Back Attilan: Defeat Maximus with Black Bolt and only other Inhuman Heroes in your team","Wake the Dragon: Defeat Fin Fang Foom with no cards left in the Awake Master Plan deck","Defeat any Villain with Fin Fang Foom as an additional Challenge","Number 1: Defeat Mole Man with all 4 members of the Fantastic Four as your team","Have a Blast: Defeat Blastaar with Nova (any version) in your team","Settling Scores: Defeat White Widow with Black Widow in your team","Should I Stay or Should I Go?: Defeat Red Hulk with Hulk in your team","God Butcher: Defeat Gorr with Thor, Loki, Ares, and Hercules as your team","Stranger than Strange: Defeat Abomination with Hulk and Silver Surfer as your team","Muscular Battle: Defeat the Wrecking Crew with Thor, She-Hulk, and The Thing as your team","Russian Answer to the Avengers: Defeat the Winter Guard with Iron Man, Doc Samson, and She-Hulk as your team","Battle of Armors: Defeat Crymson Dinamo with Iron Man in your team","Amora(l) Tales: Defeat Enchantress with any combination of these Heroes as your team: Thor, Valkyrie, Korg, Loki, Beta Ray Bill","Don’t Make Her Cry: Defeat Enchantress without ever defeating Skurge the Executioner Henchman","Defenders of Wakanda: Defeat Klaw with Black Panther and any member of the Fantastic Four in your team","Daddy Issues: Defeat Daken with Wolverine in your team","There’s Only One Captain: Defeat U.S.Agent with Captain America and Captain America (Sam Wilson) as your team","You’ll Get What You Deserve: Defeat Purple Man with Jessica Jones, Luke Cage, Daredevil, and either Shang-Chi or Mockingbird as your team","Striking Force: Defeat Moonstone with any combination of these Heroes as your team: Blade, Spectrum, Wiccan, Spider-Woman, Winter Soldier"];
+    let containsHardAchievements = false;
+    //variable for relevant list element
+    const availableAchievementsMulti = document.getElementById('available-achievements-multi');
+    //WHILE the list has a non-null node
+    while (availableAchievementsMulti.hasChildNodes && availableAchievementsMulti.firstChild != null) {
+        //remove all nodes
+        availableAchievementsMulti.removeChild(availableAchievementsMulti.firstChild);
+    }
+    //FOR each achievement add a checkbox element with label
+    for (let i = 0; i < multiAchievements.length; i++) {
+        const label = document.createElement('label');
+        const box = document.createElement('input');
+        box.type = 'checkbox';
+        box.id = `multiachievement${i}`;
+        box.name = "achieves"
+        box.value = multiAchievements[i];
+        
+        let text = document.createTextNode(multiAchievements[i]);
+        //allows a break after each achievement
+        let br = document.createElement('br');
+        label.appendChild(box);
+        label.appendChild(text);
+        // IF one of the hard achievements is being displayed, add an asterisk
+        if (hardAchievements.includes(multiAchievements[i])) {
+            let asterisk = document.createTextNode('*');
+            label.appendChild(asterisk);
+            containsHardAchievements = true;
+        }
+        label.appendChild(br);
+        availableAchievementsMulti.appendChild(label);
+    }
+    // IF one of the hard achievements is being displayed, add the explanation
+    if(containsHardAchievements) {
+        const label = document.createElement('label');
+        let br = document.createElement('br');
+        label.appendChild(br);
+        let text = document.createTextNode('* Must be completed in Hard Mode');
+        label.appendChild(text);
+        availableAchievementsMulti.appendChild(label);
+    }
 }
 // showRemainingAchievements() function that shows all non-completed achievments
 function showRemainingAchievements() {
@@ -3969,7 +4788,7 @@ function showRemainingAchievements() {
     }
     
     //Array with all achievements from Season 2
-    let xAchievements = ["Win a game in Xavier Solo Mode", 'Win a game with an Anti-Hero as a Hero', 'Win a game using only Anti-Heroes as Heroes', "Win a game with 2 Players (X-Men)", "Win a game with 3 Players (X-Men)", "Win a game with 4 Players (X-Men)", "Complete all Mission cards (X-Men)", "Win without any Hero being KO'd (X-Men)", "Complete all Mission cards with Moderate Challenge (X-Men)", "Win without any Hero being KO'd with Moderate Challenge (X-Men)", "Complete all Mission cards with Hard Challenge (X-Men)", "Win without any Hero being KO'd with Hard Challenge (X-Men)", "Complete all Mission cards with Heroic Challenge (X-Men)", "Win without any Hero being KO'd with Heroic Challenge (X-Men)", 'Win without the Villain ever triggering an Overflow', 'Win before the 6th Master Plan card is played', 'Win without using any Special Effect cards', 'Win without any Hero taking damage', 'Win without using any Action tokens', "Defeat the Super Villain with 2 Heroes", "Play all Super Hero cards on a single Villain turn (with 2 Heroes)", "Defeat the Super Villain with 3 Heroes", "Play all Super Hero cards on a single Villain turn (with 3 Heroes)", "Defeat the Super Villain with 4 Heroes", "Play all Super Hero cards on a single Villain turn (with 4 Heroes)", "Defeat the Super Villain without using any Super Hero card", "Defeat the Super Villain without using any Action tokens", "Win as the Super Villain without using any Super Villain card", "Win as the Super Villain without taking a single damage", "Win as the Super Villain before the Heroes solve any Mission", "Win as the Super Villain with a single Health left", "Win as the Super Villain by fulfilling your Villainous Plot", "Win as the Super Villain by running out of Master Plan cards", 'Defeat the Villain using the Accelerated Villain Challenge', 'Your team wins without the other team dealing a single damage to the Villain', 'Your team wins delivering the final blow to the Villain', `Defeat Magneto with Hard Challenge`, `Defeat Magneto with Heroic Challenge`, `Defeat Magneto without completing the Cerebro Mission`, `Defeat Mystique with Hard Challenge`, `Defeat Mystique with Heroic Challenge`, `Defeat Mystique without her ever triggering an Overflow`, `Defeat Sabretooth with Hard Challenge`, `Defeat Sabretooth with Heroic Challenge`, `Defeat Sabretooth without any Hero being KO'd`, `Defeat Juggernaut with Hard Challenge`, `Defeat Juggernaut with Heroic Challenge`, `Defeat Juggernaut without completing the Clear Threats Mission`, `Defeat Mister Sinister with Hard Challenge`, `Defeat Mister Sinister with Heroic Challenge`, `Defeat Mister Sinister before he takes more than 5 DNA Samples`, `Defeat Mister Sinister without any hero losing all their DNA Samples`, `Defeat Sebastian Shaw with Hard Challenge`, `Defeat Sebastian Shaw with Heroic Challenge`, `Defeat Sebastian Shaw with both Black Queen and White Queen still in play`, `Score 15 or more points against Deadpool`, `Score 30 or more points against Deadpool`, `Score 50 or more points against Deadpool`, `Defeat Bob with Hard Challenge`, `Defeat Bob with Heroic Challenge`, `Defeat Bob with the Retirement Track on 6 or less`, `Defeat Bob with the Retirement Track on 10 or less`, `Defeat Bob with the Retirement Track on 11`, `Defeat Doctor Doom with Hard Challenge`, `Defeat Doctor Doom with Heroic Challenge`, `Defeat Doctor Doom with the Doom track on 19`, `Defeat Super Skrull with Hard Challenge`, `Defeat Super Skrull with Heroic Challenge`, `Defeat Super Skrull without completing the Clear Threats Mission`, `Defeat Scarlet Witch & Quicksilver with Hard Challenge`, `Defeat Scarlet Witch & Quicksilver with Heroic Challenge`, `Defeat both Scarlet Witch & Quicksilver on the same Hero turn`, `Defeat Scarlet Witch & Quicksilver with a single Reality Warping in the Storyline`, `Defeat Scarlet Witch & Quicksilver with both Reality Warping in the Storyline`, `Defeat Nimrod with Hard Challenge`, `Defeat Nimrod with Heroic Challenge`, `Defeat Nimrod with Nimrod Activation track in the white zone`, `Defeat Nimrod with Nimrod Activation track in the yellow zone`, `Defeat Nimrod with Nimrod Activation track in the red zone`, `Win the Phoenix Five campaign`, `Win the Phoenix Five campaign with Moderate Challenge`, `Win the Phoenix Five campaign with Hard Challenge`, `Win the Phoenix Five campaign with Heroic Challenge`, `Defeat Namor as the final Phoenix Five Villain`, `Defeat Magik as the final Phoenix Five Villain`, `Defeat Colossus as the final Phoenix Five Villain`, `Defeat Emma Frost as the final Phoenix Five Villain`, `Defeat Cyclops as the final Phoenix Five Villain`,`Defeat Stryfe with Hard Challenge`, `Defeat Stryfe with Heroic Challenge`, `Defeat Stryfe without completing the Defeat Thugs Mission`, `Defeat Apocalypse with Hard Challenge`, `Defeat Apocalypse with Heroic Challenge`, `Defeat Apocalypse after defeating all four Horsemen in the prelude`, `Defeat Apocalypse with no Horsemen left in play`, `Defeat Apocalypse with all Horsemen in play`, `Defeat Apocalypse without playing the prelude first`, `Defeat Apocalypse with the Apocalypse tracker on 15`, `Defeat Arcade with Hard Challenge`, `Defeat Arcade with Heroic Challenge`, `Defeat Arcade without any Hero being Ko'd`, `Defeat Avalanche with Hard Challenge`, `Defeat Avalanche with Heroic Challenge`, `Defeat Avalanche with 6 or less faceup Master Plan cards in the Storyline`, `Defeat Brood Queen with Hard Challenge`, `Defeat Brood Queen with Heroic Challenge`, `Defeat Brood Queen with no Brood in play`, `Defeat Brood Queen with 5 Brood in play`, `Defeat Callisto with Hard Challenge`, `Defeat Callisto with Heroic Challenge`, `Defeat Callisto without defeating any Henchmen`, `Defeat Dark Phoenix with Hard Challenge`, `Defeat Dark Phoenix with Heroic Challenge`, `Defeat Dark Phoenix with no Locations facedown`, `Defeat Deathbird with Hard Challenge`, `Defeat Deathbird with Heroic Challenge`, `Defeat Deathbird with Vulcan still in play`, `Defeat Emma Frost with Hard Challenge`, `Defeat Emma Frost with Heroic Challenge`, `Defeat Emma Frost with no Henchmen still in play`, `Defeat Lady Deathstrike with Hard Challenge`, `Defeat Lady Deathstrike with Heroic Challenge`, `Defeat Lady Deathstrike with the Hunted Hero delivering the final blow`, `Defeat Legion with Hard Challenge`, `Defeat Legion with Heroic Challenge`, `Defeat Legion with both Endgame cards in the Storyline`, `Defeat Marrow with Hard Challenge`, `Defeat Marrow with Heroic Challenge`, `Defeat Marrow with both Dual Heart cards facedown in the Storyline`, `Defeat Mastermind with Hard Challenge`, `Defeat Mastermind with Heroic Challenge`, `Defeat Mastermind without using effects that affect the Master Plan deck`, `Defeat Mojo with Hard Challenge`, `Defeat Mojo with Heroic Challenge`, `Defeat Mojo with Spiral still in play`, `Defeat Mojo with the Ratings track in the white zone`, `Defeat Namor with Hard Challenge`, `Defeat Namor with Heroic Challenge`, `Defeat Namor with all 6 Imperius Rex cards in the Storyline`, `Defeat Omega Red with Hard Challenge`, `Defeat Omega Red with Heroic Challenge`, `Defeat Omega Red with all Heroes having Crisis tokens`, `Defeat Onslaught with Hard Challenge`, `Defeat Onslaught with Heroic Challenge`, `Defeat Onslaught with his Master Plan deck depleted`, `Defeat Sauron with Hard Challenge`, `Defeat Sauron with Heroic Challenge`, `Defeat Sauron with no Crisis tokens on his Dashboard`, `Defeat Shadow King with Hard Challenge`, `Defeat Shadow King with Heroic Challenge`, `Defeat Shadow King without Heroes ever damaging each other`, `Defeat Silver Samurai with Hard Challenge`, `Defeat Silver Samurai with Heroic Challenge`, `Defeat Silver Samurai after facing all 4 Tachyon Field Sword Duels without losing any`, `Defeat Spiral with Hard Challenge`, `Defeat Spiral with Heroic Challenge`, `Defeat Spiral without any Hero being KO'd`, `Defeat Toad + Blob + Pyro with Hard Challenge`, `Defeat Toad + Blob + Pyro with Heroic Challenge`, `Defeat Toad + Blob + Pyro leaving Toad for last`, `Defeat Toad + Blob + Pyro leaving Blob for last`, `Defeat Toad + Blob + Pyro leaving Pyro for last`, 'Defeat Magneto with Professor X and any other original X-Men team', 'Stepbrothers: Defeat Juggernaut with Professor X in your team', 'Mind Readers: Defeat a Villain with Professor X, Jean Grey, and Emma Frost', 'Win playing the Heroes from the Blue Team box over the Heroes from the Gold Team box', 'Win playing the Heroes from the Gold Team box over the Heroes from the Blue Team box', 'Schism: Win a Team vs Team game with Cyclops while Wolverine is on the other team', 'Schism Rematch: Win a Team vs Team game with Wolverine while Cyclops is on the other team', 'Defeat a Villain using the Deadpool Challenge', 'Besties: Win with Deadpool and Bob in your team', 'Defeat a Villain using the Takeover Challenge', 'Defeat a Villain using the Aggressive Takeover Challenge', 'Teamwork: Defeat Doctor Doom with only members of the Fantastic Four', 'Unlikely Allies: Win with Mister Fantastic and Doctor Doom in your team', 'Fantastic Family Sinergy: Win playing at least 4 Teamwork cards in the Storyline', 'Self-limitations: Win with Silver Surfer in your team without playing Cosmic Awareness', 'Win without using the Danger Room', 'Win using the Danger Room at least 6 times', 'Win after emptying the Training deck', 'Defeat a Villain using the Sentinel I Challenge', 'Defeat a Villain using the Sentinel II Challenge', 'Defeat a Villain using the Sentinel III Challenge', 'Win the Phoenix 5 campaign without Hope Summers in your team', 'Defeat a Villain using the Hazardous Locations Challenge', 'Defeat a Villain without using the Starlight Citadel effect', 'Win using only members of the original X-Men team', 'Jumpstart: Win using only Heroes with a Starting Hand card', 'Multiplicity: Win a 2-Hero game using two different versions of the same character', 'There is only one Wolverine: Win with only versions of Wolverine in your team', 'Fastball Special: Win with Colossus and Wolverine in your team, delivering the final blow with a Fastball Special using Wolverine', 'Summers Family: Win with Cyclops, Havok, Jean Grey, and Hope Summers as your team', 'Wagner Family: With with Mystique and Nightcrawler in your team', 'Les Liaisons Dangereuses: Win with Jean Grey, Cyclops, and Wolverine in your team', 'Les Liaisons Dangereuses II: Win with Magneto, Rogue, and Gambit in your team', 'Les Liaisons Dangereuses III: Win with Mister Fantastic, Invisible Woman, and Namor in your team', 'Ultimate Danger: Win with Cable, Domino, and Deadpool in your team', 'Cloak & Dagger: Win a 2-Hero game with Cloak and Dagger', 'Strong Bond: Win with Cloak and Dagger in your team and both Bond cards in the Storyline', 'Ultimate Team-up: Win with Deadpool and Cable in your team', 'Pooling Together: Win with Deadpool, Lady Deadpool, and Gwenpool in your team', 'Brothers in Arms: Win with Cyclops and Havok in your team', 'Opposites Attract: Win with Havok and Polaris in your team', 'Brother and Sister: Win with Colossus and Magik in your team', 'Just like Mother and Daughter: Win with Mystique and Rogue in your team', 'This Love is a Blast: Win with Boom Boom and Cannonball in your team', 'Banding Together: Win with Dazzler and Strong Guy in your team', 'Show Must Go On: Win with Jubilee and Dazzler in your team', 'All the Dupes: Win with Multiple Man placing at least 1 Dupe token in each Location', 'Multiple Personality: Win with Legion playing at least 5 of his special abilities', 'Mutant Town Investigations: Win with Strong Guy and Multiple Man in your team', 'Phoenix Cry: Win with Phoenix delivering the final blow with the Phoenix Cry special effect', 'Twin Heart: Win with Marrow having used her Dual Hearts special effect', 'Native Alliance: Win with Forge, Warpath, and Mirage in your team', 'Weirdest Team-up Ever: Win a 2-Hero game with Doop and Wolverine', 'Beast Pack: Win with Beast, Feral, and Wolfsbane in your team', 'Redemption Path: Win with Warpath, Sunfire, Mystique and Rogue as your team', 'A Stunning Team: Win with Iceman, Psylocke, Banshee, and Pixie as your team, all using a Stunned token at some point', 'Magnetic Personalities: Win with Magneto and Polaris in your team', 'Burn, Baby, Burn: Win with Sunfire, Firestar, and Boom Boom in your team', 'Anti-Heroes United: Win Apocalypse, Doctor Doom, Magneto, and Namor as your team', 'A Tale of Ice, Fire, and Amazing Friendship: Win a 3-Hero game with Firestar, Iceman, and a third Hero of your choice', 'Xavier’s School for Gifted Youngsters: Win with Professor X in your team, using the Danger Room Challenge', 'Xavier Institute for Higher Learning: Win with Cyclops and Emma Frost in your team, using the Danger Room Challenge', 'Jean Grey School for Higher Learning: Win with Wolverine and Kitty Pride in your team, using the Danger Room Challenge', 'Alternate Headmaster: Win with Magneto in your team, using the Danger Room Challenge', 'The Apocalypse Solution: Win with Psylocke, Archangel, Fantomex, and Deadpool as your team', 'New Mutants: Win with only New Mutants members in your team (Cannonball, Mirage, Wolfsbane, Sunspot, Warlock, Magik, or Feral)', 'X-treme Team: Win with Storm, Psylocke, and Warpath in your team', 'Alpha Strike: Win game with only Alpha Flight members in your team', 'Alpha Teamplay: Win with only Alpha Flight members in your team and having played at least 3 Alpha Team cards', 'Excalibur: Win with Captain Britain, Nightcrawler, Kitty Pride, and Phoenix as your team', 'Exiled: Win with Blink, Beast, Forge, and Polaris as your team', 'Where walks the Juggernaut: Defeat Juggernaut with Human Torch in your team', 'Clones War: Defeat Stryfe with Cable in your team', 'All in the Family: Defeat Mister Sinister with Jean Grey, Cyclops, and Cable in your team', 'Rebels: Defeat Mojo with Spiral, Longshot, and Dazzler in your team', 'The Wizard of X: Defeat Mojo with Cyclops, Rogue, Wolverine, and Dazzler as your team', 'Biting the Hand: Defeat Callisto with Marrow in your team', 'Clashing Claws: Defeat Lady Deathstrike with Wolverine in your team', 'Going Mental: Defeat Shadow King with Professor X, Magneto, and Emma Frost in your team', 'Thief’s Gambit: Defeat Shadow King with Gambit in your team', 'Anarchy in the UK: Defeat Shadow King with Psylocke and Captain Britain in your team', 'Live on TV: Defeat Spiral with Longshot, Shatterstar, Psylocke, and Dazzler as your team', 'Back in the USSR: Defeat Omega Red with Colossus and Magik in your team', 'The Red and the Blue: Defeat Omega Red with Rogue, Gambit, Psylocke, and Jubilee as your team', 'Healing Factor: Defeat the Brood Queen with Wolverine and Deadpool in your team', 'Lovers’ Quarrels: Defeat Deathbird with Bishop in your team', 'Fight for Leadership: Defeat Callisto with Storm in your team', 'Phoenix Fight: Defeat Dark Phoenix with Phoenix and Jean Gray in your team', 'The Sub-Mariner: Defeat Namor with only members of the Fantastic Four in your team', 'Father and Son: Defeat Legion with Professor X in your team'];
+    let xAchievements = ["Win a game in Xavier Solo Mode", 'Win a game with an Anti-Hero as a Hero', 'Win a game using only Anti-Heroes as Heroes', "Win a game with 2 Players (X-Men)", "Win a game with 3 Players (X-Men)", "Win a game with 4 Players (X-Men)", "Complete all Mission cards (X-Men)", "Win without any Hero being KO'd (X-Men)", "Complete all Mission cards with Moderate Challenge (X-Men)", "Win without any Hero being KO'd with Moderate Challenge (X-Men)", "Complete all Mission cards with Hard Challenge (X-Men)", "Win without any Hero being KO'd with Hard Challenge (X-Men)", "Complete all Mission cards with Heroic Challenge (X-Men)", "Win without any Hero being KO'd with Heroic Challenge (X-Men)", 'Win without the Villain ever triggering an Overflow', 'Win before the 6th Master Plan card is played', 'Win without using any Special Effect cards', 'Win without any Hero taking damage', 'Win without using any Action tokens', "Defeat the Super Villain with 2 Heroes", "Play all Super Hero cards on a single Villain turn (with 2 Heroes)", "Defeat the Super Villain with 3 Heroes", "Play all Super Hero cards on a single Villain turn (with 3 Heroes)", "Defeat the Super Villain with 4 Heroes", "Play all Super Hero cards on a single Villain turn (with 4 Heroes)", "Defeat the Super Villain without using any Super Hero card", "Defeat the Super Villain without using any Action tokens", "Win as the Super Villain without using any Super Villain card", "Win as the Super Villain without taking a single damage", "Win as the Super Villain before the Heroes solve any Mission", "Win as the Super Villain with a single Health left", "Win as the Super Villain by fulfilling your Villainous Plot", "Win as the Super Villain by running out of Master Plan cards", 'Defeat the Villain using the Accelerated Villain Challenge', 'Your team wins without the other team dealing a single damage to the Villain', 'Your team wins delivering the final blow to the Villain', `Defeat Magneto with Hard Challenge`, `Defeat Magneto with Heroic Challenge`, `Defeat Magneto without completing the Cerebro Mission`, `Defeat Mystique with Hard Challenge`, `Defeat Mystique with Heroic Challenge`, `Defeat Mystique without her ever triggering an Overflow`, `Defeat Sabretooth with Hard Challenge`, `Defeat Sabretooth with Heroic Challenge`, `Defeat Sabretooth without any Hero being KO'd`, `Defeat Juggernaut with Hard Challenge`, `Defeat Juggernaut with Heroic Challenge`, `Defeat Juggernaut without completing the Clear Threats Mission`, `Defeat Mister Sinister with Hard Challenge`, `Defeat Mister Sinister with Heroic Challenge`, `Defeat Mister Sinister before he takes more than 5 DNA Samples`, `Defeat Mister Sinister without any hero losing all their DNA Samples`, `Defeat Sebastian Shaw with Hard Challenge`, `Defeat Sebastian Shaw with Heroic Challenge`, `Defeat Sebastian Shaw with both Black Queen and White Queen still in play`, `Score 15 or more points against Deadpool`, `Score 30 or more points against Deadpool`, `Score 50 or more points against Deadpool`, `Defeat Bob with Hard Challenge`, `Defeat Bob with Heroic Challenge`, `Defeat Bob with the Retirement Track on 6 or less`, `Defeat Bob with the Retirement Track on 10 or less`, `Defeat Bob with the Retirement Track on 11`, `Defeat Doctor Doom with Hard Challenge`, `Defeat Doctor Doom with Heroic Challenge`, `Defeat Doctor Doom with the Doom track on 19`, `Defeat Super Skrull with Hard Challenge`, `Defeat Super Skrull with Heroic Challenge`, `Defeat Super Skrull without completing the Clear Threats Mission`, `Defeat Scarlet Witch & Quicksilver with Hard Challenge`, `Defeat Scarlet Witch & Quicksilver with Heroic Challenge`, `Defeat both Scarlet Witch & Quicksilver on the same Hero turn`, `Defeat Scarlet Witch & Quicksilver with a single Reality Warping in the Storyline`, `Defeat Scarlet Witch & Quicksilver with both Reality Warping in the Storyline`, `Defeat Nimrod with Hard Challenge`, `Defeat Nimrod with Heroic Challenge`, `Defeat Nimrod with Nimrod Activation track in the white zone`, `Defeat Nimrod with Nimrod Activation track in the yellow zone`, `Defeat Nimrod with Nimrod Activation track in the red zone`, `Win the Phoenix Five campaign`, `Win the Phoenix Five campaign with Moderate Challenge`, `Win the Phoenix Five campaign with Hard Challenge`, `Win the Phoenix Five campaign with Heroic Challenge`, `Defeat Namor as the final Phoenix Five Villain`, `Defeat Magik as the final Phoenix Five Villain`, `Defeat Colossus as the final Phoenix Five Villain`, `Defeat Emma Frost as the final Phoenix Five Villain`, `Defeat Cyclops as the final Phoenix Five Villain`,`Defeat Stryfe with Hard Challenge`, `Defeat Stryfe with Heroic Challenge`, `Defeat Stryfe without completing the Defeat Thugs Mission`, `Defeat Apocalypse with Hard Challenge`, `Defeat Apocalypse with Heroic Challenge`, `Defeat Apocalypse after defeating all four Horsemen in the prelude`, `Defeat Apocalypse with no Horsemen left in play`, `Defeat Apocalypse with all Horsemen in play`, `Defeat Apocalypse without playing the prelude first`, `Defeat Apocalypse with the Apocalypse tracker on 15`, `Defeat Arcade with Hard Challenge`, `Defeat Arcade with Heroic Challenge`, `Defeat Arcade without any Hero being Ko'd`, `Defeat Avalanche with Hard Challenge`, `Defeat Avalanche with Heroic Challenge`, `Defeat Avalanche with 6 or less faceup Master Plan cards in the Storyline`, `Defeat Brood Queen with Hard Challenge`, `Defeat Brood Queen with Heroic Challenge`, `Defeat Brood Queen with no Brood in play`, `Defeat Brood Queen with 5 Brood in play`, `Defeat Callisto with Hard Challenge`, `Defeat Callisto with Heroic Challenge`, `Defeat Callisto without defeating any Henchmen`, `Defeat Dark Phoenix with Hard Challenge`, `Defeat Dark Phoenix with Heroic Challenge`, `Defeat Dark Phoenix with no Locations facedown`, `Defeat Deathbird with Hard Challenge`, `Defeat Deathbird with Heroic Challenge`, `Defeat Deathbird with Vulcan still in play`, `Defeat Emma Frost with Hard Challenge`, `Defeat Emma Frost with Heroic Challenge`, `Defeat Emma Frost with no Henchmen still in play`, `Defeat Lady Deathstrike with Hard Challenge`, `Defeat Lady Deathstrike with Heroic Challenge`, `Defeat Lady Deathstrike with the Hunted Hero delivering the final blow`, `Defeat Legion with Hard Challenge`, `Defeat Legion with Heroic Challenge`, `Defeat Legion with both Endgame cards in the Storyline`, `Defeat Marrow with Hard Challenge`, `Defeat Marrow with Heroic Challenge`, `Defeat Marrow with both Dual Heart cards facedown in the Storyline`, `Defeat Mastermind with Hard Challenge`, `Defeat Mastermind with Heroic Challenge`, `Defeat Mastermind without using effects that affect the Master Plan deck`, `Defeat Mojo with Hard Challenge`, `Defeat Mojo with Heroic Challenge`, `Defeat Mojo with Spiral still in play`, `Defeat Mojo with the Ratings track in the white zone`,`Defeat Mojo with the Ratings track in the red zone` ,`Defeat Namor with Hard Challenge`, `Defeat Namor with Heroic Challenge`, `Defeat Namor with all 6 Imperius Rex cards in the Storyline`, `Defeat Omega Red with Hard Challenge`, `Defeat Omega Red with Heroic Challenge`, `Defeat Omega Red with all Heroes having Crisis tokens`, `Defeat Onslaught with Hard Challenge`, `Defeat Onslaught with Heroic Challenge`, `Defeat Onslaught with his Master Plan deck depleted`, `Defeat Sauron with Hard Challenge`, `Defeat Sauron with Heroic Challenge`, `Defeat Sauron with no Crisis tokens on his Dashboard`, `Defeat Shadow King with Hard Challenge`, `Defeat Shadow King with Heroic Challenge`, `Defeat Shadow King without Heroes ever damaging each other`, `Defeat Silver Samurai with Hard Challenge`, `Defeat Silver Samurai with Heroic Challenge`, `Defeat Silver Samurai after facing all 4 Tachyon Field Sword Duels without losing any`, `Defeat Spiral with Hard Challenge`, `Defeat Spiral with Heroic Challenge`, `Defeat Spiral without any Hero being KO'd`, `Defeat Toad + Blob + Pyro with Hard Challenge`, `Defeat Toad + Blob + Pyro with Heroic Challenge`, `Defeat Toad + Blob + Pyro leaving Toad for last`, `Defeat Toad + Blob + Pyro leaving Blob for last`, `Defeat Toad + Blob + Pyro leaving Pyro for last`, 'Defeat Magneto with Professor X and any other original X-Men team', 'Stepbrothers: Defeat Juggernaut with Professor X in your team', 'Mind Readers: Defeat a Villain with Professor X, Jean Grey, and Emma Frost', 'Win playing the Heroes from the Blue Team box over the Heroes from the Gold Team box', 'Win playing the Heroes from the Gold Team box over the Heroes from the Blue Team box', 'Schism: Win a Team vs Team game with Cyclops while Wolverine is on the other team', 'Schism Rematch: Win a Team vs Team game with Wolverine while Cyclops is on the other team', 'Defeat a Villain using the Deadpool Challenge', 'Besties: Win with Deadpool and Bob in your team', 'Defeat a Villain using the Takeover Challenge', 'Defeat a Villain using the Aggressive Takeover Challenge', 'Teamwork: Defeat Doctor Doom with only members of the Fantastic Four', 'Unlikely Allies: Win with Mister Fantastic and Doctor Doom in your team', 'Fantastic Family Sinergy: Win playing at least 4 Teamwork cards in the Storyline', 'Self-limitations: Win with Silver Surfer in your team without playing Cosmic Awareness', 'Win without using the Danger Room', 'Win using the Danger Room at least 6 times', 'Win after emptying the Training deck', 'Defeat a Villain using the Sentinel I Challenge', 'Defeat a Villain using the Sentinel II Challenge', 'Defeat a Villain using the Sentinel III Challenge', 'Win the Phoenix 5 campaign without Hope Summers in your team', 'Defeat a Villain using the Hazardous Locations Challenge', 'Defeat a Villain without using the Starlight Citadel effect', 'Win using only members of the original X-Men team', 'Jumpstart: Win using only Heroes with a Starting Hand card', 'Multiplicity: Win a 2-Hero game using two different versions of the same character', 'There is only one Wolverine: Win with only versions of Wolverine in your team', 'Fastball Special: Win with Colossus and Wolverine in your team, delivering the final blow with a Fastball Special using Wolverine', 'Summers Family: Win with Cyclops, Havok, Jean Grey, and Hope Summers as your team', 'Wagner Family: With with Mystique and Nightcrawler in your team', 'Les Liaisons Dangereuses: Win with Jean Grey, Cyclops, and Wolverine in your team', 'Les Liaisons Dangereuses II: Win with Magneto, Rogue, and Gambit in your team', 'Les Liaisons Dangereuses III: Win with Mister Fantastic, Invisible Woman, and Namor in your team', 'Ultimate Danger: Win with Cable, Domino, and Deadpool in your team', 'Cloak & Dagger: Win a 2-Hero game with Cloak and Dagger', 'Strong Bond: Win with Cloak and Dagger in your team and both Bond cards in the Storyline', 'Ultimate Team-up: Win with Deadpool and Cable in your team', 'Pooling Together: Win with Deadpool, Lady Deadpool, and Gwenpool in your team', 'Brothers in Arms: Win with Cyclops and Havok in your team', 'Opposites Attract: Win with Havok and Polaris in your team', 'Brother and Sister: Win with Colossus and Magik in your team', 'Just like Mother and Daughter: Win with Mystique and Rogue in your team', 'This Love is a Blast: Win with Boom Boom and Cannonball in your team', 'Banding Together: Win with Dazzler and Strong Guy in your team', 'Show Must Go On: Win with Jubilee and Dazzler in your team', 'All the Dupes: Win with Multiple Man placing at least 1 Dupe token in each Location', 'Multiple Personality: Win with Legion playing at least 5 of his special abilities', 'Mutant Town Investigations: Win with Strong Guy and Multiple Man in your team', 'Phoenix Cry: Win with Phoenix delivering the final blow with the Phoenix Cry special effect', 'Twin Heart: Win with Marrow having used her Dual Hearts special effect', 'Native Alliance: Win with Forge, Warpath, and Mirage in your team', 'Weirdest Team-up Ever: Win a 2-Hero game with Doop and Wolverine', 'Beast Pack: Win with Beast, Feral, and Wolfsbane in your team', 'Redemption Path: Win with Warpath, Sunfire, Mystique and Rogue as your team', 'A Stunning Team: Win with Iceman, Psylocke, Banshee, and Pixie as your team, all using a Stunned token at some point', 'Magnetic Personalities: Win with Magneto and Polaris in your team', 'Burn, Baby, Burn: Win with Sunfire, Firestar, and Boom Boom in your team', 'Anti-Heroes United: Win Apocalypse, Doctor Doom, Magneto, and Namor as your team', 'A Tale of Ice, Fire, and Amazing Friendship: Win a 3-Hero game with Firestar, Iceman, and a third Hero of your choice', 'Xavier’s School for Gifted Youngsters: Win with Professor X in your team, using the Danger Room Challenge', 'Xavier Institute for Higher Learning: Win with Cyclops and Emma Frost in your team, using the Danger Room Challenge', 'Jean Grey School for Higher Learning: Win with Wolverine and Kitty Pride in your team, using the Danger Room Challenge', 'Alternate Headmaster: Win with Magneto in your team, using the Danger Room Challenge', 'The Apocalypse Solution: Win with Psylocke, Archangel, Fantomex, and Deadpool as your team', 'New Mutants: Win with only New Mutants members in your team (Cannonball, Mirage, Wolfsbane, Sunspot, Warlock, Magik, or Feral)', 'X-treme Team: Win with Storm, Psylocke, and Warpath in your team', 'Alpha Strike: Win game with only Alpha Flight members in your team', 'Alpha Teamplay: Win with only Alpha Flight members in your team and having played at least 3 Alpha Team cards', 'Excalibur: Win with Captain Britain, Nightcrawler, Kitty Pride, and Phoenix as your team', 'Exiled: Win with Blink, Beast, Forge, and Polaris as your team', 'Where walks the Juggernaut: Defeat Juggernaut with Human Torch in your team', 'Clones War: Defeat Stryfe with Cable in your team', 'All in the Family: Defeat Mister Sinister with Jean Grey, Cyclops, and Cable in your team', 'Rebels: Defeat Mojo with Spiral, Longshot, and Dazzler in your team', 'The Wizard of X: Defeat Mojo with Cyclops, Rogue, Wolverine, and Dazzler as your team', 'Biting the Hand: Defeat Callisto with Marrow in your team', 'Clashing Claws: Defeat Lady Deathstrike with Wolverine in your team', 'Going Mental: Defeat Shadow King with Professor X, Magneto, and Emma Frost in your team', 'Thief’s Gambit: Defeat Shadow King with Gambit in your team', 'Anarchy in the UK: Defeat Shadow King with Psylocke and Captain Britain in your team', 'Live on TV: Defeat Spiral with Longshot, Shatterstar, Psylocke, and Dazzler as your team', 'Back in the USSR: Defeat Omega Red with Colossus and Magik in your team', 'The Red and the Blue: Defeat Omega Red with Rogue, Gambit, Psylocke, and Jubilee as your team', 'Healing Factor: Defeat the Brood Queen with Wolverine and Deadpool in your team', 'Lovers’ Quarrels: Defeat Deathbird with Bishop in your team', 'Fight for Leadership: Defeat Callisto with Storm in your team', 'Phoenix Fight: Defeat Dark Phoenix with Phoenix and Jean Gray in your team', 'The Sub-Mariner: Defeat Namor with only members of the Fantastic Four in your team', 'Father and Son: Defeat Legion with Professor X in your team'];
     //variable for relevant list element
     const availableAchievementsX = document.getElementById('available-achievements-x');
     //WHILE the list has a non-null node
@@ -4053,6 +4872,54 @@ function showRemainingAchievements() {
         label.appendChild(text);
         label.appendChild(br);
         availableAchievementsSpider.appendChild(label);
+    }
+
+    //Array with all achievements from Multiverse
+    let multiAchievements = ["Win a game in Commander Solo Mode (Multiverse)","Win a game with 2 Players (Multiverse)","Win a game with 3 Players (Multiverse)","Win a game with 4 Players (Multiverse)","Complete all Mission cards (Multiverse)","Complete all Mission cards with Moderate Challenge (Multiverse)","Complete all Mission cards with Hard Challenge (Multiverse)","Win without any Hero being KO’d (Multiverse)","Win without any Hero being KO’d with Moderate Challenge (Multiverse)","Win without any Hero being KO’d with Hard Challenge (Multiverse)","Win without the Villain ever triggering an Overflow (Multiverse)","Win before the 6th Master Plan card is played (Multiverse)","Win without using any Special Effect cards (Multiverse)","Win without any Hero taking damage (Multiverse)","Win without using any Action Tokens (Multiverse)","Win with all Equipment in play facedown by the end","Win without ever using any Equipment in play","Defeat the Super Villain with 2 Heroes (Multiverse)","Defeat the Super Villain with 3 Heroes (Multiverse)","Defeat the Super Villain with 4 Heroes (Multiverse)","Defeat the Super Villain without using any Super Hero card (Multiverse)","Defeat the Super Villain without using any Action Tokens (Multiverse)","Defeat the Super Villain without ever using any Equipment in play","Play all Super Hero cards on a single Villain turn (with 2 Heroes) (Multiverse)","Play all Super Hero cards on a single Villain turn (with 3 Heroes) (Multiverse)","Play all Super Hero cards on a single Villain turn (with 4 Heroes) (Multiverse)","Win as the Super Villain without using any Super Villain card (Multiverse)","Defeat Emperor Doom without the Heroic Goal","Defeat Cosmic Ghost Rider with the Punishment Tracker at 10 or less","Defeat Maestro without Rick Jones in the same location as him","Defeat Immortus with 3 or more Master Plan cards in the Master Plan deck","Defeat Demogoblin & Doppelganger without losing any Mission","Defeat both Demogoblin & Doppelganger on the same Hero turn","Defeat Scorpion with no more than 1 Hero with a KO token","Defeat Scream with no more than 1 Crisis token on the Assassination Mission card","Defeat Shriek with 3 or more Civilians in play","Defeat Morbius with the Heroes having 4 or less Crisis tokens overall","Defeat the New Sinister Six with 3 or more cards left in the Master Plan deck","Defeat World Breaker Hulk with no Hero having an Obedience Disk when he’s defeated","Defeat The Void with 3 or more cards in his Master Plan deck","Defeat Ares with 5 or less Crisis tokens on Locations","Defeat Firelord","Defeat Nova with no Location with 3 Crisis tokens","Defeat Terrax with his Domination Track on space 4 or lower","Defeat Air-Walker with no Hero with more than 2 Crisis tokens","Defeat the Heralds of Galactus","Defeat Galactus","Defeat Dark Beast","Defeat Nemesis with 4 or less Crisis tokens on his dashboard","Defeat Apocalypse without any Hero being KO’d","Defeat the Skrulls with 3 or more cards left in the Master Plan deck","Defeat Queen Veranke with all 3 Missions completed","Defeat Gladiator with his Duel Track at 1 or less","Defeat Vulcan with the Heroes having 2 or less KO tokens","Defeat Annihilus with the Annihilation Track at 8 or less","Defeat any Villain with 1 Complication added","Defeat any Villain with 2 Complications added","Defeat any Villain with 3 Complications added","Defeat any Villain with 4 Complications added","Defeat Abomination before he plays his 4th Master Plan card","Defeat Absorbing Man with the additional Titania Challenge","Defeat Blastaar while no Hero is on the Negative Zone card","Defeat the Cabal 6 times, with 6 different main Villains","Defeat Chameleon after having found him at least 4 times. Defeat Chamaleon with this additional rule: Every time a Hero tries to damage Chamaleon and none of the revealed tokens shows Chamaleon, another Hero must discard 1 card from their hand","Defeat Crimson Dynamo with 4 or less Crisis tokens on the Power Struggle Mission","Defeat Crossbones with the Headmoney Track at 4 or less","Defeat Crossbones after completing all 3 Missions","Defeat Daken with the Challenge Track at 3 or 4","Defeat the Dark Avengers with 3 or more cards in their Master Plan deck","Defeat the Dark Avengers 7 times, each time leaving out of the game a different Villain","Defeat Darkchild without any Hero ever going to Limbo","Defeat Enchantress with Skurge the Executioner still in play","Defeat Fin Fang Foom with any additional Challenge of your choice","Defeat Gorr with no more than 1 Hero removed from the game","Defeat Gorr with no Heroes removed from the game","Defeat High Evolutionary without any Hero ever getting 3 or more Crisis tokens","Defeat High Evolutionary with no Threats remaining in play","Defeat Hobgoblin without activating his Special Rule when he would be defeated the first time Defeat Hobgoblin without clearing any Threat. Once in the game, you can delay the next Villain turn","Defeat Klaw with 3 or more cards in his Master Plan deck","Defeat Knull with no more than 1 Hero being turned into a Symbiote","Defeat Knull in a 6-Hero game, with exactly 4 Heroes turned into Symbiote Henchmen","Defeat Lizard without any Hero ever being KO’d","Defeat Lizard without ever triggering an Overflow","Defeat Maximus with 3 or more cards in his Master Plan deck","Defeat Mole Man with no more than 1 Location filled with Crisis tokens","Defeat Moonstone by delivering 3 or more damage on the Hero turn she’s defeated","Defeat Purple Man with 3 or more cards in his Master Plan deck","Defeat Red Hulk with the Revenge Track at 3 or less","Defeat Shocker with him fulfilling no more than 1 of his Achievements","Defeat Titania with the additional Absorbing Man Challenge","Defeat U.S.Agent with 3 or more cards in his Master Plan deck","Defeat White Widow with 3 or less Crisis tokens among Heroes","Defeat the Winter Guard with the Interrogation Track at 2 or less","Defeat the Wrecking Crew while they’re trying to win with their Plan B","Defeat any Villain with Hard Mode Challenge and no Equipment","Calling Dr. Morbius: Defeat any version of the Sinister Six with Morbius in your team","Spider-Family: Defeat any version of the Sinister Six with only Heroes belonging to the Spider-Army in your team (Spider-Man, Miles Morales, Ghost Spider, Spider-Man 2099, Scarlet Spider, Peni Parker, Spider-Punk, Spider-Man Noir, Silk, Spider-Man (Symbiote Suit), Spider-Woman, Cyborg Spider-Man, Spider-Ham, Agent Venom, Superior Spider-Man, Black Cat, Venom)","It’s Clone Time: Defeat any version of the Sinister Six with Spider-Man, Scarlet Spider, and Spider-Man (Symbiote Suit) in your team","Weird Crossover: Defeat any version of the Sinister Six with no member of the Spider-Army in your team","Prologue: Defeat World Breaker Hulk with Black Bolt, Iron Man, Doctor Strange, and Mr. Fantastic as your team","Robert and Bruce: Defeat World Breaker Hulk with Sentry in your team","Family Ties: Defeat Galactus with all 4 members of the Fantastic Four as your team","Silver Herald: Defeat Galactus with Silver Surfer as one of the Heralds","Silver Hero: Defeat Galactus with Silver Surfer in your team","Avengers vs Galactus: Defeat Galactus with Thor, Iron Man, Captain America, and Wasp as your team","Defeat Dark Beast with Dark Beast Laboratory as his starting Location and one of his Henchmen starting there","It’s a S.H.I.E.L.D. Matter: Defeat either Villain in this set with only members of S.H.I.E.L.D. in your team (Black Widow, Agent Venom, Songbird, War Machine, Mirage, Spider-Woman, Mockingbird, Falcon, Captain America (Sam Wilson), Captain Carter, Nick Fury, U.S.Agent, Nick Fury Sr., Maria Hill, Quake, White Widow)","My name is Fury, kid… and so is yours: Defeat any Villain with Nick Fury and Nick Fury Sr. in your team","Space Adventures: Defeat Gladiator or Vulcan with only members of the Starjammers in your team (Corsair, Ch’od, Hepzibah, Raza, Havok, Polaris, Lilandra)","Space Oddity: Defeat Gladiator or Vulcan with only members of the Guardians of the Galaxy in your team (Star-Lord, Rocket, Groot, Gamora, Drax, Mantis, Phyla-Vell, Nebula, Adam Warlock, Nova Prime, Cosmic Ghost Rider, Quasar)","Defeat Annihilus with Harvester of Sorrow as his Starting location and Nova Corps Headquarters Location not in play","Defeat Annihilus with Nova Prime, Drax, Phila-Vell, and Silver Surfer as your team","All in the Family: Win with Loki, Thor, and Kid Loki as your team. Optionally, one of your Heroes should have Crocodile Loki as their Companion","Soviet Sisterhood: Win with Black Widow and White Widow as your Team","3 Shades of Hulk: Win with Hulk, Grey Hulk, and Red Hulk as your team","Ghosts in the Machine: Win with Ghost Rider, Ghost Rider (Jonny Blaze), and Cosmic Ghost Rider as your team","Knights in not so Shiny Armor: Win with Black Knight and Moon Knight as your team","Back in Black: Win with Black Bolt, Black Knight, and Black Cat as your team","Falcon and the Soldier: Win with Captain America (Sam Wilson) and Winter Soldier as your team","Twins Reunited: Win with Aurora and Northstar as your team","I Am Inhuman… or I Will Be: Win with Moon Girl & Devil Dinosaur and only other Inhumans in your team (Black Bolt, Medusa, Lockjaw, Crystal, Karnak, Gorgon, Triton, Ms. Marvel)","Winter Guardians: Win with Red Guardian, Ursa Major, and Darkstar as your team","Deadly Duo: Win with Elsa Bloodstone and Deadpool as your team","Only M: Win with M in your team without ever swapping into Penance Form Feel the Pain: Win with M in your team without playing cards with a Special Effect that works if you are in M form","Cassidy Family: Win with Siryn and Banshee as your team","Theresa and Jamie: Win with Siryn and Multiple Man as your team","The Summers: Win with Havok and Cyclops as your team","Double Date: Win with Havok, Cyclops, Jean Grey, and Polaris as your team","Pointy Ears Team-Up: Win with Meggan and Nightcrawler as your team","Fairy Tales: Win with Meggan and Captain Britain as your team","Wedding Vows: Win with Wiccan and Hulkling as your team","Mages and Witches United: Win with any combination of Wiccan, Doctor Strange, Wong, Doctor Doom, Scarlet Witch, and Magik as your team","Guthrie Brother and Sister: Win with Husk and Cannonball as your team","Complicated Relationships: Win with Husk and either Chamber or Archangel as your team. You can also play with all 3 if you wish","Shapeshifters: Win with Mystique, Husk, and Morph as your team. Or add Ms. Marvel to the team","Pym Particle Team-Up: Win with Stature, Ant-Man, Wasp, and Yellowjacket as your team Difficult Father-Son Relationship: Win with Daken and Wolverine as your team","Light and Dark: Win with Aurora and Daken as your team","Lethal Song: Win with Songbird in your team and using Manipulating Song to deal the final blow to a Henchmen or Villain","Whether They Want It or Not: Win with Man-Thing in your team and use Reality Displacement to remove another Hero from play","I’ll Never Do It Again: Win with Cypher and Wolfsbane in your team. During the game, Cypher must be KO’d while in the same Location as Wolfsbane","Conflicting Identities: Win with Captain Britain (Betsy Braddock) and Psylocke as your team","Even More Conflicting Identities: Win with Darkchild and Magik as your team","Cyber-Team: Win with Cyborg Spiderman, Deathlok, Winter Soldier, and War Machine as your team. Optionally, you can replace one of them other than Cyborg Spiderman with Cable or Forge","Oh Captain, My Captain!: Win with Patriot and Captain America (any version) as your team","Strolling through Time: Win with Patriot and Iron Lad as your team","Time Travelers: Win with Iron Lad, Loki, and Cable as your team","Weird Family Reunion: Win with Speed, Wiccan, Scarlet Witch, and Vision as your team","Twinstars: Win with Speed and Wiccan as your team","The Blue and the Red: Win with U.S.Agent and Captain America (any version) as your team","Multi-Shielded: Win with U.S.Agent, Captain America, and Captain America (Sam Wilson) as your team","Old School Buddies: Win with Agent Venom and Spider-Man as your team","Symbiosis: Win with Agent Venom, Anti-Venom, and Symbiote Spider-Man as your team","Partners in Magic: Win with Wong and Doctor Strange as your team","Getting in Your Head: Win with Moonstone and Doc Samson as your team","Dancing in the Moonlight: Win with Moonstone, Werewolf by Night, and Moon Knight as your team. Taking Back Attilan: Defeat Maximus with Black Bolt and only other Inhuman Heroes in your team","Wake the Dragon: Defeat Fin Fang Foom with no cards left in the Awake Master Plan deck","Defeat any Villain with Fin Fang Foom as an additional Challenge","Number 1: Defeat Mole Man with all 4 members of the Fantastic Four as your team","Have a Blast: Defeat Blastaar with Nova (any version) in your team","Settling Scores: Defeat White Widow with Black Widow in your team","Should I Stay or Should I Go?: Defeat Red Hulk with Hulk in your team","God Butcher: Defeat Gorr with Thor, Loki, Ares, and Hercules as your team","Stranger than Strange: Defeat Abomination with Hulk and Silver Surfer as your team","Muscular Battle: Defeat the Wrecking Crew with Thor, She-Hulk, and The Thing as your team","Russian Answer to the Avengers: Defeat the Winter Guard with Iron Man, Doc Samson, and She-Hulk as your team","Battle of Armors: Defeat Crymson Dinamo with Iron Man in your team","Amora(l) Tales: Defeat Enchantress with any combination of these Heroes as your team: Thor, Valkyrie, Korg, Loki, Beta Ray Bill","Don’t Make Her Cry: Defeat Enchantress without ever defeating Skurge the Executioner Henchman","Defenders of Wakanda: Defeat Klaw with Black Panther and any member of the Fantastic Four in your team","Daddy Issues: Defeat Daken with Wolverine in your team","There’s Only One Captain: Defeat U.S.Agent with Captain America and Captain America (Sam Wilson) as your team","You’ll Get What You Deserve: Defeat Purple Man with Jessica Jones, Luke Cage, Daredevil, and either Shang-Chi or Mockingbird as your team","Striking Force: Defeat Moonstone with any combination of these Heroes as your team: Blade, Spectrum, Wiccan, Spider-Woman, Winter Soldier"];
+    //Array with all achievements that must be completed on Hard that don't specifically mention it in the text
+    let hardAchievements = ["Defeat Emperor Doom without the Heroic Goal","Defeat Cosmic Ghost Rider with the Punishment Tracker at 10 or less","Defeat Maestro without Rick Jones in the same location as him","Defeat Immortus with 3 or more Master Plan cards in the Master Plan deck","Defeat Demogoblin & Doppelganger without losing any Mission","Defeat both Demogoblin & Doppelganger on the same Hero turn","Defeat Scorpion with no more than 1 Hero with a KO token","Defeat Scream with no more than 1 Crisis token on the Assassination Mission card","Defeat Shriek with 3 or more Civilians in play","Defeat Morbius with the Heroes having 4 or less Crisis tokens overall","Defeat the New Sinister Six with 3 or more cards left in the Master Plan deck","Defeat World Breaker Hulk with no Hero having an Obedience Disk when he’s defeated","Defeat The Void with 3 or more cards in his Master Plan deck","Defeat Ares with 5 or less Crisis tokens on Locations","Defeat Firelord","Defeat Nova with no Location with 3 Crisis tokens","Defeat Terrax with his Domination Track on space 4 or lower","Defeat Air-Walker with no Hero with more than 2 Crisis tokens","Defeat the Heralds of Galactus","Defeat Galactus","Defeat Dark Beast","Defeat Nemesis with 4 or less Crisis tokens on his dashboard","Defeat Apocalypse without any Hero being KO’d","Defeat the Skrulls with 3 or more cards left in the Master Plan deck","Defeat Queen Veranke with all 3 Missions completed","Defeat Gladiator with his Duel Track at 1 or less","Defeat Vulcan with the Heroes having 2 or less KO tokens","Defeat Annihilus with the Annihilation Track at 8 or less","Defeat any Villain with 1 Complication added","Defeat any Villain with 2 Complications added","Defeat any Villain with 3 Complications added","Defeat any Villain with 4 Complications added","Defeat Abomination before he plays his 4th Master Plan card","Defeat Absorbing Man with the additional Titania Challenge","Defeat Blastaar while no Hero is on the Negative Zone card","Defeat the Cabal 6 times, with 6 different main Villains","Defeat Chameleon after having found him at least 4 times. Defeat Chamaleon with this additional rule: Every time a Hero tries to damage Chamaleon and none of the revealed tokens shows Chamaleon, another Hero must discard 1 card from their hand","Defeat Crimson Dynamo with 4 or less Crisis tokens on the Power Struggle Mission","Defeat Crossbones with the Headmoney Track at 4 or less","Defeat Crossbones after completing all 3 Missions","Defeat Daken with the Challenge Track at 3 or 4","Defeat the Dark Avengers with 3 or more cards in their Master Plan deck","Defeat the Dark Avengers 7 times, each time leaving out of the game a different Villain","Defeat Darkchild without any Hero ever going to Limbo","Defeat Enchantress with Skurge the Executioner still in play","Defeat Fin Fang Foom with any additional Challenge of your choice","Defeat Gorr with no more than 1 Hero removed from the game","Defeat Gorr with no Heroes removed from the game","Defeat High Evolutionary without any Hero ever getting 3 or more Crisis tokens","Defeat High Evolutionary with no Threats remaining in play","Defeat Hobgoblin without activating his Special Rule when he would be defeated the first time Defeat Hobgoblin without clearing any Threat. Once in the game, you can delay the next Villain turn","Defeat Klaw with 3 or more cards in his Master Plan deck","Defeat Knull with no more than 1 Hero being turned into a Symbiote","Defeat Knull in a 6-Hero game, with exactly 4 Heroes turned into Symbiote Henchmen","Defeat Lizard without any Hero ever being KO’d","Defeat Lizard without ever triggering an Overflow","Defeat Maximus with 3 or more cards in his Master Plan deck","Defeat Mole Man with no more than 1 Location filled with Crisis tokens","Defeat Moonstone by delivering 3 or more damage on the Hero turn she’s defeated","Defeat Purple Man with 3 or more cards in his Master Plan deck","Defeat Red Hulk with the Revenge Track at 3 or less","Defeat Shocker with him fulfilling no more than 1 of his Achievements","Defeat Titania with the additional Absorbing Man Challenge","Defeat U.S.Agent with 3 or more cards in his Master Plan deck","Defeat White Widow with 3 or less Crisis tokens among Heroes","Defeat the Winter Guard with the Interrogation Track at 2 or less","Defeat the Wrecking Crew while they’re trying to win with their Plan B","All in the Family: Win with Loki, Thor, and Kid Loki as your team. Optionally, one of your Heroes should have Crocodile Loki as their Companion","Soviet Sisterhood: Win with Black Widow and White Widow as your Team","3 Shades of Hulk: Win with Hulk, Grey Hulk, and Red Hulk as your team","Ghosts in the Machine: Win with Ghost Rider, Ghost Rider (Jonny Blaze), and Cosmic Ghost Rider as your team","Knights in not so Shiny Armor: Win with Black Knight and Moon Knight as your team","Back in Black: Win with Black Bolt, Black Knight, and Black Cat as your team","Falcon and the Soldier: Win with Captain America (Sam Wilson) and Winter Soldier as your team","Twins Reunited: Win with Aurora and Northstar as your team","I Am Inhuman… or I Will Be: Win with Moon Girl & Devil Dinosaur and only other Inhumans in your team (Black Bolt, Medusa, Lockjaw, Crystal, Karnak, Gorgon, Triton, Ms. Marvel)","Winter Guardians: Win with Red Guardian, Ursa Major, and Darkstar as your team","Deadly Duo: Win with Elsa Bloodstone and Deadpool as your team","Only M: Win with M in your team without ever swapping into Penance Form Feel the Pain: Win with M in your team without playing cards with a Special Effect that works if you are in M form","Cassidy Family: Win with Siryn and Banshee as your team","Theresa and Jamie: Win with Siryn and Multiple Man as your team","The Summers: Win with Havok and Cyclops as your team","Double Date: Win with Havok, Cyclops, Jean Grey, and Polaris as your team","Pointy Ears Team-Up: Win with Meggan and Nightcrawler as your team","Fairy Tales: Win with Meggan and Captain Britain as your team","Wedding Vows: Win with Wiccan and Hulkling as your team","Mages and Witches United: Win with any combination of Wiccan, Doctor Strange, Wong, Doctor Doom, Scarlet Witch, and Magik as your team","Guthrie Brother and Sister: Win with Husk and Cannonball as your team","Complicated Relationships: Win with Husk and either Chamber or Archangel as your team. You can also play with all 3 if you wish","Shapeshifters: Win with Mystique, Husk, and Morph as your team. Or add Ms. Marvel to the team","Pym Particle Team-Up: Win with Stature, Ant-Man, Wasp, and Yellowjacket as your team Difficult Father-Son Relationship: Win with Daken and Wolverine as your team","Light and Dark: Win with Aurora and Daken as your team","Lethal Song: Win with Songbird in your team and using Manipulating Song to deal the final blow to a Henchmen or Villain","Whether They Want It or Not: Win with Man-Thing in your team and use Reality Displacement to remove another Hero from play","I’ll Never Do It Again: Win with Cypher and Wolfsbane in your team. During the game, Cypher must be KO’d while in the same Location as Wolfsbane","Conflicting Identities: Win with Captain Britain (Betsy Braddock) and Psylocke as your team","Even More Conflicting Identities: Win with Darkchild and Magik as your team","Cyber-Team: Win with Cyborg Spiderman, Deathlok, Winter Soldier, and War Machine as your team. Optionally, you can replace one of them other than Cyborg Spiderman with Cable or Forge","Oh Captain, My Captain!: Win with Patriot and Captain America (any version) as your team","Strolling through Time: Win with Patriot and Iron Lad as your team","Time Travelers: Win with Iron Lad, Loki, and Cable as your team","Weird Family Reunion: Win with Speed, Wiccan, Scarlet Witch, and Vision as your team","Twinstars: Win with Speed and Wiccan as your team","The Blue and the Red: Win with U.S.Agent and Captain America (any version) as your team","Multi-Shielded: Win with U.S.Agent, Captain America, and Captain America (Sam Wilson) as your team","Old School Buddies: Win with Agent Venom and Spider-Man as your team","Symbiosis: Win with Agent Venom, Anti-Venom, and Symbiote Spider-Man as your team","Partners in Magic: Win with Wong and Doctor Strange as your team","Getting in Your Head: Win with Moonstone and Doc Samson as your team","Dancing in the Moonlight: Win with Moonstone, Werewolf by Night, and Moon Knight as your team. Taking Back Attilan: Defeat Maximus with Black Bolt and only other Inhuman Heroes in your team","Wake the Dragon: Defeat Fin Fang Foom with no cards left in the Awake Master Plan deck","Defeat any Villain with Fin Fang Foom as an additional Challenge","Number 1: Defeat Mole Man with all 4 members of the Fantastic Four as your team","Have a Blast: Defeat Blastaar with Nova (any version) in your team","Settling Scores: Defeat White Widow with Black Widow in your team","Should I Stay or Should I Go?: Defeat Red Hulk with Hulk in your team","God Butcher: Defeat Gorr with Thor, Loki, Ares, and Hercules as your team","Stranger than Strange: Defeat Abomination with Hulk and Silver Surfer as your team","Muscular Battle: Defeat the Wrecking Crew with Thor, She-Hulk, and The Thing as your team","Russian Answer to the Avengers: Defeat the Winter Guard with Iron Man, Doc Samson, and She-Hulk as your team","Battle of Armors: Defeat Crymson Dinamo with Iron Man in your team","Amora(l) Tales: Defeat Enchantress with any combination of these Heroes as your team: Thor, Valkyrie, Korg, Loki, Beta Ray Bill","Don’t Make Her Cry: Defeat Enchantress without ever defeating Skurge the Executioner Henchman","Defenders of Wakanda: Defeat Klaw with Black Panther and any member of the Fantastic Four in your team","Daddy Issues: Defeat Daken with Wolverine in your team","There’s Only One Captain: Defeat U.S.Agent with Captain America and Captain America (Sam Wilson) as your team","You’ll Get What You Deserve: Defeat Purple Man with Jessica Jones, Luke Cage, Daredevil, and either Shang-Chi or Mockingbird as your team","Striking Force: Defeat Moonstone with any combination of these Heroes as your team: Blade, Spectrum, Wiccan, Spider-Woman, Winter Soldier"];
+    let containsHardAchievements = false;
+    
+    //variable for relevant list element
+    const availableAchievementsMulti = document.getElementById('available-achievements-multi');
+    //WHILE the list has a non-null node
+    while (availableAchievementsMulti.hasChildNodes && availableAchievementsMulti.firstChild != null) {
+        //remove all nodes
+        availableAchievementsMulti.removeChild(availableAchievementsMulti.firstChild);
+    }
+    //remove saved achievements from Array
+    multiAchievements = removeCompletedAchievements(multiAchievements);
+    //FOR each achievement add a checkbox element with label
+    for (let i = 0; i < multiAchievements.length; i++) {
+        const label = document.createElement('label');
+        const box = document.createElement('input');
+        box.type = 'checkbox';
+        box.id = `multiachievement${i}`;
+        box.name = "achieves"
+        box.value = multiAchievements[i];
+        
+        let text = document.createTextNode(multiAchievements[i]);
+        //allows a break after each achievement
+        let br = document.createElement('br');
+        label.appendChild(box);
+        label.appendChild(text);
+        // IF one of the hard achievements is being displayed, add an asterisk
+        if (hardAchievements.includes(multiAchievements[i])) {
+            let asterisk = document.createTextNode('*');
+            label.appendChild(asterisk);
+            containsHardAchievements = true;
+        }
+        label.appendChild(br);
+        availableAchievementsMulti.appendChild(label);
+    }
+    // IF one of the hard achievements is being displayed, add the explanation
+    if(containsHardAchievements) {
+        const label = document.createElement('label');
+        let br = document.createElement('br');
+        label.appendChild(br);
+        let text = document.createTextNode('* Must be completed in Hard Mode');
+        label.appendChild(text);
+        availableAchievementsMulti.appendChild(label);
     }
 }
 

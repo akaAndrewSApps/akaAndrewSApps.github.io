@@ -48,6 +48,11 @@ ul li {
     display: flex;
 }
 
+.companiondropdowns {
+    display: flex;
+    justify-content: space-between;
+}
+
 .blueteam {
     background-color: #006ea7;
 }
