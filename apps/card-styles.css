@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     float: left;
+    height: 225px;
 }
 
 @media (max-width: 1000px) {
@@ -44,12 +45,12 @@ body {
 
 .game-card img {
     max-width: 100px;
+    max-height: 150px;
     flex: 0 0 auto;
 }
 
-  
 .game-card h3 {
-    margin: 0;
+    margin: 15px;
 }
 
 .game-card p {
@@ -60,7 +61,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-    align-items: end;
+    align-items: center;
+    min-height: 150px;
+    max-height: 150px;
+    
 }
   
 .game-list {
