@@ -7,10 +7,12 @@ const season2Heroes = ["Angel", "Apocalypse", "Archangel", "Banshee", "Beast", "
 const season3Heroes = ["Agent Venom", "Ares", "Aurora", "Black Bolt", "Black Knight", "Captain America (Classic)", "Captain America (Sam)", "Captain Britain (Betsy)", "Captain Carter", "Ch'od", "Chamber", "Corsair", "Cosmic Ghost Rider", "Crystal", "Cyborg Spider-Man", "Cypher", "Daken", "Darkchild", "Darkstar", "Deathlok", "Doc Samson", "Elsa Bloodstone", "Gladiator", "Gladiator Hulk", "Ghost Rider (Blaze)", "Goliath", "Gorgon", "Havok (X-Factor)", "Hephzibah", "Hercules", "Hulkbuster Iron Man", "Hulkling", "Husk", "Ironheart", "Iron Lad", "Iron Man (Civil War)", "Iron Spider", "Karnak", "Kate Bishop", "Kid Loki", "Lilandra", "Lockjaw", "Loki", "M", "Magneto (AoA)", "Man-Thing", "Maria Hill", "Medusa",  "Meggan", "Mighty Thor", "Moondragon", "Moon Girl / Devil Dinosaur", "Moonstone", "Morbius", "Morph", "Nick Fury, Sr.", "Nova (Frankie Raye)", "Nova Prime", "Patriot", "Phyla-Vell", "Quake", "Quasar", "Raza", "Red Guardian", "Red Hulk", "Ronin", "Sabretooth / Wildchild", "Sentry", "Shuri Black Panther", "Siryn", "Songbird", "Spectrum", "Speed", "Spider-Man 2099 (Original)", "Stature", "Tigra", "Triton", "Ursa Major", "U.S. Agent", "Werewolf by Night", "White Widow", "Wiccan", "Wonder-Man", "Wong", "X-Man", "Yellowjacket"];
 //Array of all Spider-geddon Heroes
 const spiderHeroes = ['Anti-Venom', 'Peni Parker', 'Scarlet Spider', 'Silk', 'Spider-Man Noir', 'Spider-Punk', 'Superior Spider-Man', 'Symbiote Spider-Man']
-//Array of all DC Season1 Heroes //FIXME
-const dcSeason1Heroes = ['Aquaman','The Atom','Atom Smasher','Batman','Beast Boy','Black Adam','Black Canary','Black Lightning','Blue Beetle','Booster Gold', 'Cyborg','Cyclone','Doctor Fate','Etrigan the Demon','The Flash','Gleek','Hawkgirl','Hawkman','Jayna','Jonah Hex','Krypto','Martian Manhunter','Mera','Power Girl','Raven','Red Tornado', 'Robin (Dick Grayson)','Shazam!','Starfire','Steel','Superboy','Supergirl', 'Superman','Vixen','Wildcat', 'Wonder Woman','Zan'];
+//Array of all DC Season1 Heroes
+const dcSeason1Heroes = ['Aquaman','Arm-Fall-Off-Boy','The Atom','Atom Smasher','Batgirl','Batgirl (Cassandra Cain)','Batman','Batman (Armor)','Batwoamn','Beast Boy','Bizarro','Black Adam','Black Canary','Black Lightning','Bloodsport','Blue Beetle','Booster Gold','Captain Boomerang','Captain Cold','Catwoman','Constantine','Cyborg','Cyclone','Deadman','Deadshot','Doctor Fate','Etrigan the Demon','Firestorm','The Flash','Gleek','Green Arrow','Guy Gardner','Hal Jordan','Harley Quinn','Hawkgirl','Hawkman','Indigo-1','Jayna','Jessica Cruz','John Stewart','Jonah Hex','Katana','Kilowog','King Shark','Krypto','Kyle Rayner','Lobo','Martian Manhunter','Mera','Nightwing','Peacemaker','Plastic Man','Poison Ivy','Polka Dot Man','Power Girl','The Question','Raven','Red Hood','Red Tornado','Rick Flag','Robin (Damian Wayne)','Robin (Dick Grayson)','Saint Walker','Salakk','S.T.R.I.P.E.','Shazam!','Soiler','Star Sapphire','Starfire','Stargirl','Steel','Superboy','Supergirl', 'Superman','Swamp Thing','Vixen','Wildcat', 'Wonder Woman','Zan','Zatanna'];
+//Array of all Fugitives //FIXME
+const dc1Fugitives = ['Bane','Clayface','Harley Quinn','The Joker','Killer Croc','Man-Bat','Mr. Freeze','The Penguin','Poison Ivy','The Riddler','Scarecrow','Two-Face'];
 //Array of all promotional Heroes
-const promoHeroes = ["Deadpool (X-Force)", "Grey Hulk", "Juggernaut", "Mister Sinister"];
+const promoHeroes = ['Agatha Harkness','Deadpool (X-Force)','Grey Hulk','Hybrid','Juggernaut','Mister Sinister'];
 //Array of all Season 1 Villains
 const season1Villains = ["Baron Zemo", "Black Dwarf", "Bullseye", "Carnage", "Corvus Glaive", "Doctor Octopus", "Dormammu", "Ebony Maw", "Electro", "Green Goblin", "Hela", "Kang", "Killmonger", "Kingpin", "Kraven", "Loki", "M.O.D.O.K.", "Mysterio", "Proxima Midnight", "Red Skull", "Rhino", "Ronan", "Sandman", "Sinister Six", "Taskmaster", "Thanos", "Ultron", "Venom", "Vulture"];
 //Array of all Season 2 Villains
@@ -19,8 +21,23 @@ const season2Villains = ["Apocalypse", "Arcade", "Avalanche", "Bob", "Brood Quee
 const season3Villains = ["Abomination ", "Absorbing Man", "Air-Walker", "Annihilus", "Apocalypse (AoA)", "Ares", "Blastaar", "Cabal (Doctor Doom)", "Cabal (Emma Frost)", "Cabal (Iron Patriot)", "Cabal (Loki)", "Cabal (Namor)", "Cabal (Taskmaster)", "Chameleon", "Cosmic Ghost Rider", "Crimson Dynamo", "Crimson Dynamo w/ Winter Guard", "Crossbones", "Daken", "Dark Avengers", "Dark Beast", "Dark Carnage", "Darkchild", "Demogoblin/Doppelganger", "Emperor Doom", "Enchantress", "Fin Fang Foom", "Firelord", "Galactus", "Gladiator", "Gorr", "Heralds", "High Evolutionary ", "Hobgoblin", "Immortus", "Klaw", "Knull", "Lizard", "Maestro", "Maximus", "Mole Man", "Moonstone", "Morbius", "Nemesis", "New Sinister Six", "Nova (Frankie Raye)", "Purple Man", "Queen Veranke", "Red Hulk", "Scorpion", "Scream", "Shocker", "Shriek", "Sinister Six Assembled", "Skrulls", "Terrax", "Titania", "U.S. Agent", "The Void", "Vulcan", "White Widow", "Winter Guard", "World Breaker Hulk", "Wrecking Crew"];
 //Array of all Spider-geddon Villains
 const spiderVillains = ['Anti-Venom', 'Morlun', 'Spot', 'Superior Spider-Man'];
-//Array of all DC Season 1 Villains //FIXME
-const dcSeason1Villains = ['Black Adam','Black Manta','Black Mask','Brainiac','Captain Cold','The Cheetah','Condiment King', 'Darkseid','Deathstroke','Despero','Doomsday','Gorilla Grodd', 'The Joker', 'Lex Luthor','Ocean Master','Parasite',`Ra's al Ghul`,'Steppenwolf','Trigon'];
+//Array of all DC Season 1 Villains
+const dcSeason1Villains = ['Ares','Atrocitus','Bane','The Batman Who Laughs','Bizarro','Black Adam','Black Hand','Black Manta','Black Mask','Brainiac','Captain Boomerang','Captain Cold','Catwoman','The Cheetah','Clayface','Condiment King','Cyborg Superman','Darkseid','Deadshot','Deathstroke','Despero','Doomsday','General Zod','Gorilla Grodd','Indigo-1','The Joker','Larfleeze','Lex Luthor','Lobo','Mongul','Mr. Mxyzptlk','Ocean Master','Parallax','Parasite',`Ra's al Ghul`,'Red Hood','Reverse-Flash','Sinestro','Solomon Grundy','Star Sapphire','Starro','Steppenwolf','Suicide Squad','Talia Al Ghul','Trigon'];
+//Array of all Suicide Squad members that can tag team
+const dc1SuicideSquad = ['Bloodsport','Harley Quinn','King Shark','Peacemaker','Polka Dot Man','Rick Flag'];
+//Array of all Suicide Squad Tag Teams
+const dc1SuicideSquadTagTeams = [];
+for(let i = 0; i < dc1SuicideSquad.length; i++) {
+    for (let j = 0; j < dc1SuicideSquad.length; j++) {
+        if(i!=j) {
+            dc1SuicideSquadTagTeams.push(`${dc1SuicideSquad[i]} with ${dc1SuicideSquad[j]}`);
+        }
+    }
+}
+//Array of all Antagonists
+const dc1Antagonists = ['Batman','The Flash','Superman','Wonder Woman'];
+//Array of all promotional Villains
+const promoVillains = ['Agatha Harkness','Scarlet Witch'];
 //Array of all companions //FIXME
 const companions = ['Alligator Loki', 'Cosmo', 'Goose', 'Jeff', 'Lockheed', 'Redwing', 'Throg'];
 //Array of all support characters //FIXME
@@ -64,11 +81,11 @@ populateTeam2Dropdown2(season1Heroes, season2Heroes, season3Heroes, promoHeroes,
 populateTeam2Dropdown3(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes);
 //villain dropdown
 populateDropdownVillains(season1Villains, season2Villains, season3Villains, spiderVillains);
-//companion dropdown
+/** companion dropdown               NOT CURRENTLY NEEDED FOR ACHIEVEMENTS
 popualteDropdownCompanion1(companions);
 popualteDropdownCompanion2(companions);
 popualteDropdownCompanion3(companions);
-popualteDropdownCompanion4(companions);
+popualteDropdownCompanion4(companions);**/
 
 // populateDropdown1() function that populates the first hero dropdown
 // param s1 Array of Season 1 heroes
