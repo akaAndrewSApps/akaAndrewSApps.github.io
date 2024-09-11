@@ -329,17 +329,54 @@ function handleFilterChange() {
 // param rangeString the variable of the selected playingTime
 // returns an Array with ints
 function parsePlaytimeRange(rangeString) {
-    console.log('rangeString: ' + rangeString);// FIXME
-    if (rangeString == '121+') {
-        return [121, 122];
-    }
-    const match = rangeString.match(/^(\d+)-(\d+)$/);
-    if (match) {
-      return [parseInt(match[1]), parseInt(match[2])];
-    }
-    return [0, Infinity]; // Default to all playtimes
+  if (rangeString == '121+') {
+    return [121, 122];
   }
+  const match = rangeString.match(/^(\d+)-(\d+)$/);
+  if (match) {
+    return [parseInt(match[1]), parseInt(match[2])];
+  }
+  return [0, Infinity]; // Default to all playtimes
+}
 
+/**  Gets an Array of all publishers */
+/** //Array to hold all publishers
+const allPublishers = [];
+// FOR all boardgames
+for (let i = 0; i < boardGames.length; i++) {
+  // get current board game's publisher array
+  let currentPublishers = boardGames[i].publishers;
+  // FOR all the publishers
+  for (let j = 0; j < currentPublishers.length; j++) {
+    // IF the current publsiher is not in the Array
+    if (!allPublishers.includes(currentPublishers[j])) {
+      // Add the current publisher to allPublishers Array
+      allPublishers.push(currentPublishers[j]);
+    }
+  }
+}
+allPublishers.sort((a,b) => (a > b) ? 1 : ((b > a) ? -1 : 0)); // Sorts objects alphabetically
+console.log(allPublishers);**/
+
+/**  Gets an Array of all mechanisms */
+/** //Array to hold all mechanisms
+const allMechanisms = [];
+// FOR all boardgames
+for (let i = 0; i < boardGames.length; i++) {
+  // get current board game's publisher array
+  let currentMechanisms = boardGames[i].mechanisms;
+  // FOR all the publishers
+  for (let j = 0; j < currentMechanisms.length; j++) {
+    // IF the current publsiher is not in the Array
+    if (!allMechanisms.includes(currentMechanisms[j])) {
+      // Add the current publisher to allPublishers Array
+      allMechanisms.push(currentMechanisms[j]);
+    }
+  }
+}
+allMechanisms.sort((a,b) => (a > b) ? 1 : ((b > a) ? -1 : 0)); // Sorts objects alphabetically
+console.log(allMechanisms); **/
+  
   /**  Gets game ID from user */
 /**fetch('https://bgg-json.azurewebsites.net/collection/criesjuggernaut')
 .then(response => response.text())
