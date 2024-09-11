@@ -267,6 +267,9 @@ function filterGames(games, filters) {
 // Initial display of all games
 displayGames(boardGames);
 
+// createGameCard() function that creates a card for the selected game
+// param game the variable of the current game object
+// returns card that can be displayed
 function createGameCard(game) {
   const card = document.createElement('div');
   card.classList.add('game-card');
