@@ -60,7 +60,7 @@ const heroDropdown3team2 = document.getElementById('heroes3team2');
 const heroDropdown4team2 = document.getElementById('heroes4team2');
 //villain selection
 const villainDropdown = document.getElementById('villain');
-/**  companion selection    NOT CURRENTLY NEEDED FOR ACHIEVEMENTS
+/**  companion selection           NOT CURRENTLY NEEDED FOR ACHIEVEMENTS
 const companionDropdown1 = document.getElementById('companions1');
 const companionDropdown2 = document.getElementById('companions2');
 const companionDropdown3 = document.getElementById('companions3');
@@ -1262,6 +1262,13 @@ function getAdditionalFactors() {
 function displayAchievements(achievements, xAchievements, newAchievements, spiderAchievements, multiAchievements, selectedHeroes) {
     //Season 1 Achievements
     //variable for relevant list element
+    // IF there are Season 1 achievements
+    if(achievements.length > 0 && document.getElementById('available-achievements-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-header').classList.toggle('collapse');
+    }
+    else if (achievements.length <= 0 && !document.getElementById('available-achievements-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-header').classList.toggle('collapse');
+    }
     const availableAchievements = document.getElementById('available-achievements');
     //WHILE the list has a non-null node
     while (availableAchievements.hasChildNodes && availableAchievements.firstChild != null) {
@@ -1287,6 +1294,13 @@ function displayAchievements(achievements, xAchievements, newAchievements, spide
     }
     //Season 2 Achievements
     //variable for relevant list element
+    // IF there are Season 2 achievements
+    if(xAchievements.length > 0 && document.getElementById('available-achievements-x-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-x-header').classList.toggle('collapse');
+    }
+    else if (xAchievements.length <= 0 && !document.getElementById('available-achievements-x-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-x-header').classList.toggle('collapse');
+    }
     const availableAchievementsX = document.getElementById('available-achievements-x');
     //WHILE the list has a non-null node
     while (availableAchievementsX.hasChildNodes && availableAchievementsX.firstChild != null) {
@@ -1313,6 +1327,13 @@ function displayAchievements(achievements, xAchievements, newAchievements, spide
     
     //New Achievements
     //variable for relevant list element
+    // IF there New achievements
+    if(newAchievements.length > 0 && document.getElementById('available-achievements-new-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-new-header').classList.toggle('collapse');
+    }
+    else if (newAchievements.length <= 0 && !document.getElementById('available-achievements-new-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-new-header').classList.toggle('collapse');
+    }
     const availableAchievementsNew = document.getElementById('available-achievements-new');
     //WHILE the list has a non-null node
     while (availableAchievementsNew.hasChildNodes && availableAchievementsNew.firstChild != null) {
@@ -1339,6 +1360,13 @@ function displayAchievements(achievements, xAchievements, newAchievements, spide
     
     //Spider-geddon Achievements
     //variable for relevant list element
+    // IF there are Spider-geddon achievements
+    if(spiderAchievements.length > 0 && document.getElementById('available-achievements-spider-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-spider-header').classList.toggle('collapse');
+    }
+    else if (spiderAchievements.length <= 0 && !document.getElementById('available-achievements-spider-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-spider-header').classList.toggle('collapse');
+    }
     const availableAchievementsSpider = document.getElementById('available-achievements-spider');
     //WHILE the list has a non-null node
     while (availableAchievementsSpider.hasChildNodes && availableAchievementsSpider.firstChild != null) {        
@@ -1365,6 +1393,13 @@ function displayAchievements(achievements, xAchievements, newAchievements, spide
 
     //Multi Achievements
     //variable for relevant list element
+    // IF there are Season 3 achievements
+    if(multiAchievements.length > 0 && document.getElementById('available-achievements-multi-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-multi-header').classList.toggle('collapse');
+    }
+    else if (multiAchievements.length <= 0 && !document.getElementById('available-achievements-multi-header').classList.contains('collapse')) {
+        document.getElementById('available-achievements-multi-header').classList.toggle('collapse');
+    }
     const availableAchievementsMulti = document.getElementById('available-achievements-multi');
     //WHILE the list has a non-null node
     while (availableAchievementsMulti.hasChildNodes && availableAchievementsMulti.firstChild != null) {
