@@ -3635,7 +3635,7 @@ function getXHeroFeats(heroes, villain, challenges, gamemode, additional) {
     if (villain == 'Juggernaut' && heroes.includes('Professor X')) {
         heroFeatsAchievements.push('Stepbrothers: Defeat Juggernaut with Professor X in your team');
     }
-    if(heroes.includes('Professor X') && heroes.includes('Emma Frost') && (heroes.include('Jean Grey') || heroes.includes('Marvel Girl'))) {
+    if(heroes.includes('Professor X') && heroes.includes('Emma Frost') && (heroes.includes('Jean Grey') || heroes.includes('Marvel Girl'))) {
         heroFeatsAchievements.push('Mind Readers: Defeat a Villain with Professor X, Jean Grey, and Emma Frost');
     }
     //TEAM V TEAM achievements
