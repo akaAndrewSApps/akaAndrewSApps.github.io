@@ -8,34 +8,43 @@
     <div class="page-title">Stokes Family Collection</div>
     <div class="code"></div>
     <div class="filters">
-        <select id="player-filter">
-            <option value="all">All Players</option>
-            <option value="1">1 Players</option>
-            <option value="2">2 Players</option>
-            <option value="3">3 Players</option>
-            <option value="4">4 Players</option>
-            <option value="5">5 Players</option>
-            <option value="6">6 Players</option>
-            <option value="7">7 Players</option>
-            <option value="8">8+ Players</option>
-          </select>
-          <select id="playtime-filter">
-            <option value="all">All Playtimes</option>
-            <option value="0-30">0-30 Minutes</option>
-            <option value="31-60">31-60 Minutes</option>
-            <option value="61-90">61-90 Minutes</option>
-            <option value="91-120">91-120 Minutes</option>
-            <option value="121+">121+ Minutes</option>
-          </select>
-          <select id="is-competitive-filter">
-            <option value="all">All Gamemodes</option>
-            <option value="true">Competitive</option>
-            <option value="false">Cooperative</option>
-          </select>
+      <div id="playerFilter" class="playerDropdown" onclick="showDropdown('players')">
+        <p id="playerFilterText" class="dropdownSelectionText">All Player Counts</p>
+        <div id="playerFilterDropdown" class="dropdown-content player">
+          <p onclick="updateFilters('players', 'all')">All Player Counts</p>
+          <p onclick="updateFilters('players', 1)">1 Player</p>
+          <p onclick="updateFilters('players', 2)">2 Players</p>
+          <p onclick="updateFilters('players', 3)">3 Players</p>
+          <p onclick="updateFilters('players', 4)">4 Players</p>
+          <p onclick="updateFilters('players', 5)">5 Players</p>
+          <p onclick="updateFilters('players', 6)">6 Players</p>
+          <p onclick="updateFilters('players', 7)">7 Players</p>
+          <p onclick="updateFilters('players', 8)">8+ Players</p>
+        </div>
       </div>
+      <div id="playtimeFilter"  class="playtimeDropdown" onclick="showDropdown('playtime')">
+        <p id="playtimeFilterText" class='dropdownSelectionText'>All Playtimes</p>
+        <div id="playtimeFilterDropdown" class="dropdown-content playtime">
+          <p onclick="updateFilters('playtime', 'all')">All Playtimes</p>
+          <p onclick="updateFilters('playtime', '0-30')">0 - 30 Minutes</p>
+          <p onclick="updateFilters('playtime', '31-60')">31 - 60 Minutes</p>
+          <p onclick="updateFilters('playtime', '61-90')">61 - 90 Minutes</p>
+          <p onclick="updateFilters('playtime', '91-120')">91 - 120 Minutes</p>
+          <p onclick="updateFilters('playtime', '121+')">120+ Minutes</p>
+        </div>
+      </div>
+      <div id="gamemodeFilter"  class="gamemodeDropdown" onclick="showDropdown('gamemode')">
+        <p id="gamemodeFilterText" class="dropdownSelectionText">All Gamemodes</p>
+        <div id="gamemodeFilterDropdown" class="dropdown-content gamemode">
+          <p onclick="updateFilters('gamemode', 'all')">All Gamemodes</p>
+          <p onclick="updateFilters('gamemode', 'true')">Competitive</p>
+          <p onclick="updateFilters('gamemode', 'false')">Cooperative</p>
+        </div>
+      </div>
+    </div>
   <div class="game-list">
     
-    </div>
+  </div>
   <script src="games-collection-app.js"></script>
 </body>
 </html>

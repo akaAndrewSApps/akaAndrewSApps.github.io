@@ -218,7 +218,18 @@ const boardGames = [
   {gameId: 222887, title: `Twin It!`, image: `https://cf.geekdo-images.com/bC-qaNTSRO5lHBSA10VYbg__original/img/YvRyViIg0hEZj3IPLUQKkm1pdss=/0x0/filters:format(jpeg)/pic4462372.jpg`, minPlayers: 2, maxPlayers: 6, playingTime: 10, isCompetitive: false, mechanisms: [`Cooperative Game`,`Matching`,`Pattern Recognition`,`Set Collection`,`Simultaneous Action Selection`,`Speed Matching`,`Take That`,`Team-Based Game`,`Variable Set-up`],yearPublished: 2017, rank: 3760, designers: [`Nathalie Saunier`,`Rémi Saunier`,`Thomas Vuarchex`],publishers: [`Cocktail Games`,`Big Potato Games`,`Enigma (Bergsala Enigma)`,`Gamewright`,`Happy Baobab`,`Hobby Japan`,`HUCH!`,`Lifestyle Boardgames Ltd`,`Rebel Sp. z o.o.`,`Reflexshop`],artists: [`Xavier Gueniffey Durin`,`Thomas Vuarchex`]},
   {gameId: 343981, title: `Gathering of the Wicked`, image: `https://cf.geekdo-images.com/Vh3UGE4LA_5CZ954H_u6Gg__original/img/vwoWTgMfev1gow09KSemKlQ0-U4=/0x0/filters:format(png)/pic6315375.png`, minPlayers: 6, maxPlayers: 12, playingTime: 30, isCompetitive: true, mechanisms: [`Hidden Roles`],yearPublished: 2021, rank: 12180, designers: [`Philippe des Pallières`,`Hervé Marly`],publishers: [`Zygomatic`,`Rebel Sp. z o.o.`],artists: [`Thibault Prugne`,`Alexios Tjoyas`]},
   {gameId: 306881, title: `Railroad Ink Challenge: Lush Green Edition`, image: `https://cf.geekdo-images.com/SOSOn5ningJ66cE1CBJlyQ__original/img/OfkxR1fw4gYu-Sn-i7T_UCPr1II=/0x0/filters:format(jpeg)/pic5350593.jpg`, minPlayers: 1, maxPlayers: 4, playingTime: 30, isCompetitive: true, mechanisms: [`Bingo`,`Connections`,`Dice Rolling`,`Line Drawing`,`Network and Route Building`,`Paper-and-Pencil`,`Simultaneous Action Selection`,`Solo / Solitaire Game`],yearPublished: 2021, rank: 746, designers: [`Hjalmar Hach`,`Lorenzo Silva`],publishers: [`Horrible Guild`,`Albi`,`Delta Vision Publishing`,`Ghenos Games`,`HeidelBÄR Games`,`IELLO`,`White Goblin Games`],artists: [`Marta Tranquilli`]},
-  {gameId: 97991, title: `Hit the Trail`, image: `https://cf.geekdo-images.com/mPcJX5EyG_tLbesQAt3JjA__original/img/gLChBOqKfvxSZDymdpB1NJwPohM=/0x0/filters:format(jpeg)/pic1014521.jpg`, minPlayers: 2, maxPlayers: 10, playingTime: 0, isCompetitive: true, mechanisms: [`Dice Rolling`,`Open Drafting`],yearPublished: 2011, rank: -1, designers: [],publishers: [`Education Outdoors`],artists: []}
+  {gameId: 97991, title: `Hit the Trail`, image: `https://cf.geekdo-images.com/mPcJX5EyG_tLbesQAt3JjA__original/img/gLChBOqKfvxSZDymdpB1NJwPohM=/0x0/filters:format(jpeg)/pic1014521.jpg`, minPlayers: 2, maxPlayers: 10, playingTime: 0, isCompetitive: true, mechanisms: [`Dice Rolling`,`Open Drafting`],yearPublished: 2011, rank: -1, designers: [],publishers: [`Education Outdoors`],artists: []},
+  {gameId: 1472, title: `Five Crowns`, image: `https://cf.geekdo-images.com/sPc6K1gC--QrGHkdCmD8MQ__original/img/oWAwl_4jKymtzwQ2TyuWPKJKITo=/0x0/filters:format(jpeg)/pic2869930.jpg`, minPlayers: 1, maxPlayers: 7, playingTime: 30, isCompetitive: true, mechanisms: [`Hand Management`,`Score-and-Reset Game`,`Set Collection`],yearPublished: 1996, rank: 4260, designers: [`Marsha J. Falco`],publishers: [`Set Enterprises, Inc.`,`999 Games`,`AMIGO`,`Asmodee`,`Broadway Toys LTD`,`Coiledspring Games`,`Gigamic`,`Nordic Games GmbH`,`PlayMonster`],artists: []},
+  {gameId: 362205, title: `Sleeping Gods: Primeval Peril`, image: `https://cf.geekdo-images.com/pNQImPAMcRD_8vVdPwnjSw__original/img/OYLJctuXubzsWliJm0qF0pNlzu8=/0x0/filters:format(jpeg)/pic8037477.jpg`, minPlayers: 1, maxPlayers: 2, playingTime: 240, isCompetitive: false, mechanisms: [`Cooperative Game`,`Hand Management`,`Scenario / Mission / Campaign Game`,`Solo / Solitaire Game`,`Storytelling`],yearPublished: 2023, rank: 3371, designers: [`Ryan Laukat`],publishers: [`Red Raven Games`,`Keep Exploring Games`,`Lavka Games`,`Lucky Duck Games`,`Schwerkraft-Verlag`],artists: [`Ryan Laukat`]},
+  {gameId: 403240, title: `King of Tokyo: Origins`, image: `https://cf.geekdo-images.com/0F9WfwIY6p13EzQgKbvZ1A__original/img/zU_NWnh3hmzVPecPHq5-Wks9Lrg=/0x0/filters:format(png)/pic7924163.png`, minPlayers: 2, maxPlayers: 4, playingTime: 30, isCompetitive: true, mechanisms: [`Dice Rolling`,`Die Icon Resolution`,`King of the Hill`,`Player Elimination`,`Push Your Luck`,`Re-rolling and Locking`],yearPublished: 2024, rank: 8668, designers: [`Richard Garfield`],publishers: [`IELLO`,`Brain Games`,`GaGa Games`,`Hobby Japan`],artists: [`Régis Torres`]},
+  {gameId: 416284, title: `Avatar: The Last Airbender - Aang's Destiny`, image: `https://cf.geekdo-images.com/jIKk2PpRhLzeBu-Q2a9c9A__original/img/887jb_fpXpPveYqhES5gXSKZO9E=/0x0/filters:format(jpeg)/pic8077386.jpg`, minPlayers: 2, maxPlayers: 4, playingTime: 60, isCompetitive: false, mechanisms: [`Cooperative Game`,`Deck, Bag, and Pool Building`,`Scenario / Mission / Campaign Game`,`Variable Player Powers`],yearPublished: 2024, rank: 8367, designers: [`Patrick Marino`],publishers: [`The Op Games`],artists: []},
+  {gameId: 3845, title: `Yahtzee Jr.`, image: `https://cf.geekdo-images.com/JTSXWQD0dJZCIKY0Nr2T1Q__original/img/qLPs0b7Kn5CBlXD_3z4RSNzcY1I=/0x0/filters:format(jpeg)/pic613307.jpg`, minPlayers: 2, maxPlayers: 4, playingTime: 10, isCompetitive: true, mechanisms: [`Dice Rolling`,`Set Collection`],yearPublished: 1988, rank: 27865, designers: [`(Uncredited)`],publishers: [`Clown Games`,`Hasbro`,`Klee`,`MB Jeux`,`MB Spellen`,`Milton Bradley`,`Parker Brothers`,`Schmidt Spiele`,`Tactic`,`Wizards of the Coast`],artists: [`Alfred Bestall`,`Disney Anon`,`Willy Vandersteen`]},
+  {gameId: 426467, title: `Trekking the National Parks: Third Edition`, image: `https://cf.geekdo-images.com/Cc2-wSElQF3AEWI1pAbQlA__original/img/LQwDy61_fPiKBSGD0r4dIvVzzV8=/0x0/filters:format(jpeg)/pic8354259.jpg`, minPlayers: 1, maxPlayers: 5, playingTime: 60, isCompetitive: true, mechanisms: [`Hand Management`,`Open Drafting`,`Point to Point Movement`,`Set Collection`,`Solo / Solitaire Game`],yearPublished: 2024, rank: 12794, designers: [`Charlie Bink`],publishers: [`Underdog Games (I)`],artists: [`Eric Hibbeler`]},
+  {gameId: 397897, title: `Horrified: Greek Monsters`, image: `https://cf.geekdo-images.com/AXNf3SxmIx125TDTK3CMtg__original/img/rgKvIS3WUZ8m_kldqCCLrpUmvVU=/0x0/filters:format(jpeg)/pic7669076.jpg`, minPlayers: 1, maxPlayers: 5, playingTime: 60, isCompetitive: false, mechanisms: [`Action Points`,`Cooperative Game`,`Dice Rolling`,`Pick-up and Deliver`,`Point to Point Movement`,`Solo / Solitaire Game`,`Variable Player Powers`,`Variable Set-up`],yearPublished: 2023, rank: 2197, designers: [`Peter Lee`,`Michael Mulvihill`],publishers: [`Ravensburger`],artists: [`George Doutsiopoulos`,`Raph Lomotan`,`Victor Maristane`,`Tom Moore`,`Ann-Sophie De Steur`]},
+  {gameId: 412911, title: `Monkey Palace`, image: `https://cf.geekdo-images.com/E0_jjeKtADvRnn0vSVGgeQ__original/img/47wS0eCENy1h2sD223YMs4aq0Vg=/0x0/filters:format(png)/pic8445137.png`, minPlayers: 2, maxPlayers: 4, playingTime: 45, isCompetitive: true, mechanisms: [],yearPublished: 2024, rank: 2779, designers: [`David Gordon (I)`,`TAM`],publishers: [`Dotted Games`,`Boardgame Space`,`CoolPlay`,`Gém Klub Kft.`,`Hobby Japan`,`LEGO`,`Lord of Boards`,`Rebel Sp. z o.o.`],artists: [`Matthieu Martin`]},
+  {gameId: 244691, title: `UNO: Minecraft`, image: `https://cf.geekdo-images.com/ET6PjzWffoDV1_4tHkHTzw__original/img/osse_XL1oSfCCZojhx2lSUu4xH4=/0x0/filters:format(png)/pic4657097.png`, minPlayers: 2, maxPlayers: 10, playingTime: 60, isCompetitive: true, mechanisms: [`Hand Management`,`Take That`],yearPublished: 2017, rank: 19932, designers: [],publishers: [`Mattel, Inc.`],artists: []},
+  {gameId: 374173, title: `Star Wars: The Deckbuilding Game`, image: `https://cf.geekdo-images.com/U6scsOGrPtVym4nCLaYjyw__original/img/bPFq87JbA919A2vxks_PFF2DwsY=/0x0/filters:format(png)/pic7387735.png`, minPlayers: 2, maxPlayers: 2, playingTime: 30, isCompetitive: true, mechanisms: [`Deck, Bag, and Pool Building`,`Open Drafting`,`Tug of War`],yearPublished: 2023, rank: 226, designers: [`Caleb Grace`],publishers: [`Fantasy Flight Games`,`ADC Blackfire Entertainment`,`Bluebird Games`,`CoolPlay`,`Delta Vision Publishing`,`Galápagos Jogos`,`Geekach Games`,`GoKids 玩樂小子`,`MTS Games`,`Rebel Sp. z o.o.`],artists: [`Jake Murray`,`David Ardila`,`Borja Pindado Arribas`,`Cristi Balanescu`,`Tiziano Baracchi`,`Colin Boyer`,`Matt Bradbury`,`Mark Bulahao`,`Rovina Cai`,`J. B. Casacop`,`Alexandre Dainche`,`Anthony Devine`,`Alexandr Elichev`,`Mariusz Gandzel`,`Sergey Glushakov`,`Steven Hamilton`,`Joel Hustak`,`Imaginary Studios`,`Nick Ingeneri`,`Michal Ivan`,`Tomasz Jedruszek`,`Jason Juta`,`Alex Kim`,`Leonid Kozienko`,`Raven Mimura`,`Mark Molnar`,`Ameen Naksewee`,`Vlad Racean`,`Adam Schumpert`,`Stephen Somers`,`Darren Tan`,`Ryan Valle`,`Magali Villeneuve`,`Andreas Zafiratos`,`Ben Zweifel`]},
+  {gameId: 411458, title: `Grab that Donut`, image: `https://cf.geekdo-images.com/0ur0dmvqzVsVnHsHH9ipFA__original/img/UFLKVsKvUfliacmefUQrfgL5yqo=/0x0/filters:format(png)/pic8205855.png`, minPlayers: 1, maxPlayers: 4, playingTime: 0, isCompetitive: true, mechanisms: [],yearPublished: 0, rank: -1, designers: [],publishers: [`Learning Resources`],artists: []},
 ];
 
 // variables for different div elements
@@ -240,29 +251,24 @@ function displayGames(games) {
 // param games the variable of all game objects
 // param filters the varaible containing user's selected filters
 // returns games with only relevant objects
-function filterGames(games, filters) {
-    console.log(filters.playtime); //FIXME
-    console.log(filters.isCompetitive); //FIXME
-    const playtimeRange = parsePlaytimeRange(filters.playtime);
-    filters.playtime = playtimeRange;
-
-    return games.filter(game => {
-
-      console.log('game.playTime: ' + game.playingTime);
-        if (filters.isCompetitive === "true") {
-            filters.isCompetitive = true;
-        } 
-        else if (filters.isCompetitive === "false") {
-            filters.isCompetitive = false;
-        }
-        console.log(filters.playtime[0] + ' ' + filters.playtime[1]);
-      return (
-        (filters.players === 'all' || game.minPlayers <= filters.players && game.maxPlayers >= filters.players) &&
-        (filters.playtime === 'all' || game.playingTime >= filters.playtime[0] && game.playingTime <= filters.playtime[1]) &&
-        (filters.isCompetitive === 'all' || game.isCompetitive === filters.isCompetitive)
-      );
-    });
-  }
+function filterGames(games, filters) {  
+  const playtimeRange = parsePlaytimeRange(filters.playtime);
+  filters.playtime = playtimeRange;
+  
+  return games.filter(game => {
+    if (filters.isCompetitive === "true") {
+      filters.isCompetitive = true;
+    } 
+    else if (filters.isCompetitive === "false") {
+      filters.isCompetitive = false;
+    }
+    return (
+      (filters.players === 'all' || game.minPlayers <= filters.players && game.maxPlayers >= filters.players) &&
+      (filters.playtime === 'all' || game.playingTime >= filters.playtime[0] && game.playingTime <= filters.playtime[1]) &&
+      (filters.isCompetitive === 'all' || game.isCompetitive === filters.isCompetitive)
+    );
+  });
+}
 
 // Initial display of all games
 displayGames(boardGames);
@@ -308,32 +314,12 @@ function createGameCard(game) {
   return card;
 }
 
-//variables for filter elements
-const playerFilter = document.getElementById('player-filter');
-const playtimeFilter = document.getElementById('playtime-filter');
-const isCompetitiveFilter = document.getElementById('is-competitive-filter');
-// Event listeners for filter options
-playerFilter.addEventListener('change', handleFilterChange);
-playtimeFilter.addEventListener('change', handleFilterChange);
-isCompetitiveFilter.addEventListener('change', handleFilterChange);
-
-// handleFilterChange() function that gets values from select filters and passes them to filterGames()
-function handleFilterChange() {
-  const filters = {
-    players: playerFilter.value,
-    playtime: playtimeFilter.value,
-    isCompetitive: isCompetitiveFilter.value
-  };
-  const filteredGames = filterGames(boardGames, filters);
-  displayGames(filteredGames);
-}
-
 // parsePlaytimeRange() function that gets useable values from playingTime selects
 // param rangeString the variable of the selected playingTime
 // returns an Array with ints
 function parsePlaytimeRange(rangeString) {
   if (rangeString == '121+') {
-    return [121, 122];
+    return [121, Infinity];
   }
   const match = rangeString.match(/^(\d+)-(\d+)$/);
   if (match) {
@@ -484,3 +470,89 @@ for (let i = 0; i < gameIDs.length; i++) {
   });
 
 }**/
+
+// showDropdown() function that displays the options for the selected filter
+// param selection the variable of the filter that was clicked
+function showDropdown(selection) {
+  switch(selection) {
+    case 'players':
+      document.getElementById("playerFilterDropdown").classList.toggle("show");
+      break;
+    case 'playtime':
+      document.getElementById("playtimeFilterDropdown").classList.toggle("show");
+      break;
+    case 'gamemode':
+      document.getElementById("gamemodeFilterDropdown").classList.toggle("show");
+      break;  
+  }
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  //IF the area of the window clicked was NOT the playerDropdown
+  if (!event.target.matches('.playerDropdown')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content player");
+    for (let i = 0; i < dropdowns.length; i++) {
+      let opendropdown = dropdowns[i];
+      if (opendropdown.classList.contains('show')) {
+        opendropdown.classList.remove('show');
+      }
+    }
+  }
+  //IF the area of the window clicked was NOT the playtimeDropdown
+  if (!event.target.matches('.playtimeDropdown')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content playtime");
+    for (let i = 0; i < dropdowns.length; i++) {
+      let opendropdown = dropdowns[i];
+      if (opendropdown.classList.contains('show')) {
+        opendropdown.classList.remove('show');
+      }
+    }
+  }
+  //IF the area of the window clicked was NOT the gamemodeDropdown
+  if (!event.target.matches('.gamemodeDropdown')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content gamemode");
+    for (let i = 0; i < dropdowns.length; i++) {
+      let opendropdown = dropdowns[i];
+      if (opendropdown.classList.contains('show')) {
+        opendropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+// Initialization of object to hold all filters
+let filters = {
+  players: 'all',
+  playtime: 'all',
+  isCompetitive: 'all'
+};
+// Initialization of variable that holds the current playtime value
+let savedPlaytime = 'all';
+
+// updateFilters() function that takes user selections and filters and displays games based on them
+// param selectedFilter the variable of all which filter is being updated
+// param selection the varaible containing the value of the user's selected filters
+function updateFilters(selectedFilter, selection) {
+  switch(selectedFilter) {
+    case 'players':
+      filters.players = selection;
+      document.getElementById('playerFilterText').textContent = event.target.textContent;
+      break;
+    case 'playtime':
+      document.getElementById('playtimeFilterText').textContent = event.target.textContent;
+      filters.playtime = selection;
+      //update variable with the selection
+      savedPlaytime = selection;
+      break;
+    case 'gamemode':
+      document.getElementById('gamemodeFilterText').textContent = event.target.textContent;
+      filters.isCompetitive = selection;
+      break;
+  }
+  //variable that contains the game objects meeting the filtered requirements
+  const filteredGames = filterGames(boardGames, filters);
+  displayGames(filteredGames);
+  // update object with the variable as it was before parseInt()
+  filters.playtime = savedPlaytime;
+}
