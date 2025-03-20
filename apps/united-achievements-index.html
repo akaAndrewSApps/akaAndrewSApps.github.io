@@ -9,63 +9,86 @@
 <body>
     <div id="app">
         <h1 align='center'>Achievement Tracker</h1>
-        <div class="herodropdowns" id="herodropdowns">
-            <div class="hero">
-                <label for="heroes1">Select Hero 1:</label>
-                <select id="heroes1"></select>
+        <div class="herodropdowns" id="heroSelectionDropdowns">
+            <div class="heroSelections">
+                <label for="hero1Selection">Select Hero 1:</label>
+                <div class="dropdown-button" id="hero1DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="hero1Dropdown">
+                    <input type="text" placeholder="Search.." id="hero1Input" onkeyup="filterFunction(hero1Input, hero1DropdownContent)">
+                  </div>
             </div>
-
-            <div class="hero">
-                <label for="heroes2">Select Hero 2:</label>
-                <select id="heroes2"></select>
+            <div class="heroSelections">
+                <label for="hero2Selection">Select Hero 2:</label>
+                <div class="dropdown-button" id="hero2DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="hero2Dropdown">
+                    <input type="text" placeholder="Search.." id="hero2Input" onkeyup="filterFunction(hero2Input, hero2DropdownContent)">
+                  </div>
             </div>
-
-            <div class="hero">
-                <label for="heroes3">Select Hero 3:</label>
-                <select id="heroes3"></select>
+            <div class="heroSelections">
+                <label for="hero3Selection">Select Hero 3:</label>
+                <div class="dropdown-button" id="hero3DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="hero3Dropdown">
+                    <input type="text" placeholder="Search.." id="hero3Input" onkeyup="filterFunction(hero3Input, hero3DropdownContent)">
+                  </div>
             </div>
-
-            <div class="hero">
-                <label for="heroes4">Select Hero 4:</label>
-                <select id="heroes4"></select>
+            <div class="heroSelections">
+                <label for="hero4Selection">Select Hero 4:</label>
+                <div class="dropdown-button" id="hero4DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="hero4Dropdown">
+                    <input type="text" placeholder="Search.." id="hero4Input" onkeyup="filterFunction(hero4Input, hero4DropdownContent)">
+                  </div>
             </div>
         </div>
         <div class="team1herodropdownslabel collapse" id="team1herodropdownslabel">
             <label for="team1herodropdowns"></label>
         </div>
         <div class="team1herodropdowns collapse" id="team1herodropdowns">
-            <div class="hero">
-                <label for="heroes1team1">Select Hero 1:</label>
-                <select id="heroes1team1"></select>
+            <div class="heroSelections">
+                <label for="team1Hero1Selection">Select Hero 1:</label>
+                <div class="dropdown-button" id="team1Hero1DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="team1Hero1Dropdown">
+                    <input type="text" placeholder="Search.." id="team1Hero1Input" onkeyup="filterFunction(team1Hero1Input, team1Hero1DropdownContent)">
+                  </div>
             </div>
-
-            <div class="hero">
-                <label for="heroes2team1">Select Hero 2:</label>
-                <select id="heroes2team1"></select>
+            <div class="heroSelections">
+                <label for="team1Hero2Selection">Select Hero 2:</label>
+                <div class="dropdown-button" id="team1Hero2DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="team1Hero2Dropdown">
+                    <input type="text" placeholder="Search.." id="team1Hero2Input" onkeyup="filterFunction(team1Hero2Input, team1Hero2DropdownContent)">
+                  </div>
             </div>
-
-            <div class="hero">
-                <label for="heroes3team1">Select Hero 3:</label>
-                <select id="heroes3team1"></select>
+            <div class="heroSelections">
+                <label for="team1Hero3Selection">Select Hero 3:</label>
+                <div class="dropdown-button" id="team1Hero3DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="team1Hero3Dropdown">
+                    <input type="text" placeholder="Search.." id="team1Hero3Input" onkeyup="filterFunction(team1Hero3Input, team1Hero3DropdownContent)">
+                  </div>
             </div>
         </div>
         <div class="team2herodropdownslabel collapse" id="team2herodropdownslabel">
             <label for="team2herodropdowns"></label>
         </div>
         <div class="team2herodropdowns collapse" id="team2herodropdowns">
-            <div class="hero">
-                <label for="heroes1team2">Select Hero 1:</label>
-                <select id="heroes1team2"></select>
+            <div class="heroSelections">
+                <label for="team2Hero1Selection">Select Hero 1:</label>
+                <div class="dropdown-button" id="team2Hero1DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="team2Hero1Dropdown">
+                    <input type="text" placeholder="Search.." id="team2Hero1Input" onkeyup="filterFunction(team2Hero1Input, team2Hero1DropdownContent)">
+                  </div>
             </div>
-
-            <div class="hero">
-                <label for="heroes2team2">Select Hero 2:</label>
-                <select id="heroes2team2"></select>
+            <div class="heroSelections">
+                <label for="team2Hero2Selection">Select Hero 2:</label>
+                <div class="dropdown-button" id="team2Hero2DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="team2Hero2Dropdown">
+                    <input type="text" placeholder="Search.." id="team2Hero2Input" onkeyup="filterFunction(team2Hero2Input, team2Hero2DropdownContent)">
+                  </div>
             </div>
-
-            <div class="hero">
-                <label for="heroes3team2">Select Hero 3:</label>
-                <select id="heroes3team2"></select>
+            <div class="heroSelections">
+                <label for="team2Hero3Selection">Select Hero 3:</label>
+                <div class="dropdown-button" id="team2Hero3DropdownButton">No Hero</div>
+                <div class="dropdown-content" id="team2Hero3Dropdown">
+                    <input type="text" placeholder="Search.." id="team2Hero3Input" onkeyup="filterFunction(team2Hero3Input, team2Hero3DropdownContent)">
+                  </div>
             </div>
         </div>
         
@@ -99,7 +122,10 @@
         <div class="villainlabel" id="villainlabel">
         <label for="villain">Select Villain:</label></div>
         <div class='villaindiv' id="villaindiv">
-            <select id="villain"></select>
+            <div class="dropdown-button" id="villainDropdownButton"></div>
+            <div class="dropdown-content" id="villainDropdown">
+                <input type="text" placeholder="Search.." id="villainInput" onkeyup="filterFunction(villainInput, villainDropdownContent)">
+            </div>
             <label><input type="checkbox" id='infinity' name='campaign' value='infinity'>Infinity Campaign</label>    
         </div>
         
@@ -214,7 +240,7 @@
         </select>
         
 
-        <button onclick="getRelevantAchievements()">Get Achievements</button>
+        <button onclick="getRelevantAchievements1()">Get Achievements</button>
 
         <h2 id="available-achievements-header" class="collapse">Available Achievements:</h2>
         <ul id="available-achievements"></ul>
