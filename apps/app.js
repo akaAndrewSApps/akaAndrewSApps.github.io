@@ -57,16 +57,18 @@ popualteDropdownCompanion2(companions);
 popualteDropdownCompanion3(companions);
 popualteDropdownCompanion4(companions);**/
 
-/**                                 START TEST CODE   **/
 // combineArrays() function that combines multiple arrays into one
 function combineArrays(...arrays) {
     // Use the spread operator to flatten the arrays into a single array
     return [].concat(...arrays);
   }
 //combine all heroes and villains into one respective array
-const allHeroes = ["No Hero"].concat(combineArrays(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes, dcSeason1Heroes));
-const allVillains = ['None'].concat(combineArrays(season1Villains, season2Villains, season3Villains, spiderVillains, dcSeason1Villains, dc1SuicideSquadTagTeams, dc1Antagonists, promoVillains));
-console.log(allVillains);//FIXME
+const combinedHeroes = combineArrays(season1Heroes, season2Heroes, season3Heroes, promoHeroes, spiderHeroes, dcSeason1Heroes);
+combinedHeroes.sort(); //sorts array alphabetically
+const allHeroes = ["No Hero"].concat(combinedHeroes);
+const combinedVillains = combineArrays(season1Villains, season2Villains, season3Villains, spiderVillains, dcSeason1Villains, dc1SuicideSquadTagTeams, dc1Antagonists, promoVillains);
+combinedVillains.sort(); //sorts array alphabetically
+const allVillains = ["None"].concat(combinedVillains);
 
 //populate the relevant selction dropwdown with the combined arrays
 //hero1
@@ -181,8 +183,8 @@ allHeroes.forEach(option => {
     hero4DropdownContent.appendChild(a);
 });
 hero4DropdownButton.value = allHeroes[0];
-//teams
-//team1Hero1
+// Team dropdowns
+//Team1Hero1
 allHeroes.forEach(option => {
     const a = document.createElement("a");
     a.href = "#";
@@ -196,7 +198,7 @@ allHeroes.forEach(option => {
     team1Hero1DropdownContent.appendChild(a);
 });
 team1Hero1DropdownButton.value = allHeroes[0];
-//team1Hero2
+//Team1Hero2
 allHeroes.forEach(option => {
     const a = document.createElement("a");
     a.href = "#";
@@ -210,7 +212,7 @@ allHeroes.forEach(option => {
     team1Hero2DropdownContent.appendChild(a);
 });
 team1Hero2DropdownButton.value = allHeroes[0];
-//team1Hero3
+//Team1Hero3
 allHeroes.forEach(option => {
     const a = document.createElement("a");
     a.href = "#";
@@ -224,7 +226,7 @@ allHeroes.forEach(option => {
     team1Hero3DropdownContent.appendChild(a);
 });
 team1Hero3DropdownButton.value = allHeroes[0];
-//team2Hero1
+//Team2Hero1
 allHeroes.forEach(option => {
     const a = document.createElement("a");
     a.href = "#";
@@ -238,7 +240,7 @@ allHeroes.forEach(option => {
     team2Hero1DropdownContent.appendChild(a);
 });
 team2Hero1DropdownButton.value = allHeroes[0];
-//team2Hero2
+//Team2Hero2
 allHeroes.forEach(option => {
     const a = document.createElement("a");
     a.href = "#";
@@ -252,7 +254,7 @@ allHeroes.forEach(option => {
     team2Hero2DropdownContent.appendChild(a);
 });
 team2Hero2DropdownButton.value = allHeroes[0];
-//team2Hero3
+//Team2Hero3
 allHeroes.forEach(option => {
     const a = document.createElement("a");
     a.href = "#";
@@ -267,7 +269,7 @@ allHeroes.forEach(option => {
 });
 team2Hero3DropdownButton.value = allHeroes[0];
 
-//villain
+// Villain dropdown
 allVillains.forEach(option => {
     const a = document.createElement("a");
     a.href = "#";
@@ -303,39 +305,39 @@ hero4DropdownButton.addEventListener("click", function() {
     hero4DropdownContent.classList.toggle("show");
     hero4Input.focus();
 });
-//teams
-//team1Hero1
+// Team dropdowns
+// Team1Hero1
 team1Hero1DropdownButton.addEventListener("click", function() {
     team1Hero1DropdownContent.classList.toggle("show");
     team1Hero1Input.focus();
 });
-//team1Hero2
+// Team1Hero2
 team1Hero2DropdownButton.addEventListener("click", function() {
     team1Hero2DropdownContent.classList.toggle("show");
     team1Hero2Input.focus();
 });
-//team1Hero3
+// Team1Hero3
 team1Hero3DropdownButton.addEventListener("click", function() {
     team1Hero3DropdownContent.classList.toggle("show");
     team1Hero3Input.focus();
 });
-//team2Hero1
+// Team2Hero1
 team2Hero1DropdownButton.addEventListener("click", function() {
     team2Hero1DropdownContent.classList.toggle("show");
     team2Hero1Input.focus();
 });
-//team2Hero2
+// Team2Hero2
 team2Hero2DropdownButton.addEventListener("click", function() {
     team2Hero2DropdownContent.classList.toggle("show");
     team2Hero2Input.focus();
 });
-//team2Hero3
+// Team2Hero3
 team2Hero3DropdownButton.addEventListener("click", function() {
     team2Hero3DropdownContent.classList.toggle("show");
     team2Hero3Input.focus();
 });
 
-//villain
+// Tillain dropdowns
 villainDropdownButton.addEventListener("click", function() {
     villainDropdownContent.classList.toggle("show");
     villainInput.focus();
@@ -374,8 +376,8 @@ window.addEventListener("click", function(event) {
         }
     }
 });
-//teams
-//team1Hero1
+// Team dropdowns
+//Team1Hero1
 window.addEventListener("click", function(event) {
     if (!event.target.matches(".dropdown-button")) {
         if (team1Hero1DropdownContent.classList.contains("show")) {
@@ -383,7 +385,7 @@ window.addEventListener("click", function(event) {
         }
     }
 });
-//team1Hero2
+//Team1Hero2
 window.addEventListener("click", function(event) {
     if (!event.target.matches(".dropdown-button")) {
         if (team1Hero2DropdownContent.classList.contains("show")) {
@@ -391,7 +393,7 @@ window.addEventListener("click", function(event) {
         }
     }
 });
-//team1Hero3
+//Team1Hero3
 window.addEventListener("click", function(event) {
     if (!event.target.matches(".dropdown-button")) {
         if (team1Hero3DropdownContent.classList.contains("show")) {
@@ -399,7 +401,7 @@ window.addEventListener("click", function(event) {
         }
     }
 });
-//team2Hero1
+//Team2Hero1
 window.addEventListener("click", function(event) {
     if (!event.target.matches(".dropdown-button")) {
         if (team2Hero1DropdownContent.classList.contains("show")) {
@@ -407,7 +409,7 @@ window.addEventListener("click", function(event) {
         }
     }
 });
-//team2Hero2
+//Team2Hero2
 window.addEventListener("click", function(event) {
     if (!event.target.matches(".dropdown-button")) {
         if (team2Hero2DropdownContent.classList.contains("show")) {
@@ -415,7 +417,7 @@ window.addEventListener("click", function(event) {
         }
     }
 });
-//team2Hero3
+//Team2Hero3
 window.addEventListener("click", function(event) {
     if (!event.target.matches(".dropdown-button")) {
         if (team2Hero3DropdownContent.classList.contains("show")) {
@@ -424,7 +426,7 @@ window.addEventListener("click", function(event) {
     }
 });
 
-//villain
+// Villain dropdowns
 window.addEventListener("click", function(event) {
     if (!event.target.matches(".dropdown-button")) {
         if (villainDropdownContent.classList.contains("show")) {
@@ -433,8 +435,10 @@ window.addEventListener("click", function(event) {
     }
 });
 
+// filterFunction() function that sorts options based on user input
+// param input variable that holds input value
+// param dropdownContent variable of specfic content to filter
 function filterFunction(input, dropdownContent) {
-    
     const filter = input.value.toUpperCase();
     const a = dropdownContent.getElementsByTagName("a");
     for (let i = 0; i < a.length; i++) {
@@ -446,8 +450,6 @@ function filterFunction(input, dropdownContent) {
         }
     }
 }
-
-/**                                 END TEST CODE     **/
 
 // populateDropdownCompanion1() function that populates the first companion dropdown
 // param c Array of companions
@@ -755,6 +757,7 @@ function showAlternateSelections() {
     }
 }
 
+// getRelevantAchievements() function that takes user inputs and passes them to relevant functions
 function getRelevantAchievements1() {
     //Array to hold chosen heroes
     const selectedHeroes = [];
@@ -816,7 +819,6 @@ function getRelevantAchievements1() {
 
     //variable for selected villain
     let selectedVillain = document.getElementById('villainDropdownButton').value;
-    console.log(selectedVillain); //FIXME
     //IF Registration Clash or Clash of Heroes is selected
     if(selectedGameMode == 'registrationclash' || selectedGameMode == 'clashofheroes') {
         //set selectedVillain to none
