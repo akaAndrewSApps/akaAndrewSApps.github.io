@@ -1,4 +1,3 @@
-//FIXME Add Hush heroes and villains and sidekicks
 //Array of all Season 1 Heroes
 const season1Heroes = ["Adam Warlock", "America Chavez", "Ant-Man", "Beta Ray Bill", "Black Cat", "Black Panther", "Black Widow", "Blade", "Captain America", "Captain Marvel", "Daredevil", "Doctor Strange", "Drax", "Elektra", "Falcon", "Gamora", "Ghost Rider", "Ghost-Spider", "Groot", "Hawkeye", "Howard the Duck", "Hulk", "Iron Fist", "Iron Man", "Jessica Jones", "Korg", "Luke Cage", "Mantis", "Miles Morales", "Mockingbird", "Moon Knight", "Ms. Marvel", "Nebula", "Nick Fury", "Nova", "Okoye", "Punisher", "Quicksilver", "Rocket Racoon", "Scarlet Witch", "Shang Chi", "She-Hulk", "Shuri", "Spider-Ham", "Spider-Man", "Spider-Man 2099", "Spider-Woman", "Squirrel Girl", "Star-Lord", "Thor", "Valkyrie", "Venom", "Vision", "War Machine", "Wasp", "Winter Soldier", "Yondu"];
 //Array of all Season 2 Heroes
@@ -11,6 +10,8 @@ const spiderHeroes = ['Anti-Venom', 'Peni Parker', 'Scarlet Spider', 'Silk', 'Sp
 const dcSeason1Heroes = ['Aquaman','Arm-Fall-Off-Boy','The Atom','Atom Smasher','Batgirl','Batgirl (Cassandra Cain)','Batman','Batman (Armor)','Batwoamn','Beast Boy','Bizarro','Black Adam','Black Canary','Black Lightning','Bloodsport','Blue Beetle','Booster Gold','Captain Boomerang','Captain Cold','Catwoman','Constantine','Cyborg','Cyclone','Deadman','Deadshot','Doctor Fate','Etrigan the Demon','Firestorm','The Flash','Gleek','Green Arrow','Guy Gardner','Hal Jordan','Harley Quinn','Hawkgirl','Hawkman','Indigo-1','Jayna','Jessica Cruz','John Stewart','Jonah Hex','Katana','Kilowog','King Shark','Krypto','Kyle Rayner','Lobo','Martian Manhunter','Mera','Nightwing','Peacemaker','Plastic Man','Poison Ivy','Polka Dot Man','Power Girl','The Question','Raven','Red Hood','Red Tornado','Rick Flag','Robin (Damian Wayne)','Robin (Dick Grayson)','Saint Walker','Salakk','S.T.R.I.P.E.','Shazam!','Soiler','Star Sapphire','Starfire','Stargirl','Steel','Superboy','Supergirl', 'Superman','Swamp Thing','Vixen','Wildcat', 'Wonder Woman','Zan','Zatanna'];
 //Array of all Fugitives //FIXME
 const dc1Fugitives = ['Bane','Clayface','Harley Quinn','The Joker','Killer Croc','Man-Bat','Mr. Freeze','The Penguin','Poison Ivy','The Riddler','Scarecrow','Two-Face'];
+//Array of all Batman Hush Heroes
+const hushHeroes = ['Batman (Classic)','Catwoman (Goggles)','Huntress','Robin (Tim Drake)','Superman (Controlled)'];
 //Array of all promotional Heroes
 const promoHeroes = ['Agatha Harkness','Deadpool (X-Force)','Grey Hulk','Hybrid','Juggernaut','Mister Sinister'];
 
@@ -19,7 +20,7 @@ const season1Villains = ["Baron Zemo", "Black Dwarf", "Bullseye", "Carnage", "Co
 //Array of all Season 2 Villains
 const season2Villains = ["Apocalypse", "Arcade", "Avalanche", "Bob", "Brood Queen", "Callisto", "Colossus (Phoenix Force)", "Cyclops (Phoenix Force)", "Dark Phoenix", "Deadpool", "Deathbird", "Doctor Doom", "Emma Frost", "Emma Frost (Phoenix Force)", "Four Horsemen", "Juggernaut", "Lady Deathstrike", "Legion", "Magik (Phoenix Force)", "Magneto", "Marrow", "Mastermind", "Mister Sinister", "Mojo", "Mystique", "Namor", "Namor (Phoenix Force)", "Nimrod", "Omega Red", "Onslaught", "Phoenix Force", "Quicksilver & Scarlet Witch", "Sabretooth", "Sauron", "Shadow King", "Silver Samurai", "Spiral", "Scarlet Witch & Quicksilver", "Sebastian Shaw", "Stryfe", "Super Skrull", "Toad + Blob + Pyro"];
 //Array of all Season 3 Villains
-const season3Villains = ["Abomination ", "Absorbing Man", "Air-Walker", "Annihilus", "Apocalypse (AoA)", "Ares", "Blastaar", "Cabal (Doctor Doom)", "Cabal (Emma Frost)", "Cabal (Iron Patriot)", "Cabal (Loki)", "Cabal (Namor)", "Cabal (Taskmaster)", "Chameleon", "Cosmic Ghost Rider", "Crimson Dynamo", "Crimson Dynamo w/ Winter Guard", "Crossbones", "Daken", "Dark Avengers", "Dark Beast", "Dark Carnage", "Darkchild", "Demogoblin/Doppelganger", "Emperor Doom", "Enchantress", "Fin Fang Foom", "Firelord", "Galactus", "Gladiator", "Gorr", "Heralds", "High Evolutionary ", "Hobgoblin", "Immortus", "Klaw", "Knull", "Lizard", "Maestro", "Maximus", "Mole Man", "Moonstone", "Morbius", "Nemesis", "New Sinister Six", "Nova (Frankie Raye)", "Purple Man", "Queen Veranke", "Red Hulk", "Scorpion", "Scream", "Shocker", "Shriek", "Sinister Six Assembled", "Skrulls", "Terrax", "Titania", "U.S. Agent", "The Void", "Vulcan", "White Widow", "Winter Guard", "World Breaker Hulk", "Wrecking Crew"];
+const season3Villains = ["Abomination ", "Absorbing Man", "Air-Walker", "Annihilus", "Apocalypse (AoA)", "Ares", "Blastaar", "Cabal (Doctor Doom)", "Cabal (Emma Frost)", "Cabal (Iron Patriot)", "Cabal (Loki)", "Cabal (Namor)", "Cabal (Taskmaster)", "Chameleon", "Cosmic Ghost Rider", "Crimson Dynamo", "Crimson Dynamo w/ Winter Guard", "Crossbones", "Daken", "Dark Avengers", "Dark Beast", "Dark Carnage", "Darkchild", "Demogoblin/Doppelganger", "Emperor Doom", "Enchantress", "Fin Fang Foom", "Firelord", "Galactus", "Gladiator", "Gorr","Heralds of Galactus", "High Evolutionary ", "Hobgoblin", "Immortus", "Klaw", "Knull", "Lizard", "Maestro", "Maximus", "Mole Man", "Moonstone", "Morbius", "Nemesis", "New Sinister Six", "Nova (Frankie Raye)", "Purple Man", "Queen Veranke", "Red Hulk", "Scorpion", "Scream", "Shocker", "Shriek", "Sinister Six Assembled", "Skrulls", "Terrax", "Titania", "U.S. Agent", "The Void", "Vulcan", "White Widow", "Winter Guard", "World Breaker Hulk", "Wrecking Crew"];
 //Array of all Spider-geddon Villains
 const spiderVillains = ['Anti-Venom', 'Morlun', 'Spot', 'Superior Spider-Man'];
 //Array of all DC Season 1 Villains
@@ -37,13 +38,17 @@ for(let i = 0; i < dc1SuicideSquad.length; i++) {
 }
 //Array of all Antagonists
 const dc1Antagonists = ['Batman','The Flash','Superman','Wonder Woman'];
+//Array of all Batman Hush Villains
+const hushVillains = ['Hush','The Joker & Harley Quinn','Superman (Controlled)'];
 //Array of all promotional Villains
 const promoVillains = ['Agatha Harkness','Scarlet Witch'];
 
-//Array of all companions //FIXME
+//Array of all companions
 const companions = ['Alligator Loki', 'Cosmo', 'Goose', 'Jeff', 'Lockheed', 'Redwing', 'Throg'];
-//Array of all support characters //FIXME
-const supportCharacters = ['Jimmy Olsen', 'Lois Lane'];
+//Array of all sidekicks
+const sidekicks = ['Ace the Bat-Hound','Alfred',`Ch'p`,'Commissioner Gordon','Detective Chimp','Dex-Starr','Gleek','Jimmy Olsen','Krypto','Lois Lane','Robin','S.T.R.I.P.E.'];
+//Array of all support characters
+const supportCharacters = ['Alfred','Commissioner Gordon','Jimmy Olsen','Lois Lane'];
 
 /**  companion selection           NOT CURRENTLY NEEDED FOR ACHIEVEMENTS
 const companionDropdown1 = document.getElementById('companions1');
@@ -813,7 +818,7 @@ function getRelevantAchievements1() {
         //IF a hero has been selected
         if (document.getElementById('hero4DropdownButton').value != 'No Hero') {
             //gets the selected hero
-            selectedHeroes.push(document.getElementById('hero1DropdownButton4').value);
+            selectedHeroes.push(document.getElementById('hero4DropdownButton').value);
         }
     }    
 
@@ -829,6 +834,34 @@ function getRelevantAchievements1() {
     const selectedChallenges = getSelectedChallenges();
     const selectedDifficulty = document.getElementById('difficulty').value;
     const selectedAdditionalFactors = getAdditionalFactors();
+
+    //IF villain is Absorbing Man or Titania, and their additional challnges are not selected, and difficulty is at least hard
+    if(((selectedVillain == 'Absorbing Man' && !selectedChallenges.includes('titania')) || (selectedVillain == 'Titania' && !selectedChallenges.includes('absorbing'))) 
+        && (selectedDifficulty == 'hard' || selectedDifficulty == 'heroic')) {
+            let challengeVillain;
+            switch(selectedVillain) {
+                case 'Absorbing Man':
+                    challengeVillain = 'Titania';
+                    break;
+                case 'Titania':
+                    challengeVillain = 'Absorbing Man';
+                    break;
+            }
+            //Ask user if they want to add challenge
+            const addChallenge = confirm(`Would you like to add ${challengeVillain} challenge?`);
+            //IF user wants to add challenge
+            if (addChallenge) {
+                //add appropriate challenge
+                switch(challengeVillain) {
+                    case 'Absorbing Man':
+                        selectedChallenges.push('absorbing');
+                        break;
+                    case 'Titania':
+                        selectedChallenges.push('titania');
+                        break;
+                }
+            }
+    }
 
     //Array to hold chosen companions
     const selectedCompanions = [];
@@ -1955,6 +1988,18 @@ function getMultiAchievements(gamemode, heroes, difficulty, villain, challenges)
             }
         }
     }
+    else if (challenges.includes('complications')) {
+        //Array that holds Villain Fights Achievements
+        const villainFightsAchievements = [];
+        //Add complication achievements
+        villainFightsAchievements.push('Defeat any Villain with 1 Complication added');
+        villainFightsAchievements.push('Defeat any Villain with 2 Complications added');
+        villainFightsAchievements.push('Defeat any Villain with 3 Complications added');
+        villainFightsAchievements.push('Defeat any Villain with 4 Complications added');
+        for (let i = 0; i < villainFightsAchievements.length; i++) {
+            availableAchievements.push(villainFightsAchievements[i]);            
+        }
+    }
     //Array that holds Hero Feats Achievements
     const heroFightsAchievements = getMultiHeroFeats(difficulty, villain, heroes, challenges);
     //IF the array is not empty
@@ -2845,7 +2890,6 @@ function getMultiVillainFights(villain, challenges) {
     if (villain == 'Air-Walker') {
         villainFightsAchievements.push('Defeat Air-Walker with no Hero with more than 2 Crisis tokens');
     }
-    //FIXME add Heralds as selectable
     if (villain == 'Heralds of Galactus') {
         villainFightsAchievements.push('Defeat the Heralds of Galactus');
     }
@@ -2876,7 +2920,6 @@ function getMultiVillainFights(villain, challenges) {
     if (villain == 'Annihilus') {
         villainFightsAchievements.push('Defeat Annihilus with the Annihilation Track at 8 or less');
     }
-    //FIXME check this achievement
     if(challenges.includes('complications')) {
         villainFightsAchievements.push('Defeat any Villain with 1 Complication added');
         villainFightsAchievements.push('Defeat any Villain with 2 Complications added');
@@ -2886,8 +2929,7 @@ function getMultiVillainFights(villain, challenges) {
     if (villain == 'Abomination') {
         villainFightsAchievements.push('Defeat Abomination before he plays his 4th Master Plan card');
     }
-    //FIXME consider adding Titania challenge to challenges
-    if (villain == 'Absorbing Man') {
+    if (villain == 'Absorbing Man' && challenges.includes('titania')) {
         villainFightsAchievements.push('Defeat Absorbing Man with the additional Titania Challenge');
     }
     if (villain == 'Blastaar') {
@@ -2900,8 +2942,7 @@ function getMultiVillainFights(villain, challenges) {
         villainFightsAchievements.push('Defeat Chameleon after having found him at least 4 times.');
         villainFightsAchievements.push('Defeat Chamaleon with this additional rule: Every time a Hero tries to damage Chamaleon and none of the revealed tokens shows Chamaleon, another Hero must discard 1 card from their hand.');
     }
-    //FIXME consider adding Crimson Dynamo with Winter Guard
-    if (villain == 'Crimson Dynamo') {
+    if (villain == 'Crimson Dynamo' || villain == 'Crimson Dynamo w/ Winter Guard') {
         villainFightsAchievements.push('Defeat Crimson Dynamo with 4 or less Crisis tokens on the Power Struggle Mission');
     }
     if (villain == 'Crossbones') {
@@ -2965,8 +3006,7 @@ function getMultiVillainFights(villain, challenges) {
     if (villain == 'Shocker') {
         villainFightsAchievements.push('Defeat Shocker with him fulfilling no more than 1 of his Achievements');
     }
-    //FIXME consider adding Absorbing Man challenge to challenges
-    if (villain == 'Titania') {
+    if (villain == 'Titania' && challenges.includes('absorbing')) {
         villainFightsAchievements.push('Defeat Titania with the additional Absorbing Man Challenge');
     }
     if (villain == 'U.S. Agent') {
@@ -2975,7 +3015,7 @@ function getMultiVillainFights(villain, challenges) {
     if (villain == 'White Widow') {
         villainFightsAchievements.push('Defeat White Widow with 3 or less Crisis tokens among Heroes');
     }
-    if (villain == 'Winter Guard') {
+    if (villain == 'Winter Guard'|| villain == 'Crimson Dynamo w/ Winter Guard') {
         villainFightsAchievements.push('Defeat the Winter Guard with the Interrogation Track at 2 or less');
     }
     if (villain == 'Wrecking Crew') {
@@ -3839,19 +3879,18 @@ function getMultiHeroFeats(difficulty, villain, heroes, challenges) {
     if (villain == 'Dark Beast') {
         heroFeatsAchievements.push('Defeat Dark Beast with Dark Beast Laboratory as his starting Location and one of his Henchmen starting there');
     }
-    //FIXME check shield
     if ((villain == 'Queen Veranke' || villain == 'Skrulls') && heroTeams.includes('S.H.I.E.L.D.')) {
         heroFeatsAchievements.push('It’s a S.H.I.E.L.D. Matter: Defeat either Villain in this set with only members of S.H.I.E.L.D. in your team (Black Widow, Agent Venom, Songbird, War Machine, Mirage, Spider-Woman, Mockingbird, Falcon, Captain America (Sam Wilson), Captain Carter, Nick Fury, U.S.Agent, Nick Fury Sr., Maria Hill, Quake, White Widow)');
     }
     if (heroes.includes('Nick Fury') && heroes.includes('Nick Fury Sr.')) {
         heroFeatsAchievements.push('My name is Fury, kid… and so is yours: Defeat any Villain with Nick Fury and Nick Fury Sr. in your team');
     }
-    //check Starjammers & GotG
     if (villain == 'Gladiator' || villain == 'Vulcan') {
         if(heroTeams.includes('Starjammers')) {
-            heroFeatsAchievements.push('Space Adventures: Defeat Gladiator or Vulcan with only members of the Starjammers in your team (Corsair, Ch’od, Hepzibah, Raza, Havok, Polaris, Lilandra)');
+            heroFeatsAchievements.push(`Space Adventures: Defeat Gladiator or Vulcan with only members of the Starjammers in your team (Corsair, Ch'od, Hepzibah, Raza, Havok, Polaris, Lilandra)`);
         }
-        if (heroTeams.includes('Guardians of the Galaxy')) {
+        //Gladiator is a member of GotG team but is not mentioned in the text of the achievement
+        if (heroTeams.includes('Guardians of the Galaxy') && !heroes.includes('Gladiator')) {
             heroFeatsAchievements.push('Space Oddity: Defeat Gladiator or Vulcan with only members of the Guardians of the Galaxy in your team (Star-Lord, Rocket, Groot, Gamora, Drax, Mantis, Phyla-Vell, Nebula, Adam Warlock, Nova Prime, Cosmic Ghost Rider, Quasar)');
         }
     }
@@ -3922,8 +3961,7 @@ function getMultiHeroFeats(difficulty, villain, heroes, challenges) {
         if (heroes.includes('Meggan') && heroes.includes('Nightcrawler') && heroes.length == 2) {
             heroFeatsAchievements.push('Pointy Ears Team-Up: Win with Meggan and Nightcrawler as your team');
         }
-        //FIXME consider Captain Britain Betsy
-        if (heroes.includes('Meggan') && heroes.includes('Captain Britain') && heroes.length == 2) {
+        if (heroes.includes('Meggan') && (heroes.includes('Captain Britain') || heroes.includes('Captain Britain (Betsy)')) && heroes.length == 2) {
             heroFeatsAchievements.push('Fairy Tales: Win with Meggan and Captain Britain as your team');
         }
         if (heroes.includes('Wiccan') && heroes.includes('Hulkling') && heroes.length == 2) {
@@ -3990,8 +4028,7 @@ function getMultiHeroFeats(difficulty, villain, heroes, challenges) {
         if (heroes.includes('Patriot') && heroes.includes('Iron Lad') && heroes.length == 2) {
             heroFeatsAchievements.push('Strolling through Time: Win with Patriot and Iron Lad as your team');
         }
-        //FIXME consider adding Kid Loki
-        if (heroes.includes('Iron Lad') && heroes.includes('Loki') && heroes.includes('Cable') && heroes.length == 3) {
+        if (heroes.includes('Iron Lad') && (heroes.includes('Loki') || heroes.includes('Kid Loki')) && heroes.includes('Cable') && heroes.length == 3) {
             heroFeatsAchievements.push('Time Travelers: Win with Iron Lad, Loki, and Cable as your team');
         }
         if (heroes.includes('Speed') && heroes.includes('Wiccan') && heroes.includes('Scarlet Witch') && heroes.includes('Vision')) {
@@ -4059,7 +4096,7 @@ function getMultiHeroFeats(difficulty, villain, heroes, challenges) {
         if (villain == 'Wrecking Crew' && (heroes.includes('Thor') || heroes.includes('Mighty Thor')) && heroes.includes('She-Hulk') && heroes.includes('The Thing') && heroes.length == 3) {
             heroFeatsAchievements.push('Muscular Battle: Defeat the Wrecking Crew with Thor, She-Hulk, and The Thing as your team');
         }
-        if (villain == 'Winter Guard' && (heroes.includes('Iron Man') || heroes.includes('Iron Man (Civil War)') || heroes.includes('Hulkbuster Iron Man')) && heroes.includes('Doc Samson') && heroes.includes('She-Hulk') && heroes.length == 3) {
+        if ((villain == 'Winter Guard' || villain == 'Crimson Dynamo w/ Winter Guard') && (heroes.includes('Iron Man') || heroes.includes('Iron Man (Civil War)') || heroes.includes('Hulkbuster Iron Man')) && heroes.includes('Doc Samson') && heroes.includes('She-Hulk') && heroes.length == 3) {
             heroFeatsAchievements.push('Russian Answer to the Avengers: Defeat the Winter Guard with Iron Man, Doc Samson, and She-Hulk as your team');
         }
         if (villain == 'Crymson Dynamo' && ((heroes.includes('Iron Man') || heroes.includes('Iron Man (Civil War)') || heroes.includes('Hulkbuster Iron Man')))) {
@@ -4139,9 +4176,8 @@ function checkAntiHero(heroes) {
 // returns 'startingHandHeroesPresent', a String that identifies how many Starting Hand heroes
 function checkStartingHandHeroes(heroes) {
     //Array with all heroes with Starting Hand cards
-    //FIXME Add Multi startingHandHeroes //
     //FIXME Add DC startingHandHeroes //
-    const startingHandHeroes = ['Anti-Venom', 'Apocalypse', 'Bishop', 'Cloak', 'Colossus', 'Dagger', 'Deadpool', 'Doctor Doom', 'Doop', 'Fantomex', 'Grey Hulk', 'Gwenpool', 'Human Torch', 'Invisible Woman', 'Juggernaut', 'Kitty Pryde', 'Lady Deadpool', 'Logan', 'Magik', 'Marrow', 'Mister Fantastic', 'Multiple Man', 'Mystique', 'Northstar', 'Old Man Logan', 'Peni Parker', 'Phoenix', 'Puck', 'Scarelt Spider', 'Silk', 'Silver Surfer', 'Snowbird', 'Spider-Man Noir', 'Spiral', 'Storm (Mohawk)', 'Superior Spider-Man', 'Symbiote Spider-Man', 'The Thing', 'Warlock', 'Weapon X', 'Wolverine', 'X-23'];
+    const startingHandHeroes = ['Agent Venom','Anti-Venom','Apocalypse','Ares','Aurora','Bishop','Black Bolt','Black Knight','Captain America (Classic)','Captain America (Sam)',`Ch'od`,'Cloak', 'Colossus','Corsair','Crystal','Cyborg Spider-Man','Cypher','Dagger','Daken','Darkchild','Darkstar','Deadpool','Deadpool (X-Force)','Deathlok','Doc Samson','Doctor Doom','Doop','Elsa Bloodstone','Fantomex','Gladiator','Goliath','Gorgon','Grey Hulk','Gwenpool','Havok (X-Factor)','Hepzibah','Hercules','Hulkbuster Iron Man','Hulkling','Human Torch','Invisible Woman','Iron Spider','Juggernaut','Karnak','Kid Loki','Kitty Pryde','Lady Deadpool','Logan','Magik','Man-Thing','Marrow','Medusa','Mister Fantastic','Mister Sinister','Moon Girl / Devil Dinosaur','Moonstone','Morph','Multiple Man','Mystique','Nick Fury, Sr.','Northstar','Nova (Frankie Raye)','Old Man Logan','Peni Parker','Phoenix','Phyla-Vell','Puck','Quake','Quasar','Red Guardian','Sabretooth / Wildchild','Scarelt Spider','Sentry','Silk','Silver Surfer','Snowbird','Spectrum','Spider-Man 2099 (original)','Spider-Man Noir','Spiral','Storm (Mohawk)','Stature','Superior Spider-Man','Symbiote Spider-Man','The Thing','Triton','Warlock','Weapon X','Werewolf by Night','Wolverine','X-23','Yellowjacket'];
     //variable with default value
     let startingHandHeroesPresent = 'no';
     //variable with default count of Starting Hand heroes
@@ -4207,7 +4243,7 @@ function getAvailableTeams(heroes) {
         {teamName : 'Inhumans', roster: ['Black Bolt','Crystal','Gorgon','Karnak','Lockjaw','Medusa','Moon Girl / Devil Dinosaur','Ms. Marvel','Triton']},
         //checked via card
         {teamName : 'Marvel Knights', roster: ['Black Widow','Dagger','Daredevil','Luke Cage','Moon Knight','Shang-Chi']},
-        //checked via card FIXME check Wong with physical card
+        //checked via card
         {teamName : 'Midnight Sons', roster: ['Blade','Darkchild','Doctor Strange','Elsa Bloodstone','Ghost Rider (Blaze)','Iron Fist','Man-Thing','Moon Knight','Morbius','Werewolf by Night','Wong']},
         //checked via card
         {teamName : 'New Avengers', roster: ['Captain America','Captain America (Classic)','Iron Man','Iron Man (Civil War)','Hulkbuster Iron Man','Logan','Luke Cage','Ronin','Sentry','Spider-Man','Spider-Woman','Squirrel Girl','The Thing','Weapon X','Wolverine']},
@@ -4227,9 +4263,9 @@ function getAvailableTeams(heroes) {
         {teamName : 'Secret Avengers', roster: ['Black Panther','Captain America','Captain America (Classic)','Cloak','Dagger','Daredevil','Falcon','Goliath','Hercules','Hulkling','Human Torch','Invisible Woman','Kate Bishop','Luke Cage','Punisher','Spectrum','Spider-Man','Spider-Woman','Storm','Storm (Mohawk)','Vision','Wiccan']},
         //checked via card
         {teamName : 'Spider-Army', roster: ['Agent Venom','Black Cat','Cyborg Spider-Man','Ghost-Spider','Iron Spider','Miles Morales','Peni Parker','Scarlet Spider','Silk','Spider-Ham','Spider-Man','Spider-Man 2099','Spider-Man 2099 (Classic)','Spider-Man Noir','Spider-Punk','Spider-Woman','Superior Spider-Man','Symbiote Spider-Man','Venom']},
-        //checked via card FIXME check with physical card
+        //checked via card
         {teamName : 'Starjammers', roster: [`Ch'od`,'Corsair','Havok','Hepzibah','Lilandra','Polaris','Raza']},
-        //checked via card FIXME add check Magik OR Darkchild, Storm OR Storm Mohawk, Wolverines
+        //checked via card
         {teamName : 'Swordbearers of Krakoa', roster: ['Apocalypse','Cable','Captain Britain','Captain Britain (Betsy)','Cypher','Magik','Darkchild','Storm','Storm (Mohawk)','Wolverine','Logan','Weapon X']},
         //checked via card
         {teamName : 'Uncanny X-Force', roster: ['Archangel','Deadpool','Deadpool (X-Force)','Deathlok','Fantomex','Logan','Psylocke','Spiral','Weapon X','Wolverine','X-23']},
@@ -4253,8 +4289,17 @@ function getAvailableTeams(heroes) {
         let currentHerosTeams = teams.filter(team => team.roster.includes(heroes[i]));
         //For each of the teams
         for (let j = 0; j < currentHerosTeams.length; j++) {
-            //store the team name
-            tempTeams.push(currentHerosTeams[j].teamName);
+            //IF the current team is not Swordbearers of Krakoa
+            if(!(currentHerosTeams[j].teamName == 'Swordbearers of Krakoa')) {
+                tempTeams.push(currentHerosTeams[j].teamName);
+            }
+            //ELSE IF the team does not have more than 1one Magik, Storm and Wolverine
+            else if (!(heroes.includes('Magik') && heroes.includes('Darkchild')) &&
+            !(heroes.includes('Storm') && heroes.includes('Storm (Mohawk)')) && 
+            !(heroes.includes('Wolverine') && heroes.includes('Logan') && heroes.includes('Weapon X'))) {
+                //store the team name
+                tempTeams.push(currentHerosTeams[j].teamName);
+            }
         }
     }
     //Array to hold all unique teams

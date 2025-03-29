@@ -126,11 +126,18 @@ ul li {
 #challengefieldset {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #challengefieldset>div {
     display: flex;
     flex-direction: column;
+}
+
+#villainspecificchallengefieldset {
+  margin: 0;
+  border: 0;
+  width: 100%;
 }
 
 .show {
