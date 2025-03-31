@@ -4829,3 +4829,38 @@ function getTeamInformation() {
     //return all selected hereos
     return allSelectedHeroes;
 }
+
+
+// downloadAchievements() function to download the saved achievements as a JSON file
+function downloadAchievements() {
+    const completedAchievements = JSON.parse(localStorage.getItem('achievements')) || [];
+    const json = JSON.stringify(completedAchievements, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'united-achievements.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// uploadAchievements() function to upload saved achievements achievements
+function uploadAchievements(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const achievements = JSON.parse(e.target.result);
+                localStorage.setItem('achievements', JSON.stringify(achievements));
+                console.log('Achievements uploaded and saved:', achievements);
+            } catch (error) {
+                console.error('Error parsing JSON:', error);
+                alert('Invalid JSON file.');
+            }
+        };
+        reader.readAsText(file);
+    }
+}

@@ -281,6 +281,11 @@
         <div>
             <button id='allbtn' onclick='showAllAchievements()'>Show All Achievements</button>
             <button id='remainingbtn' onclick="showRemainingAchievements()">Show All Remaining Achievements</button>
+            <button onclick="downloadAchievements()">Download Achievements</button>
+            <button id='uploadbtn' onclick="uploadFile.click()">Upload Achievements</button>
+            <input type="file" id="uploadFile" accept=".json" onchange="uploadAchievements(event)" style="display: none">
+
+
         </div>
     </div>
 
